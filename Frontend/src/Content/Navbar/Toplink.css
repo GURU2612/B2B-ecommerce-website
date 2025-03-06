@@ -1,0 +1,137 @@
+/* Top Bar */
+.top-bar {
+    position: absolute;
+    width: 90%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: #3F2444;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 40px;
+    
+
+}
+
+.social-links .icon-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.social-links .top-icon {
+    width: 20px;
+    height: 20px;
+    color: #3F2444;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.social-links .icon-wrapper:hover {
+    background: #f3b431;
+    transform: scale(1.1);
+}
+
+.social-links .top-icon:hover {
+    color: white;
+}
+
+/* Top Links */
+.top-links {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    gap: 15px;
+}
+
+.top-links a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.top-links a:hover {
+    color: #f3b431;
+}
+
+/* Divider */
+.divider {
+    width: 1px;
+    height: 20px;
+    background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .top-bar {
+        padding: 0 3%;
+    }
+
+    .top-links a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 3%;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-bottom: 5px;
+    }
+
+    .top-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 8px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .top-links {
+        gap: 8px;
+    }
+
+    .top-links a {
+        font-size: 14px;
+    }
+
+    .icon-wrapper {
+        width: 25px;
+        height: 25px;
+    }
+
+    .top-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
