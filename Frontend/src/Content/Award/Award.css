@@ -1,0 +1,49 @@
+.Awardsection{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    top:696px;
+    left: 0;
+}
+
+  .about-us-image {
+    position: absolute;
+    width: 552px;
+    height: 516px;
+    left: 143px;
+    top: 250px;
+    /* background: url("Media (7).jpg") no-repeat center center / cover; */
+    border-radius: 10px;
+  }
+
+
+/* Enhancing Quality - Sub Heading */
+.about-us-heading {
+    position: absolute;
+    width: 294px;
+    left: 143px;
+    top: 65px;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px; /* 124% */
+    color: #6E3F77;
+  }
+
+
+/* Of Life For a Better Tomorrow - Main Heading */
+.about-us-subheading {
+    position: absolute;
+    width: 570px;
+    left: 157px;
+    top: 90px;  
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px; /* 120% */
+    color: #FC9B3B;
+  }
+
