@@ -36,7 +36,7 @@ const Navbar = () => {
 
       {/* Search Icon */}
       <div className="nav-icons">
-        <div className="icon">
+        <div className="search-icon">
           <IoSearch />
         </div>
       </div>

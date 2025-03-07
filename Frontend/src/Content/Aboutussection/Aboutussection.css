@@ -5,6 +5,7 @@
     height: 800px;
     top:696px;
     left: 0;
+    z-index: 1000;
 }
 
   .about-us-image {
@@ -154,6 +155,7 @@
   color: white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  
 }
 
 .About-us-button:hover {
