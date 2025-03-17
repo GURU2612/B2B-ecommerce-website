@@ -1,49 +1,100 @@
-.Awardsection{
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    height: 1000px;
-    top:696px;
-    left: 0;
+.award-container {
+  position: absolute;
+  width: 90%;
+  height: 446px;
+  left: 50%;
+  top: 3972px;
+  transform: translateX(-50%);
+  background: linear-gradient(237.87deg, #BE36A7 0%, #6E3F77 100%);
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-  .about-us-image {
-    position: absolute;
-    width: 552px;
-    height: 516px;
-    left: 143px;
-    top: 250px;
-    /* background: url("Media (7).jpg") no-repeat center center / cover; */
-    border-radius: 10px;
-  }
+.achievements {
+  position: absolute;
+  left: 141px;
+  /* right: 76.58%; */
+  top: 60px;
+  /* bottom: 77.13%; */
+
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  
+  color: #F7F2F8;
+}
+
+.good-hands {
+  position: absolute;
+  left: 141px;
+  /* right: 64.48%; */
+  top: 102px;
+  /* bottom: 66.37%; */
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  
+  color: #FFF7EB;
+}
+
+.belief-text {
+  position: absolute;
+  width: 510px;
+  height: 168px;
+  left: 139px;
+  top: 190px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  
+  color: #FFFFFF;
+}
+
+.clinic-awards {
+  position: absolute;
+  left: 50.75%;
+  right: 32.47%;
+  top: 19.96%;
+  bottom: 69.28%;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  
+  color: #FFF7EB;
+}
+
+.awardsimg1 {
+  position: absolute;
+  width: 252px;
+  height: 72px;
+  left: 779px;
+  top: 164px;
+  
+  background-color: #F7F2F8;
+  background-size: cover;
+  background-position: center;
+}
 
 
-/* Enhancing Quality - Sub Heading */
-.about-us-heading {
-    position: absolute;
-    width: 294px;
-    left: 143px;
-    top: 65px;
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 42px; /* 124% */
-    color: #6E3F77;
-  }
-
-
-/* Of Life For a Better Tomorrow - Main Heading */
-.about-us-subheading {
-    position: absolute;
-    width: 570px;
-    left: 157px;
-    top: 90px;  
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px; /* 120% */
-    color: #FC9B3B;
-  }
-
+.awardsimg2 {
+  position: absolute;
+  width: 252px;
+  height: 72px;
+  left: 1079px;
+  top: 164px;
+  
+  background-color: #F7F2F8;
+  background-size: cover;
+  background-position: center;
+}

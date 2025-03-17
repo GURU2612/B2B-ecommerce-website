@@ -1,7 +1,8 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
 import "./Navbar.css";
-import logo from "../../assets/Logo/meghmanilogo.png";
+import logo from "../../assets/images/meghmanilogo.png";
+
 
 const Navbar = () => {
   return (

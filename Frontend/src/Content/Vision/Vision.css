@@ -1,0 +1,281 @@
+.outer-vision-container {
+    position:absolute;
+    width: 90%;
+    height: 1000px;
+    padding-left: 5%;
+    padding-right: 5%;
+  
+    background-color: #ffffff; /* Light background for visibility */
+    margin: 0 auto; /* Centers the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5218px;
+    left: 0px;
+  }
+
+  
+  /* Vision Heading */
+  .vision-heading {
+    position: absolute;
+    width: 100px;
+    height: 42px;
+    left: 717px;
+    top: 50px; /* Adjusted from 5097px for better positioning */
+    
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+  
+    /* primary/800 */
+    color: #6E3F77;
+  }
+  
+  
+/* Our Passion for Progress */
+.passion-heading {
+    position: absolute;
+    width: 466px;
+    height: 48px;
+    left: 534px;
+    top: 80px; /* Adjusted from 5139px for relative positioning */
+  
+    font-family: 'Raleway';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  
+    /* Secondary/600 */
+    color: #FC9B3B;
+  }
+
+  /* Vision Card */
+.vision-card1 {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+  
+    position: absolute;
+    width: 600.5px;
+    height: 749px;
+    left: 140px;
+    top: 240px;
+  
+    border: 1px solid #D5BADA;
+    border-radius: 10px;
+    background-color: #FC9B3B;
+    /* Optional Styling */
+    background-color: #ffffff; /* Keeps it visually appealing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  
+/* Reshaping Lives */
+.reshaping-heading {
+    position: absolute;
+    width: 256px;
+    left: 40px;
+    top: 0px;
+    bottom: 81.42%;
+  
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+  
+    color: #6E3F77;
+  }
+
+  
+/* Expanding Horizons */
+.expanding-heading {
+    position: absolute;
+    width: 380px;
+    left: 45px;
+    top: 42px;
+    bottom: 60.18%;
+  
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  
+    color: #FC9B3B;
+  }
+
+  
+/* Vision Paragraph */
+/* Vision Paragraph */
+.vision-paragraph {
+    position: absolute;
+    width: 520.5px;
+    height: 120px;
+    left: 50px;
+    top: 130px;
+    text-align: left;
+  
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+  
+    color: #282828;
+  }
+  
+  
+/* Vision Image */
+.vision-image {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    background-color: #FC9B3B;
+    position: absolute;
+    width: 520.5px;
+    height: 403px;
+    left: 40px;
+    top: 305px;
+  
+    border-radius: 16px;
+    object-fit: cover; /* Ensures the image fits well */
+  }
+
+   /* Vision Card */
+.vision-card2 {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+  
+    position: absolute;
+    width: 600.5px;
+    height: 749px;
+    left: 790px;
+    top: 240px;
+  
+    border: 1px solid #D5BADA;
+    border-radius: 10px;
+    background-color: #FC9B3B;
+    /* Optional Styling */
+    background-color: #ffffff; /* Keeps it visually appealing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  
+/* Vision Card 2 - Image */
+.vision-card2-image {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    background-color: #FC9B3B;
+    position: absolute;
+    width: 520.5px;
+    height: 311px;
+    left: 40px;
+    top: 40px;
+  
+    border-radius: 16px;
+    object-fit: cover; /* Ensures the image fits well */
+  }
+
+  .vision-card2-subheading {
+    position: absolute;
+    width: 424px;
+    left: 40px;
+    top: 52.2%;
+    bottom: 42.19%;
+  
+    /* Sub Heading */
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    text-align: left;
+  
+    /* primary/800 */
+    color: #6E3F77;
+  }
+
+  
+/* Vision Card 2 - Heading (Ignite Innovation) */
+.vision-card2-heading {
+    position: absolute;
+    width: 321px;
+    left: 40px;
+    top: 57.81%;
+    bottom: 35.78%;
+  
+    /* H2 */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: left;
+  
+    /* Secondary/600 */
+    color: #FC9B3B;
+  }
+
+  /* Vision Card 2 - Additional Heading (And Enrich Lives) */
+.vision-card2-enrich {
+    position: absolute;
+    width: 315px;
+    height: 48px;
+    left: 40px;
+    top: 481px;
+  
+    /* H2 */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: left;
+  
+    /* Secondary/600 */
+    color: #FC9B3B;
+  }
+
+  /* Vision Card 2 - Paragraph */
+.vision-card2-paragraph {
+    position: absolute;
+    width: 520.5px;
+    height: 168px;
+    left: 40px;
+    top: 545px;
+  
+    /* Body */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  
+    /* black 3 */
+    color: #282828;
+  }
+  
