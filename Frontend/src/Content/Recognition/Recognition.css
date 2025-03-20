@@ -1,0 +1,207 @@
+.outer-Recognition-container {
+    position:absolute;
+    width: 90%;
+    height: 696px;
+    padding-left: 5%;
+    padding-right: 5%;
+  
+    background-color: #ffffff; /* Light background for visibility */
+    margin: 0 auto; /* Centers the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1752px;
+    left: 0px;
+  }
+
+  
+/* Styles for the heading */
+.recognition-heading {
+    position: absolute;
+    width: 104px;
+    height: 42px;
+    left: 144px;
+    top: 0px;
+    
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px; /* Matches box height */
+    text-align: center;
+
+    color: #6E3F77; /* Primary color */
+}
+
+
+/* Styles for 'Our Core Values' heading */
+.core-values-heading {
+    position: absolute;
+    width: 307px;
+    height: 48px;
+    left: 144px;
+    top: 42px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px; /* Matches box height */
+    color: #FC9B3B; /* Secondary color */
+}
+
+
+/* Styles for the image */
+.recognition-image {
+    position: absolute;
+    width: 508px;
+    height: 446px;
+    left: 885px;
+    top: 154px;
+    /* background-color: #FC9B3B; */
+    background-size: cover;
+    /* box-shadow: 0px 0px 4px rgba(110, 63, 119, 0.7); */
+    border-radius: 10px;
+}
+
+
+/* Styles for 'Awards & Recognition' heading */
+.awards-heading-about {
+    position: absolute;
+    width: 353px;
+    height: 42px;
+    left: 144px;
+    top: 440px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 42px; /* Matches box height */
+    color: #FC9B3B; /* Secondary color */
+}
+
+.awardimg-about1 {
+    position: absolute;
+    width: 252px;
+    height: 72px;
+    left: 144px;
+    top: 524px;
+
+    background-color: #6E3F77;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+
+.awardimg-about2 {
+    position: absolute;
+    width: 252px;
+    height: 72px;
+    left: 496px;
+    top: 524px;
+
+    background-color: #6E3F77;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+
+/* Styles for Meghmani Lifesciences description */
+.meghmani-description-about {
+    position: absolute;
+    width: 718px;
+    height: 168px;
+    left: 144px;
+    top: 250px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px; /* 150% line height */
+    color: #282828; /* Black 3 */
+    text-align: left;
+}
+
+/* Styles for the button */
+.recognition-button {
+    position: absolute;
+    width: 185px;
+    height: 66.63px;
+    left: 146px;
+    top: 135px;
+
+    background-color: transparent;
+    border: none;
+    /* border-bottom: 2px solid #6E3F77; Primary 800 */
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #6E3F77;
+    cursor: pointer;
+    /* transition: 0s ease-in-out; */
+}
+
+.quality-button {
+    position: absolute;
+    width: 100px;
+    height: 66.63px;
+    left: 352px;
+    top: 135px;
+
+    background-color: transparent;
+    border: none;
+    /* border-bottom: 2px solid #6E3F77; Primary 800 */
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #6E3F77;
+    cursor: pointer;
+    /* transition: 0.3s ease-in-out; */
+}
+
+
+.innovation-button {
+    position: absolute;
+    width: 130px;
+    height: 66.63px;
+    left: 465px;
+    top: 135px;
+
+    background-color: transparent;
+    border: none;
+    /* border-bottom: 2px solid #6E3F77; Primary 800 */
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #6E3F77;
+    cursor: pointer;
+    /* transition: 0.3s ease-in-out; */
+}
+
+.consistency-button {
+    position: absolute;
+    width: 130px;
+    height: 66.63px;
+    left: 616px;
+    top: 135px;
+
+    background-color: transparent;
+    border: none;
+    /* border-bottom: 2px solid #6E3F77; Primary 800 */
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #6E3F77;
+    cursor: pointer;
+    /* transition: 0.3s ease-in-out; */
+}
+
+
+.quality-button:hover,.innovation-button:hover,.consistency-button:hover,.recognition-button:hover{
+    border-bottom: 2px solid #6E3F77; /* Primary 800 */
+}

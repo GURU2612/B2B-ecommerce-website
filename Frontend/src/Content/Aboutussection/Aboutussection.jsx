@@ -1,42 +1,36 @@
 import React from "react";
-import "./Aboutussection.css"; // Import the CSS file
-import i3 from "../../assets/images/aboutusimage.png";
+import "./Aboutussection.css"; // Import the external CSS file
+import memberimage from "../../assets/images/memberimage.png";
+
 
 const Aboutussection = () => {
   return (
-    <div className="aboutussection">
-      <img src={i3} alt="About Us" className="about-us-image" />
-        {/* Rectangle Box */}
-        <div className="rectangle-box1">
-        <p className="rectangle-text">500+</p>
-        <p className="rectangle-subtext">Employees</p>
-        </div>
-        <div className="rectangle-box2"><p className="rectangle-text">100000+</p>
-        <p className="rectangle-subtext">HCPc Connected</p></div>
-        <div className="rectangle-box3"><p className="rectangle-text">50000+</p>
-        <p className="rectangle-subtext">Retail Counters</p></div>
-        <div className="rectangle-box4"><p className="rectangle-text">1000+</p>
-        <p className="rectangle-subtext">Distributors</p></div>
+    <>
+      <div className="outer-Aboutussection-container">
 
-        <div className="about-content">
-        <p className="welcome-text">Welcome to</p>
-        <h2 className="company-name">Meghmani Lifescience LTD</h2>
+            <div className="about-image-container">
+            <img src={memberimage} alt="Team Member" className="member-image" />
+                
+            </div>
+            <div className="about-heading">About Us</div>
+             {/* Dedicated to Your Wellbeing */}
+      <div className="about-subheading">Dedicated to Your Wellbeing</div>
+
+        {/* About Description */}
         <p className="about-description">
-          Meghmani Lifesciences Ltd is a subsidiary of Meghmani Group, one of
-          India’s largest Paracetamol manufacturers with a turnover of more than
-          US$ 1 Billion. Meghmani Group has global footprints in 75+ countries
-          with a dedicated workforce of more than 6000 employees. <br />
-          <br />
-          As innovators in healthcare, our primary commitment lies in enhancing
-          the well-being of individuals, families, and communities alike.
-          Propelled by our expertise in Lifesciences, we are constantly at the
-          forefront of creating transformative healthcare solutions.
+        At Meghmani Lifesciences Ltd, we're more than just a leading name in healthcare. We're a collective of innovative minds committed to transforming the way health and well-being are perceived and managed. <br></br><br></br>   
+        Every day, we strive to live up to our promise - to empower everyone to live their healthiest life. This is who we are, this is what drives us - Meghmani Lifesciences Ltd, nurturing health and wellbeing.
         </p>
-         {/* Contact Us Button */}
-         <button className="About-us-button">About Us</button>
-        </div>
-    </div>
-  );
+
+        {/* Life at Meghmani Life Sciences LTD */}
+      <div className="life-heading">Life at Meghmani Life Sciences LTD</div>
+    
+      <div className="lottie-animation">
+        
+      </div>
+      </div>
+    </>
+    );
 };
 
 export default Aboutussection;

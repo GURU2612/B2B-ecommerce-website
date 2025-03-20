@@ -1,0 +1,54 @@
+.outer-Evolution-container {
+    position:absolute;
+    width: 90%;
+    height: 734px;
+    padding-left: 5%;
+    padding-right: 5%;
+  
+    background-color: #F7F2F8; /* Light background for visibility */
+    margin: 0 auto; /* Centers the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3358px;
+    left: 0px;
+  }
+
+  
+/* Evolution Heading */
+.evolution-heading {
+    position: absolute;
+    left: 144px;
+    top: 45px;
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px; /* 124% */
+    color: #6E3F77;
+  }
+
+  
+/* Our Professional Journey Heading */
+.professional-journey-heading {
+    position: absolute;
+    left: 144px;
+    top: 86px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px; /* 120% */
+    color: #FC9B3B;
+  }
+
+  
+/* Image 19 */
+.evolution-image {
+    position: absolute;
+    width: 1249px;
+    height: 403px;
+    left: 144px;
+    top: 235px;
+    background-size: cover;
+  }

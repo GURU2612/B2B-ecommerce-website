@@ -1,0 +1,163 @@
+.welcomesection{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    top:696px;
+    left: 0;
+    z-index: 1000;
+}
+
+  .about-us-image {
+    position: absolute;
+    width: 552px;
+    height: 516px;
+    left: 143px;
+    top: 150px;
+    /* background: url("Media (7).jpg") no-repeat center center / cover; */
+    border-radius: 10px;
+  }
+
+/* Rectangle Box */
+.rectangle-box1 {
+  position: absolute;
+    width: 174px;
+    height: 140px;
+    left: 590px;
+    top: 100px;
+    background: #ffffff;
+    box-shadow: 0px 10px 15px rgba(106, 42, 119, 0.1);
+    border-radius: 10px;
+}
+
+.rectangle-box2 {
+  position: absolute;
+    width: 174px;
+    height: 140px;
+    left: 45px;
+    top: 200px;
+    background: #ffffff;
+    box-shadow: 0px 10px 15px rgba(106, 42, 119, 0.1);
+    border-radius: 10px;
+}
+
+.rectangle-box3 {
+  position: absolute;
+    width: 174px;
+    height: 140px;
+    left: 590px;
+    top: 450px;
+    background: #ffffff;
+    box-shadow: 0px 10px 15px rgba(9, 9, 9, 0.1);
+    border-radius: 10px;
+}
+
+.rectangle-box4 {
+  position: absolute;
+    width: 174px;
+    height: 140px;
+    left: 45px;
+    top: 600px;
+    background: #ffffff;
+    box-shadow: 0px 10px 15px rgba(106, 42, 119, 0.1);
+    border-radius: 10px;
+}
+
+.rectangle-text {
+  font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    color: #6E3F77;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.rectangle-subtext {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  color: #333333;
+  margin-top: 5px;
+  top: 10px;
+  left: 50px;
+}
+
+.welcome-text {
+  position: absolute;
+  width: 185px;
+  height: 34.24px;
+  left: 880px;
+  top: 130px;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  color: #6E3F77;
+}
+
+.company-name {
+  position: absolute;
+  width: 514px;
+  height: 48px;
+  left: 895px;
+  top: 172px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FC9B3B;
+}
+
+.welcome-description {
+  position: absolute;
+  width: 509px;
+  height: 245px;
+  left: 895px;
+  top: 260px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #282828;
+  text-align: left;
+}
+
+
+/* About Us Button */
+.welcome-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 14px 8px 10px;
+  gap: 5px;
+
+  position: absolute;
+  width: 126px;
+  height: 42.4px;
+  left: 895px;
+  top: 580px;
+  background: #FC9B3B;
+  border: 0.5px solid #FFF7EB;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  
+}
+
+.welcome-button:hover {
+  background: #e68933;
+}
