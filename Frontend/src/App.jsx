@@ -19,6 +19,8 @@ import Aboutussection from './Content/Aboutussection/Aboutussection';
 import Recognition from './Content/Recognition/Recognition';
 import Management from './Content/Management/Management';
 import Evolution from './Content/Evolution/Evolution';
+import Contact from './Content/Contact/Contact';
+
 
 
 
@@ -32,6 +34,7 @@ function App() {
     <>
       <Toplink/>    
       <Navbar/>    
+      <Contact/>
       {/* <Herosection/>
       <Welcomesection/>
       <Areaoffocus/>
@@ -41,14 +44,14 @@ function App() {
       <Enhance/>
       <Vision/>
       <Blog/> */}
-      <Banner/>
-      <Aboutussection/>
+      {/* <Banner/> */}
+      {/* <Aboutussection/>
       <Valuesection/>
       <Recognition/> 
       <Management/> 
       <Evolution/>
-      <Blog/>
-      <Footer/> 
+      <Blog/> */}
+      {/* <Footer/>  */}
 
       
       
