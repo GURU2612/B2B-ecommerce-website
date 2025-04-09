@@ -1,15 +1,12 @@
 /* Top Bar */
 .top-bar {
-    position: absolute;
-    width: 90%;
+    width: 80%;
     height: 50px;
-    top: 0;
-    left: 0;
     background: #3F2444;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 10%;
     z-index: 1000;
 }
 
@@ -19,35 +16,35 @@
     align-items: center;
     gap: 12px;
     padding-right: 40px;
-    
-
 }
 
-.social-links .icon-wrapper {
+.icon-wrapper {
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes it a perfect circle */
     background: white;
     transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional for depth */
 }
 
-.social-links .top-icon {
-    width: 20px;
-    height: 20px;
+.top-icon {
+    font-size: 18px;
     color: #3F2444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: color 0.3s ease-in-out;
 }
 
-/* Hover Effect */
-.social-links .icon-wrapper:hover {
+.icon-wrapper:hover {
     background: #f3b431;
     transform: scale(1.1);
 }
 
-.social-links .top-icon:hover {
+.icon-wrapper:hover .top-icon {
     color: white;
 }
 
@@ -55,7 +52,6 @@
 .top-links {
     display: flex;
     align-items: center;
-    text-decoration: underline;
     gap: 15px;
 }
 
@@ -70,13 +66,6 @@
 
 .top-links a:hover {
     color: #f3b431;
-}
-
-/* Divider */
-.divider {
-    width: 1px;
-    height: 20px;
-    background: white;
 }
 
 /* Responsive Design */
@@ -131,7 +120,6 @@
     }
 
     .top-icon {
-        width: 18px;
-        height: 18px;
+        font-size: 18px;
     }
 }

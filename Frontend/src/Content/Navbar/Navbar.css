@@ -1,23 +1,19 @@
 /* Navbar Container */
 .navbar-container {
-    position: absolute;
-    top: 50px;
-    left: 50%;
+
     width: 100%;
-    height: 114px;
-    padding: 0 5%;
-    
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    background: #FFFFFF;
-    border-bottom: 1px solid #E5EFFF;
-    
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-bottom: 1px solid #e5efff;
     box-sizing: border-box;
-    transform: translateX(-50%);
     z-index: 1000;
-}
+  }
+  
 
 
 /* Logo */
@@ -29,7 +25,7 @@
 /* Navigation Menu */
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 /* Navigation Links */
@@ -61,14 +57,31 @@
     padding: 10px 20px;
 }
 
-/* Icons Container */
+
 .nav-icons {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 35px;
+    margin-top:10px;
+    
 }
 
-/* Individual Icon */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .login-signup {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+
 .search-icon {
     width: 40px;
     height: 40px;
@@ -79,14 +92,31 @@
     cursor: pointer;
 }
 
-/* Icon Styling */
 .search-icon svg {
     width: 40px;
     height: 40px;
     fill: #FC9B3B;
 }
 
-/* Responsive Design */
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    cursor: pointer;
+}
+
+
+.profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: #FC9B3B;
+}
+
+
+
 @media (max-width: 1024px) {
     .nav-menu {
         gap: 20px;
@@ -156,3 +186,5 @@
         height: 22px;
     }
 }
+
+

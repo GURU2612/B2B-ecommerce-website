@@ -32,5 +32,4 @@ const Aboutussection = () => {
     </>
     );
 };
-
 export default Aboutussection;

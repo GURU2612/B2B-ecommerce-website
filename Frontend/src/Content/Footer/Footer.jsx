@@ -1,78 +1,67 @@
 import React from "react";
 import './Footer.css';
-import { FaInstagram, FaLinkedinIn,  FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
-import logo from "../../assets/images/meghmanilogo.png";
-import { IoLocationSharp } from "react-icons/io5";  
+import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
+import logo from "../../assets/images/meghmanilogo.png";
 
 const Footer = () => {
   return (
-    <div className="outer-footer-container">
-      <div className="footer-logo">
-        <img src={logo} alt="Footer Logo" />
-      </div>
-      <p className="footer-text">
-        Meghmani Life Sciences fosters a culture of innovation, aiming to improve individual, family, and community well-being through our life-changing healthcare solutions.
-      </p>
-
-              <div className="footer-social-links">
-                  <a href="#" className="icon-wrapper"><FaInstagram className="top-icon" /></a>
-                  <a href="#" className="icon-wrapper"><FaLinkedinIn className="top-icon" /></a>
-                  <a href="#" className="icon-wrapper">< FaFacebookF className="top-icon" /></a>
-                  <a href="#" className="icon-wrapper"><FaTwitter className="top-icon" /></a>
-              </div>
-
-        <div className="quick-contact">Quick Contact</div>
-        <div className="frame-phone" ><FaPhoneVolume className="frame-phone" /></div> {/* Add an icon or leave it blank */}
-        <div className="phone-number">07926812827</div>
-        <div className="get-in-touch">GET IN TOUCH</div>
-        <p className="footer-description">
-        Siddhivinayak Tower, 'B' wing, 7th Floor, (Nr. Kataria Arcade) Makarba, SG Highway, Ahmedabad – 380051, Gujarat
-        </p>
-        <div className="frame-location">
-        <IoLocationSharp className="frame-location"/>
-      </div>
-
-        {/* Quick Links */}
-        <div className="footer-quick-links">Quick Links</div>
-
-        <a href="/" className="footer-home">Home</a>
-        <a href="/" className="footer-aboutus">About Us</a>
-        <a href="/" className="footer-doctors">Doctors</a>
-        <a href="/" className="footer-contactus">Contact Us</a>
-        <a href="/" className="footer-careers">Careers</a>
-        <a href="/" className="footer-blog">Blog</a>
-
-        <div className="footer-areaoffocus">Area Of Focus</div>
-        <div className="footer-respiratory">Respiratory</div>
-        <div className="footer-neuropathy">Neuropathy</div>
-        <div className="footer-antiinflammatory">Anti inflammatory</div>
-        <div className="footer-nutraceuticals">Nutraceuticals</div>
+    <footer className="footer-container">
+      <div className="footer-top">
+        <div className="footer-logo-section">
+          <div className="footer-logo">
+            <img src={logo} alt="Meghmani Life Sciences" />
+          </div>
+          <p className="footer-description-text">
+            Meghmani Life Sciences fosters a culture of innovation, aiming to improve individual, family, and community well-being through our life-changing healthcare solutions.
+          </p>
+          <div className="footer-socials">
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedinIn /></a>
+            <a href="#"><FaFacebookF /></a>
+            <a href="#"><FaTwitter /></a>
+          </div>
+        </div>
+        
+        
 
 
+        <div className="footer-contact-section">
+          <h3>Get in Touch</h3>
+          <p><IoLocationSharp /> Siddhivinayak Tower, 'B' wing, 7th Floor, (Nr. Kataria Arcade) Makarba, SG Highway, Ahmedabad – 380051, Gujarat</p>
+          <a href="/"><IoIosMail /> info@meghmanilife.com</a>
+          <a href="/"><FaPhoneVolume className="phonevolume"/> 07926812827</a>
 
-      {/* Email Address */}
-      <p className="email-address">info@meghmanilife.com</p>
+        </div>
 
-      <div className="frame-email">
-      <IoIosMail className="frame-email"/>
+        <div className="footer-links-section">
+          <h3>Quick Links</h3>
+          <a href="/">Home</a>
+          <a href="/">About Us</a>
+          <a href="/">Doctors</a>
+          <a href="/">Contact Us</a>
+          <a href="/">Careers</a>
+          <a href="/">Blog</a>
+        </div>
+
+        <div className="footer-focus-section">
+          <h3>Area of Focus</h3>
+          <a href="/">Respiratory</a>
+          <a href="/">Neuropathy</a>
+          <a href="/">Anti-inflammatory</a>
+          <a href="/">Nutraceuticals</a>
+        </div>
       </div>
 
+      <hr className="footer-divider" />
 
-      <div className="phone-number-bottom">07926812827</div>
-      <div className="frame-phone-bottom" ><FaPhoneVolume className="frame-phone-bottom" /></div> {/* Add an icon or leave it blank */}
-
-        {/* Horizontal Line */}
-        <div className="footer-line"></div>
-         {/* Copyright Text */}
-      <p className="footer-copyright">Copyright © 2024 - All rights reserved</p>
-       {/* Developed by Text */}
-       <p className="footer-developed">Design and developed by Maharshi Patel</p>
-
-    </div>
-    
-    
+      <div className="footer-bottom">
+        <p>© 2024 Meghmani Life Sciences. All rights reserved.</p>
+        <p>Design and developed by Maharshi Patel</p>
+      </div>
+    </footer>
   );
 };
 

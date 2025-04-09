@@ -1,517 +1,205 @@
-.outer-footer-container {
-  position:absolute;
-    width: 90%;
-    height: 630px;
-    padding-left: 5%;
-    padding-right: 5%;
-  
-    background-color: #3F2444; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 7094px;
-    left: 0px;
-}
-
-/* Main Logo inside Footer */
-.footer-logo {
-  position: absolute;
-  width: 301.26px;
-  height: 162px;
-  left: 141px;
-  top: -2px;
-
-  background: #FBFDFF;
-  box-shadow: 0px 4px 16px rgba(0, 74, 139, 0.15);
-  backdrop-filter: blur(7px);
-  border-radius: 0px 0px 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* Image inside Footer Logo */
-.footer-logo img {
-  position: absolute;
-  width: 292px;
-  height: 135px;
-  left: 8px;
-  top: 14px;
-  object-fit: contain;
-}
-
-
-/* Footer Text */
-.footer-text {
-  position: absolute;
-  width: 310px;
-  height: 168px;
-  left: 143px;
-  top: 210.2px;
-
+.footer-container {
+  width: 80%;
+  height:628px;
+  background-color: #3F2444;
+  color: #fff;
+  padding-left:10% ;
+  padding-right: 10%;
   font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+/* 
+.footer-logo-section {
+  flex: 1 1 50px;
+} */
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #FBFDFF;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 16px rgba(0, 74, 139, 0.15);
+  max-width: 300px;
+}
+
+
+.footer-logo img {
+  display: block;
+  width: 202px;
+  height: auto;
+  
+}
+
+.footer-description-text {
+  margin-top: 50px;
+  margin-bottom: 20px;
   font-size: 20px;
-  line-height: 28px;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  
-  color: #FFFFFF;
+  line-height: 26px;
+  width: 337px;
+  height: 168px;
 }
 
-
-/* Social Media Links */
-.footer-social-links {
-  position:absolute;
+.footer-socials {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-right: 40px;
-  top:450px;
-  left:143px;
-  
-
+  gap: 10px;
 }
-
-.footer-social-links .icon-wrapper {
-  width: 30px;
-  height: 30px;
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #3F2444;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: white;
-  transition: background 0.3s ease-in-out, transform 0.2s;
+  transition: all 0.3s ease;
+  font-size: 24px; /* Adjust icon size if needed */
 }
 
-.footer-social-links .top-icon {
-  width: 20px;
-  height: 20px;
-  color: #3F2444;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.footer-social-links .icon-wrapper:hover {
-  background: #f3b431;
+.footer-socials a:hover {
+  background-color: #f3b431;
+  color: #fff;
   transform: scale(1.1);
 }
 
-.footer-social-links .top-icon:hover {
-  color: white;
+
+.footer-contact-section,
+.footer-links-section,
+.footer-focus-section {
+  margin-top: 150px;
+  flex: 1 1 220px;
 }
 
-
-/* Quick Contact */
-.quick-contact {
-  position: absolute;
-  width: 132px;
-  height: 28px;
-  left: 546px;
-  top: 62px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-
-  color: #FFFFFF;
-}
-
-.frame-phone {
-  position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 275px;
-    top: 55px;
-    /* background-color: #FFFFFF; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Phone Number */
-.phone-number {
-  position: absolute;
-  width: 212px;
-  height: 42px;
-  left: 593px;
-  top: 105px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 42px;
-  color: #FFFFFF;
-}
-
-.get-in-touch {
-  position: absolute;
-  width: 167px;
-  height: 28px;
-  left: 546px;
-  top: 189px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
+.footer-contact-section h3,
+.footer-links-section h3,
+.footer-focus-section h3 {
   font-size: 24px;
-  line-height: 28px;
-  color: #FFFFFF;
+  margin-bottom: 24px;
+  text-transform: uppercase;
 }
 
-/* Footer Description */
-.footer-description {
-  position: absolute;
-  width: 271px;
-  height: 140px;
-  left: 578px;
-  top: 241px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  color: #FFFFFF;
-  text-align: left;
+.footer-links-section a{
+  width:90px;
+  /* margin: 10px 0; */
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+/* .footer-contact-section p, */
+.footer-focus-section a {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffff;
+  text-decoration: none;
 }
 
-/* Second Frame (New at Left: 546px, Top: 241px) */
-.frame-location {
-  position: absolute;
+.footer-contact-section svg {
   width: 24px;
   height: 24px;
-  left: 273px;
-  top: 130px;
-  /* background-color: #FFFFFF; */
-  /* border-radius: 50%; */
+  /* margin-right: 10px; Optional: to add spacing between icon and text */
+  flex-shrink: 0;
+}
+
+.footer-contact-section p {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 🔥 Align icon to the top */
+  gap: 5px;
+  padding-top:5px ;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
 }
 
-/* Email Address */
-.email-address {
-  position: absolute;
-  width: 227px;
-  height: 28px;
-  left: 576px;
-  top: 405px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  
-  color: #FFFFFF;
-}
-
-.frame-email {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 273px;
-  top: 213px;
-  /* background-color: #FFFFFF; */
-  /* border-radius: 50%; */
+.footer-contact-section a {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
+  align-items: flex-start; /* 🔥 Align icon to the top */
+  gap: 5px;
+  padding-top:5px ;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
 }
 
-.phone-number-bottom{
-  position: absolute;
-    width: 123px;
-    height: 28px;
-    left: 576px;
-    top: 480px;
 
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-
-    color: #FFFFFF;
+svg.phonevolume {
+  margin-top: 5px;
+  height: 18px;
 }
 
-.frame-phone-bottom{
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 275px;
-  top: 243px;
-  /* background-color: #FFFFFF; */
-  /* border-radius: 50%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.footer-links-section a {
+  color: #fff;
+  padding-bottom: 24px;
+  text-decoration: none;
 }
 
-/* Horizontal Line (Line 25) */
-.footer-line {
-  position: absolute;
-  width: 1250px;
-  height: 0px;
-  left: calc(50% - 1250px/2);
-  top: 570px;
-  
+.footer-links-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-divider {
+  margin: 40px 0 20px;
   border: 1px solid #F7F2F8;
 }
 
-
-/* Copyright Text */
-.footer-copyright {
-  position: absolute;
-  width: 278px;
-  height: 24px;
-  left: calc(50% - 278px/2 - 483px);
-  top: 566px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+.footer-bottom {
   display: flex;
-  align-items: center;
-  text-align: center;
-
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
   color: #F7F2F8;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-/* Developed by Text */
-.footer-developed {
-  position: absolute;
-  width: 343px;
-  height: 24px;
-  left: calc(50% - 343px/2 + 447.5px);
-  top: 566px;
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
 
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+
+.footer-quick-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+  margin-bottom: -100px; /* pull up the following section visually */
+  flex: 1 1 220px;
+}
+
+.quick-contact-item {
   display: flex;
   align-items: center;
-  text-align: center;
-
-  color: #F7F2F8;
+  gap: 10px;
+  font-size: 18px;
+  color: #fff;
 }
 
-/* Quick Links */
-.footer-quick-links {
-  position: absolute;
-  width: 151px;
-  height: 28px;
-  left: 884px;
-  top: 189px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-
-.footer-home {
-  position: absolute;
-  width: 57px;
-  height: 28px;
-  left: 884px;
-  top: 261px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-  text-decoration: none; /* Removes underline */
-}
-
-
-.footer-aboutus {
-  position: absolute;
-  width: 87px;
-  height: 28px;
-  left: 884px;
-  top: 313px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-  text-decoration: none; /* Removes underline */
-}
-
-
-.footer-doctors {
-  position: absolute;
-  width: 57px;
-  height: 28px;
-  left: 884px;
-  top: 365px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-  text-decoration: none; /* Removes underline */
-}
-
-
-
-.footer-contactus {
-  position: absolute;
-  width: 104px;
-  height: 28px;
-  left: 884px;
-  top: 417px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-  text-decoration: none; /* Removes underline */
-}
-
-.footer-careers {
-  position: absolute;
-  width: 73px;
-  height: 28px;
-  left: 884px;
-  top: 469px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-  text-decoration: none; /* Removes underline */
-}
-
-.footer-blog {
-  position: absolute;
-  width: 49px;
-  height: 28px;
-  left: 884px;
-  top: 521px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-  text-decoration: none; /* Removes underline */
-}
-
-.footer-areaoffocus {
-  position: absolute;
-  width: 201px;
-  height: 28px;
-  left: 1171px;
-  top: 189px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-
-.footer-respiratory {
-  position: absolute;
-  width: 107px;
-  height: 28px;
-  left: 1171px;
-  top: 261px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-}
-
-.footer-neuropathy {
-  position: absolute;
-  width: 107px;
-  height: 28px;
-  left: 1171px;
-  top: 313px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-}
-
-.footer-antiinflammatory {
-  position: absolute;
-  width: 167px;
-  height: 28px;
-  left: 1171px;
-  top: 365px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
-}
-
-
-.footer-nutraceuticals {
-  position: absolute;
-  width: 107px;
-  height: 28px;
-  left: 1171px;
-  top: 417px;
-
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; /* 140% */
-
-  color: #FFFFFF;
+.quick-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #fff;
 }

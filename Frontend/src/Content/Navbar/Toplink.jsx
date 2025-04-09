@@ -1,30 +1,41 @@
-import { useState } from "react";
-
-import { FaInstagram, FaLinkedinIn,  FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa";
 import "./Toplink.css";
 
+const socialIcons = [
+  { icon: <FaInstagram />, url: "#" },
+  { icon: <FaLinkedinIn />, url: "#" },
+  { icon: <FaFacebookF />, url: "#" },
+  { icon: <FaTwitter />, url: "#" },
+];
 
-const Navbar = () => {
-    
-  
-    return (
-      <header>
-        {/* Top Bar */}
-        <div className="top-bar">
+const topLinks = [
+  { label: "Blogs", url: "#" },
+  { label: "Careers", url: "#" },
+  { label: "Contact Us", url: "#" },
+];
+
+const Toplink = () => {
+  return (
+    <header>
+      <div className="top-bar">
         <div className="social-links">
-            <a href="#" className="icon-wrapper"><FaInstagram className="top-icon" /></a>
-            <a href="#" className="icon-wrapper"><FaLinkedinIn className="top-icon" /></a>
-            <a href="#" className="icon-wrapper">< FaFacebookF className="top-icon" /></a>
-            <a href="#" className="icon-wrapper"><FaTwitter className="top-icon" /></a>
+          {socialIcons.map((item, index) => (
+            <a key={index} href={item.url} className="icon-wrapper">
+              <span className="top-icon">{item.icon}</span>
+            </a>
+          ))}
         </div>
+
         <div className="top-links">
-          <a href="#">Blogs</a>
-          <a href="#">Careers</a>
-          <a href="#">Contact Us</a>
+          {topLinks.map((link, index) => (
+            <a key={index} href={link.url}>
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
-      </header>
+    </header>
   );
 };
 
-export default Navbar;
+export default Toplink;
