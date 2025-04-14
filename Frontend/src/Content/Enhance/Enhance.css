@@ -1,12 +1,12 @@
-.outer-enhance-container {
+/* .outer-enhance-container {
     position:absolute;
     width: 90%;
     height: 800px;
     padding-left: 5%;
     padding-right: 5%;
   
-    background-color: #ffffff; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
+    background-color: #ffffff; 
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
   }
   
   
-  /* New Heading inside outer-enhance */
+  
   .outer-enhance-heading1 {
     position: absolute;
     width: 251px;
@@ -78,7 +78,7 @@
   }
   
   
-  /* Paragraph inside outer-enhance */
+  
   .outer-enhance-paragraph1 {
     position: absolute;
     width: 628px;
@@ -89,13 +89,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
     letter-spacing: -0.006em;
     text-align: left;
     color: #282828;
   }
   
-  /* Rotated Line */
+  
   .outer-enhance-line1 {
     position: absolute;
     width: 100px;
@@ -110,7 +110,7 @@
   }
   
   
-  /* New Heading inside outer-enhance */
+  
   .outer-enhance-heading2 {
     position: absolute;
     width: 251px;
@@ -129,7 +129,7 @@
   }
   
   
-  /* Paragraph inside outer-enhance */
+  
   .outer-enhance-paragraph2 {
     position: absolute;
     width: 628px;
@@ -140,13 +140,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
     letter-spacing: -0.006em;
     text-align: left;
     color: #282828;
   }
   
-  /* Rotated Line */
+  
   .outer-enhance-line2 {
     position: absolute;
     width: 100px;
@@ -161,7 +161,7 @@
   }
   
   
-  /* New Heading inside outer-enhance */
+  
   .outer-enhance-heading3 {
     position: absolute;
     width: 351px;
@@ -180,7 +180,7 @@
   }
   
   
-  /* Paragraph inside outer-enhance */
+  
   .outer-enhance-paragraph3 {
     position: absolute;
     width: 628px;
@@ -191,13 +191,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
     letter-spacing: -0.006em;
     text-align: left;
     color: #282828;
   }
   
-  /* Rotated Line */
+  
   .outer-enhance-line3 {
     position: absolute;
     width: 100px;
@@ -213,7 +213,7 @@
   
   
   
-  /* New Heading inside outer-enhance */
+  
   .outer-enhance-heading4 {
     position: absolute;
     width: 551px;
@@ -232,7 +232,7 @@
   }
   
   
-  /* Paragraph inside outer-enhance */
+ 
   .outer-enhance-paragraph4 {
     position: absolute;
     width: 628px;
@@ -243,13 +243,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
     letter-spacing: -0.006em;
     text-align: left;
     color: #282828;
   }
   
-  /* Rotated Line */
+  
   .outer-enhance-line4 {
     position: absolute;
     width: 100px;
@@ -261,4 +261,92 @@
     order: 1;
     flex-grow: 0;
     top: 640px;
+  } */
+
+
+  .outer-enhance-container {
+    width: 100%;
+    /* padding: 60px 5%; */
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    gap: 40px;
   }
+  
+  .enhance-left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+  }
+  
+  .enhancing-quality-text {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    color: #6E3F77;
+    margin-bottom: 0px;
+    margin-left: 150px;
+  }
+  
+  .better-tomorrow-text {
+    width: 700px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FC9B3B;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-left: 150px;
+  }
+  
+  .enhance-image {
+    width: 100%;
+    height: 540px;
+    margin-left: 150px;
+    background-color: #FC9B3B;
+    border-radius: 12px;
+  }
+  
+  .enhance-right {
+    flex: 1;
+    min-width: 300px;
+    margin:120px;
+    max-width: 630px;
+  }
+  
+  .enhance-block {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  .enhance-line {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 2px;
+    height: 100%;
+    background-color: #6E3F77;
+  }
+  
+  .enhance-heading {
+    font-family: 'Inter';
+    font-size: 38px;
+    font-weight: 500;
+    color: #282828;
+    margin-bottom: 10px;
+  }
+  
+  .enhance-paragraph {
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 24px;
+    color: #282828;
+  }
+  

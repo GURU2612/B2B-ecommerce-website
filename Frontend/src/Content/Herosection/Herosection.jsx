@@ -1,42 +1,41 @@
 import React from "react";
 import "./Herosection.css";
-import i1 from "../../assets/images/bannerimage.png";
-import i2 from "../../assets/images/dnastyle.png";
+import bannerImage from "../../assets/images/bannerimage.png";
+import dnaStyle from "../../assets/images/dnastyle.png";
+import ellipse from "../../assets/images/Ellipse.png";
 
 
 const Herosection = () => {
   return (
-    <div className="hero-container">
-      <div className="ellipse"></div>
-      <h2 className="hero-text">Health & Happiness</h2>
-      <h2 className="hero-subtext">In the Heart of</h2>
-      <h1 className="hero-title">Trust, We Thrive</h1>
-      <div className="group-3">
-        <div className="line"></div>
-        <p className="hero-description">
-          It is a long established fact that a reader will be distracted.
-        </p>
+    <section className="hero-section">
+      <div className="hero-content">
+        <h2 className="hero-heading">Health & Happiness</h2>
+        <h2 className="hero-subheading">In the Heart of</h2>
+        <h1 className="hero-title">Trust, We Thrive</h1>
+
+        <div className="hero-description-block">
+          <div className="vertical-line" />
+          <p className="hero-description">
+            It is a long established fact that a reader will be distracted.
+          </p>
+        </div>
+
+        <button className="hero-button">Contact Us Now</button>
       </div>
-      <button className="contact-button">Contact Us Now</button>
-        <div class="hero-image">
-        <img src={i1} alt="Hero Image">
-        </img>
-        </div>
 
-        <div class="frame-image">
-        <img src={i2} alt="Decorative Frame">
-        </img>
-        </div>
-       
-        {/* Slider Indicator */}
-        <div className="slider-indicator">
-        <div className="slider-dot"></div>
-        <div className="slider-dot active"></div>
-        <div className="slider-dot"></div>
-        </div>
+      <div className="hero-image-wrapper">
+        <img src={dnaStyle} alt="DNA style" className="dna-frame" />
+        <img src={bannerImage} alt="Product" className="product-image" />
+        <img src={ellipse} alt="bg" className="ellipse-image" />
 
-    </div>
-    
+      </div>
+
+      <div className="slider-indicators">
+        <span className="dot" />
+        <span className="dot active" />
+        <span className="dot" />
+      </div>
+    </section>
   );
 };
 

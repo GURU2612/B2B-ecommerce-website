@@ -1,114 +1,87 @@
-.outer-Aboutussection-container {
-    position:absolute;
-    width: 90%;
-    height: 638px;
-    padding-left: 5%;
-    padding-right: 5%;
-  
-    background-color: #ffffff; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
+
+  .aboutus-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 4rem 5%;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: 507px;
-    left: 0px;
   }
-
   
-/* About Image Container (formerly rectangle-box) */
-.about-image-container {
-    position: absolute;
-    width: 615px;
-    height: 450px;
-    left: 143px;
-    top: 92px;
+  .aboutus-content {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+  }
+  
+  .aboutus-image-wrapper {
     background: #E6D6E9;
     border-radius: 10px;
+    /* padding: 1rem; */
+    height: 450px;
+    flex: 1 1 500px;
+    width: 615px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
-
-  /* Member Image */
-.member-image {
-    position: absolute;
-    width: 596px;
-    height: 344px;
-    left: 9px;
-    top: 106px;
-    background-size: cover;
-    background-position: center;
+  
+  .aboutus-image {
+    max-width: 100%;
     border-radius: 10px;
   }
   
-  /* About Us Heading */
-.about-heading {
-    position: absolute;
-    width: 185px;
-    height: 34.24px;
-    left: 780px;
-    top: 97px;
+  .aboutus-text-section {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  
+  .aboutus-heading {
     font-family: 'Noto Serif', serif;
     font-style: italic;
     font-weight: 400;
+    margin: 0px;
     font-size: 34px;
-    line-height: 42px;
     color: #6E3F77;
   }
-
   
-/* Dedicated to Your Wellbeing */
-.about-subheading {
-    position: absolute;
-    width: 548px;
-    height: 48px;
-    left: 795px;
-    top: 131.24px;
+  .aboutus-subheading {
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 36px;
+    margin: 0px;
     color: #FC9B3B;
   }
   
-  /* About Description */
-  .about-description {
-    position: absolute;
-    width: 613px;
-    height: 168px;
-    left: 810px;
-    top: 204px;
+  .aboutus-description {
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 24px; /* 150% */
+    line-height: 1.6;
     color: #282828;
-    text-align: left;
   }
-
   
-/* Life at Meghmani Life Sciences LTD */
-.life-heading {
-    position: absolute;
-    width: 316px;
-    height: 64px;
-    left: 1000px;
-    top: 435px;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    color: #6E3F77;
-    text-align: left;
+  .life-at-meghmani {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
-
   
-/* Lottie Animation */
-.lottie-animation {
-    position: absolute;
+  .lottie-placeholder {
     background-color: #6E3F77;
-    width: 150px;
-    height: 150px;
-    left: 810px;
-    top: 392px;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
   }
+  
+  .life-heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #6E3F77;
+  }
+  

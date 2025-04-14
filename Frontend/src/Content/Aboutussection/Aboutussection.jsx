@@ -1,35 +1,50 @@
 import React from "react";
-import "./Aboutussection.css"; // Import the external CSS file
+import "./Aboutussection.css";
 import memberimage from "../../assets/images/memberimage.png";
-
-
+import Navbar from "../Navbar/Navbar";
+import Banner from "../AboutusBanner/Banner";
+import Valuesection from "../ValueSection/Valuesection";
+import Recognition from "../Recognition/Recognition";
+import Management from "../Management/Management";
+import Evolution from "../Evolution/Evolution";
+import Blog from "../Blog/Blog";
 const Aboutussection = () => {
   return (
     <>
-      <div className="outer-Aboutussection-container">
+    <Banner/>
+    <div className="aboutus-container">
+      {/* <Banner/> */}
+      <div className="aboutus-content">
+        <div className="aboutus-image-wrapper">
+          <img src={memberimage} alt="Team Member" className="aboutus-image" />
+        </div>
 
-            <div className="about-image-container">
-            <img src={memberimage} alt="Team Member" className="member-image" />
-                
-            </div>
-            <div className="about-heading">About Us</div>
-             {/* Dedicated to Your Wellbeing */}
-      <div className="about-subheading">Dedicated to Your Wellbeing</div>
-
-        {/* About Description */}
-        <p className="about-description">
-        At Meghmani Lifesciences Ltd, we're more than just a leading name in healthcare. We're a collective of innovative minds committed to transforming the way health and well-being are perceived and managed. <br></br><br></br>   
-        Every day, we strive to live up to our promise - to empower everyone to live their healthiest life. This is who we are, this is what drives us - Meghmani Lifesciences Ltd, nurturing health and wellbeing.
-        </p>
-
-        {/* Life at Meghmani Life Sciences LTD */}
-      <div className="life-heading">Life at Meghmani Life Sciences LTD</div>
+        <div className="aboutus-text-section">
+          <h2 className="aboutus-heading">About Us</h2>
+          <h3 className="aboutus-subheading">Dedicated to Your Wellbeing</h3>
+          <p className="aboutus-description">
+            At Meghmani Lifesciences Ltd, we're more than just a leading name in healthcare.
+            We're a collective of innovative minds committed to transforming the way health and
+            well-being are perceived and managed. <br /><br />
+            Every day, we strive to live up to our promise - to empower everyone to live their
+            healthiest life. This is who we are, this is what drives us - Meghmani Lifesciences
+            Ltd, nurturing health and wellbeing.
+          </p>
+          <div className="life-at-meghmani">
+            <div className="lottie-placeholder"></div>
+            <span className="life-heading">Life at Meghmani Life Sciences LTD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Valuesection/>
+    <Recognition/>
+    <Management/>
+    <Evolution/>
+    <Blog/>
     
-      <div className="lottie-animation">
-        
-      </div>
-      </div>
     </>
-    );
+  );
 };
+
 export default Aboutussection;

@@ -1,12 +1,12 @@
-.outer-Recognition-container {
+/* .outer-Recognition-container {
     position:absolute;
     width: 90%;
     height: 696px;
     padding-left: 5%;
     padding-right: 5%;
   
-    background-color: #ffffff; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
+    background-color: #ffffff; 
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
   }
 
   
-/* Styles for the heading */
+
 .recognition-heading {
     position: absolute;
     width: 104px;
@@ -27,14 +27,14 @@
     font-style: italic;
     font-weight: 400;
     font-size: 34px;
-    line-height: 42px; /* Matches box height */
+    line-height: 42px; 
     text-align: center;
 
-    color: #6E3F77; /* Primary color */
+    color: #6E3F77; 
 }
 
 
-/* Styles for 'Our Core Values' heading */
+
 .core-values-heading {
     position: absolute;
     width: 307px;
@@ -45,26 +45,25 @@
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    line-height: 48px; /* Matches box height */
-    color: #FC9B3B; /* Secondary color */
+    line-height: 48px; 
+    color: #FC9B3B; 
 }
 
 
-/* Styles for the image */
+
 .recognition-image {
     position: absolute;
     width: 508px;
     height: 446px;
     left: 885px;
     top: 154px;
-    /* background-color: #FC9B3B; */
+    
     background-size: cover;
-    /* box-shadow: 0px 0px 4px rgba(110, 63, 119, 0.7); */
+    
     border-radius: 10px;
 }
 
 
-/* Styles for 'Awards & Recognition' heading */
 .awards-heading-about {
     position: absolute;
     width: 353px;
@@ -76,8 +75,8 @@
     font-style: normal;
     font-weight: 600;
     font-size: 34px;
-    line-height: 42px; /* Matches box height */
-    color: #FC9B3B; /* Secondary color */
+    line-height: 42px; 
+    color: #FC9B3B; 
 }
 
 .awardimg-about1 {
@@ -106,7 +105,7 @@
 }
 
 
-/* Styles for Meghmani Lifesciences description */
+
 .meghmani-description-about {
     position: absolute;
     width: 718px;
@@ -118,12 +117,12 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px; /* 150% line height */
-    color: #282828; /* Black 3 */
+    line-height: 24px; 
+    color: #282828; 
     text-align: left;
 }
 
-/* Styles for the button */
+
 .recognition-button {
     position: absolute;
     width: 185px;
@@ -133,14 +132,13 @@
 
     background-color: transparent;
     border: none;
-    /* border-bottom: 2px solid #6E3F77; Primary 800 */
     font-family: 'Raleway';
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: #6E3F77;
     cursor: pointer;
-    /* transition: 0s ease-in-out; */
+    
 }
 
 .quality-button {
@@ -152,14 +150,14 @@
 
     background-color: transparent;
     border: none;
-    /* border-bottom: 2px solid #6E3F77; Primary 800 */
+   
     font-family: 'Raleway';
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: #6E3F77;
     cursor: pointer;
-    /* transition: 0.3s ease-in-out; */
+    
 }
 
 
@@ -172,14 +170,13 @@
 
     background-color: transparent;
     border: none;
-    /* border-bottom: 2px solid #6E3F77; Primary 800 */
     font-family: 'Raleway';
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: #6E3F77;
     cursor: pointer;
-    /* transition: 0.3s ease-in-out; */
+    
 }
 
 .consistency-button {
@@ -191,17 +188,119 @@
 
     background-color: transparent;
     border: none;
-    /* border-bottom: 2px solid #6E3F77; Primary 800 */
     font-family: 'Raleway';
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: #6E3F77;
     cursor: pointer;
-    /* transition: 0.3s ease-in-out; */
+    
 }
 
 
 .quality-button:hover,.innovation-button:hover,.consistency-button:hover,.recognition-button:hover{
-    border-bottom: 2px solid #6E3F77; /* Primary 800 */
-}
+    border-bottom: 2px solid #6E3F77; 
+} */
+
+
+
+.recognition-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .text-content {
+    flex: 1 1 50%;
+    max-width: 600px;
+  }
+  
+  .image-container {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recognition-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .recognition-heading {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    margin: 0px;
+    color: #6E3F77;
+  }
+  
+  .core-values-heading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #FC9B3B;
+    margin: 0px;
+    margin-bottom: 40px;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 700px;
+    margin-bottom: 20px;
+  }
+  
+  .value-button {
+    background: transparent;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    color: #6E3F77;
+    cursor: pointer;
+    padding-bottom: 5px;
+  }
+  
+  .value-button:hover {
+    border-bottom: 2px solid #6E3F77;
+  }
+  
+  .meghmani-description-about {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282828;
+    text-align: left;
+    margin: 30px 0;
+  }
+  
+  .awards-heading-about {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 34px;
+    color: #FC9B3B;
+    margin-bottom: 16px;
+  }
+  
+  .award-images {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .award-box {
+    width: 252px;
+    height: 72px;
+    background-color: #6E3F77;
+    border-radius: 4px;
+  }
+  

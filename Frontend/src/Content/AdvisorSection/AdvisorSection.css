@@ -1,18 +1,174 @@
-.advisor-section {
-    position:absolute;
-    width: 90%;
-    height: 800px;
-    padding: 5%;
-    background-color: #ffffff; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top:2221px;
-    left: 0px;
-  }
+.advisor-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 40px 30px;
+  font-family: 'Raleway', sans-serif;
+}
 
-  .advisor-heading {
+.advisor-section-left {
+  flex: 1;
+  min-width: 400px;
+  margin-right: 30px;
+}
+
+
+.advisor-section-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.advisor-section-doctor-img {
+  width: 100%;
+  height: auto;
+}
+
+.advisor-section-card-info {
+  background: #8a2be2;
+  color: white;
+  padding: 20px;
+}
+
+.advisor-section-card-info h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+
+.advisor-section-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.advisor-section-desc {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+
+.advisor-section-right {
+  flex: 2;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advisor-section-label {
+  font-style: italic;
+  color: #6a3dad;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.advisor-section-info h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.advisor-section-info h2 span {
+  color: #ff8400;
+}
+
+.advisor-section-info h3 {
+  color: #6a3dad;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.advisor-section-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.advisor-section-read-more {
+  background-color: #ff8400;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+
+.advisor-section-image-box {
+  width: 100%;
+}
+
+.advisor-section-side-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Specialties */
+.advisor-section-specialties {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.advisor-section-specialty-card {
+  width: 120px;
+  text-align: center;
+  position: relative;
+  font-size: 0.85rem;
+}
+
+.advisor-section-specialty-card img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.advisor-section-arrow {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* .advisor-heading {
     position: absolute;
     width: 139px;
     height: 42px;
@@ -155,7 +311,7 @@
   gap: 5px;
 
   position: absolute;
-  width: 126px; /* Adjusted width for longer text */
+  width: 126px; 
   height: 52px;
   left: 566px;
   top: 420px;
@@ -258,7 +414,7 @@
 }
 
 
-/* Background Box */
+
 .extra-image-background {
   box-sizing: border-box;
   position: absolute;
@@ -272,7 +428,7 @@
   border-radius: 4px;
 }
 
-/* SVG inside the background */
+
 .extra-image-svg {
   position: absolute;
   width: 24px;
@@ -281,7 +437,7 @@
   top: calc(50% - 24px/2 + 0.44px);
 }
 
-/* Vector */
+
 .extra-image-svg rect {
   position: absolute;
   left: 37.5%;
@@ -298,7 +454,7 @@
 }
 
 
-/* Background Box */
+
 .extra-image-background2 {
   box-sizing: border-box;
   position: absolute;
@@ -312,7 +468,7 @@
   border-radius: 4px;
 }
 
-/* SVG inside the background */
+
 .extra-image-svg2 {
   position: absolute;
   width: 24px;
@@ -321,7 +477,7 @@
   top: 0px
 }
 
-/* Vector */
+
 .extra-image-svg rect {
   position: absolute;
   left: 37.5%;
@@ -337,15 +493,15 @@
   left: 793px;
   top: 650.61px;
 
-  /* H6 */
+ 
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 28px; /* 140% */
+  line-height: 28px; 
   text-align: center;
 
-  /* primary/800 */
+  
   color: #6E3F77;
 }
 
@@ -357,15 +513,15 @@
   left: 1010px;
   top: 650.61px;
 
-  /* H6 */
+ 
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 28px; /* 140% */
+  line-height: 28px; 
   text-align: center;
 
-  /* primary/800 */
+ 
   color: #6E3F77;
 }
 
@@ -378,14 +534,15 @@
   left: 1218px;
   top: 650.61px;
 
-  /* H6 */
+  
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 28px; /* 140% */
+  line-height: 28px; 
   text-align: center;
 
-  /* primary/800 */
+  
   color: #6E3F77;
-}
+} 
+ */

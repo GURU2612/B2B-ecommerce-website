@@ -1,4 +1,4 @@
-.award-container {
+/* .award-container {
   position: absolute;
   width: 90%;
   height: 446px;
@@ -13,10 +13,9 @@
 .achievements {
   position: absolute;
   left: 141px;
-  /* right: 76.58%; */
+  
   top: 60px;
-  /* bottom: 77.13%; */
-
+  
   font-family: 'Noto Serif';
   font-style: italic;
   font-weight: 400;
@@ -29,9 +28,9 @@
 .good-hands {
   position: absolute;
   left: 141px;
-  /* right: 64.48%; */
+  
   top: 102px;
-  /* bottom: 66.37%; */
+  
 
   font-family: 'Raleway';
   font-style: normal;
@@ -97,4 +96,94 @@
   background-color: #F7F2F8;
   background-size: cover;
   background-position: center;
+} */
+
+
+
+
+
+
+
+
+
+
+.award-container {
+  width: 90%;
+  height: 446px;
+  background: linear-gradient(237.87deg, #BE36A7 0%, #6E3F77 100%);
+  padding: 60px 5%;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  flex: 1;
+  margin-top: 30px;
+  min-width: 300px;
+}
+
+.right-section {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievements {
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  color: #F7F2F8;
+  margin-bottom: 8px;
+}
+
+.good-hands {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFF7EB;
+  margin-bottom: 16px;
+  margin-top: 0px;
+}
+
+.belief-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.clinic-awards {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFF7EB;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.awards-images {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.awards-images img {
+  width: 252px;
+  height: 72px;
+  object-fit: cover;
+  background-color: #F7F2F8;
+  border-radius: 8px;
 }

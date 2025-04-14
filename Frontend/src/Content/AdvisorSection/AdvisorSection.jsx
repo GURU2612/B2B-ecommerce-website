@@ -1,79 +1,61 @@
 import React from "react";
-import "./AdvisorSection.css"
-import drimg from "../../assets/images/doctor.png";
-import advisorimg from "../../assets/images/advisorimage.png";
-import extraadvisorimg from "../../assets/images/extraadvisor.png";
+import "./AdvisorSection.css";
+import doctorImage from "../../assets/images/doctor.png";
+import advisorimage from "../../assets/images/advisorimage.png";
+import extraadvisor from "../../assets/images/extraadvisor.png";
 
-
-
-
-
-
-const AdvisorSection = () => {
-    return (
-      <div className="advisor-section">
-        <h2 className="advisor-heading">Advisors</h2>
-        <h1 className="team-heading">Team of Consultants</h1>
-        <h3 className="dermatologist-heading">Dermatologist</h3>
-          <p className="advisor-quote">
-            Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born, and I will give you a complete account of the system, and the master-builder of human happiness. Expound the actual teachings of the great explorer of the truth.
-          </p>
-         <div className="advisor-container">
-           <img src={drimg} alt="dr Image"></img>
-            <div className="advisor-gradient">
-            <h2 className="advisor-name">Dr. Mitesh Shah</h2>
-            <p className="advisor-title">Dermatologist</p>
-            <p className="advisor-description">
-            As a tertiary referral ICU to provide state-of-the-art care with the help of very good professionals and infrastructure.
+const Advisorsection = () => {
+  return (
+    <div className="advisor-section-container">
+      {/* Left Doctor Card */}
+      <div className="advisor-section-left">
+        <div className="advisor-section-card">
+          <img src={doctorImage} alt="Doctor" className="advisor-section-doctor-img" />
+          <div className="advisor-section-card-info">
+            <h3>Dr. Mitesh Shah</h3>
+            <p className="advisor-section-title">Dermatologist</p>
+            <p className="advisor-section-desc">
+              As a tertiary referral ICU to provide state of the art care with the help of very good professionals and infrastructure.
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Content */}
+      <div className="advisor-section-right">
+        <div className="advisor-section-info">
+          <p className="advisor-section-label">Advisors</p>
+          <h2><span>Team of </span>Consultants</h2>
+          <h3>Dermatologist</h3>
+          <p className="advisor-section-text">
+            Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and the master-builder of human happiness. Expound the actual teachings of the great explorer of the truth.
+          </p>
+          <button className="advisor-section-read-more">Read More</button>
+        </div>
+
+        {/* Side Image */}
+        <div className="advisor-section-image-box">
+          <img src={advisorimage} alt="Check" className="advisor-section-side-img" />
+        </div>
+
+        {/* Specialties */}
+        <div className="advisor-section-specialties">
+          {[
+            { name: 'Cardiologist', img: extraadvisor, arrow: true },
+            { name: 'Ophthalmologist', img: extraadvisor },
+            { name: 'Gastroologist', img: extraadvisor },
+            { name: 'Hepatologist', img: extraadvisor, arrow: true },
+          ].map((item, index) => (
+            <div className="advisor-section-specialty-card" key={index}>
+              <img src={item.img} alt={item.name} />
+              {item.arrow && <button className="advisor-section-arrow">&gt;</button>}
+              <p>{item.name}</p>
             </div>
-         </div>
-         <div className="advisor-image">
-         <img src={advisorimg} alt="dr Image"></img>
-         </div>
-
-         {/* Additional Image */}
-      <div className="advisor-extra-image1"><img src={extraadvisorimg} alt="Extra Image"></img>
-      
-
-      <div className="extra-image-background">
-          <svg className="extra-image-svg" width="24" height="24">
-            <rect width="24" height="24" fill="none" />
-          </svg>
-        </div>
-        
-      </div>
-      <div className="advisor-extra-image2">
-      <img src={extraadvisorimg} alt="Extra Image"></img>
-
-      </div>
-      <div className="advisor-extra-image3">
-      <img src={extraadvisorimg} alt="Extra Image"></img>
-
-      </div>
-      <div className="advisor-extra-image4">
-      <img src={extraadvisorimg} alt="Extra Image"></img>
-
-      <div className="extra-image-background2">
-          <svg className="extra-image-svg2" width="24" height="24">
-            <rect width="24" height="24" fill="none" />
-          </svg>
+          ))}
         </div>
       </div>
+    </div>
+  );
+};
 
-
-        {/* Cardiologist Section */}
-        <h6 className="cardiologist-heading">Cardiologist</h6>
-        <h6 class="ophthalmologist-heading">Ophthalmologist</h6>
-        <h6 class="Gastrologist-heading">Gastrologist</h6>
-        <h6 class="Hepatologist-heading">Hepatologist</h6>
-
-
-         <button className="advisor-ReadMore-button">Read More</button>
-
-      </div>
-    );
-  };
-  
-  export default AdvisorSection;
-  
+export default Advisorsection;

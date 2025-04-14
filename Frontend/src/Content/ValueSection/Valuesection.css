@@ -1,12 +1,12 @@
-.outer-Valuesection-container {
+/* .outer-Valuesection-container {
     position:absolute;
     width: 90%;
     height: 607px;
     padding-left: 5%;
     padding-right: 5%;
   
-    background-color: #ffffff; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
+    background-color: #ffffff; 
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@
   color: #FC9B3B;
 }
 
-/* Mission Box */
+
 .mission-box {
   position: absolute;
   width: 403px;
@@ -54,12 +54,12 @@
   left: 143px;
   top: 135px;
   filter: drop-shadow(0px 0px 4px rgba(110, 63, 119, 0.7));
-  background: #ffffff; /* Assuming a white background */
+  background: #ffffff; 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* padding: 20px; */
+  
   border-radius: 10px;
 }
 
@@ -70,12 +70,12 @@
   left: 566px;
   top: 135px;
   filter: drop-shadow(0px 0px 4px rgba(110, 63, 119, 0.7));
-  background: #ffffff; /* Assuming a white background */
+  background: #ffffff; 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* padding: 20px; */
+  
   border-radius: 10px;
 }
 
@@ -86,22 +86,22 @@
   left: 989px;
   top: 135px;
   filter: drop-shadow(0px 0px 4px rgba(110, 63, 119, 0.7));
-  background: #ffffff; /* Assuming a white background */
+  background: #ffffff; 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* padding: 20px; */
+
   border-radius: 10px;
 }
 
-/* Hover Effect */
+
 .mission-box:hover,.value-box:hover,.vision-box:hover {
   filter: drop-shadow(0px 0px 4px rgba(110, 63, 119, 0.7));
   background: linear-gradient(85.6deg, #813D82 0%, #B537A2 99.16%);
 }
 
-/* Icon Container */
+
 .mission-icon {
   position: absolute;
   width: 124px;
@@ -116,7 +116,7 @@
 }
 
 
-/* Icon Container */
+
 .vision-icon {
   position: absolute;
   width: 124px;
@@ -131,7 +131,7 @@
 }
 
 
-/* Icon Container */
+
 .value-icon {
   position: absolute;
   width: 124px;
@@ -146,7 +146,7 @@
 }
 
 
-/* Mission Title */
+
 .mission-title {
   position: absolute;
   left: 150px;
@@ -187,7 +187,7 @@
 }
 
 
-/* Mission Description */
+
 .mission-description {
   position: absolute;
   width: 332px;
@@ -228,4 +228,83 @@
   line-height: 28px;
   text-align: center;
   color: #282828;
+} */
+
+.outer-Valuesection-container {
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 60px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.outer-Valuesection-container h2 {
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  color: #6E3F77;
+  margin-bottom: 10px;
+}
+
+.outer-Valuesection-container h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #FC9B3B;
+  margin-bottom: 40px;
+}
+
+.values-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.value-box-common {
+  width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 20px;
+  box-shadow: 0px 0px 4px rgba(110, 63, 119, 0.7);
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.value-box-common:hover {
+  background: linear-gradient(85.6deg, #813D82 0%, #B537A2 99.16%);
+  color: #fff;
+}
+
+.value-box-common:hover h3,
+.value-box-common:hover p {
+  color: #fff;
+}
+
+.icon-circle {
+  width: 124px;
+  height: 124px;
+  background: #F7F2F8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.value-box-common h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #6E3F77;
+  margin-bottom: 16px;
+}
+
+.value-box-common p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #282828;
+  line-height: 28px;
 }

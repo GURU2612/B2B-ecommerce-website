@@ -3,10 +3,11 @@ import { IoSearch} from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import "./Navbar.css";
 import logo from "../../assets/images/meghmanilogo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+const navigate =useNavigate()
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
@@ -22,8 +23,8 @@ const Navbar = () => {
 
       {/* Navigation Menu */}
       <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
-        <a href="/" className="nav-link" onClick={closeMenu}>Home</a>
-        <a href="/about" className="nav-link" onClick={closeMenu}>About</a>
+        <a href="/home" className="nav-link" onClick={()=>navigate("home")}>Home</a>
+        <a href="/about" className="nav-link" onClick={()=>navigate("about")}>About</a>
         <a href="/services" className="nav-link" onClick={closeMenu}>Area of Focus</a>
         <a href="/doctors" className="nav-link" onClick={closeMenu}>Doctors</a>
         <a href="/contact" className="nav-link" onClick={closeMenu}>Contact Us</a>

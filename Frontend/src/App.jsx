@@ -4,7 +4,7 @@ import Layout from './Layout .jsx';
 import Welcomesection from './Content/Welcomesection/Welcomesection.jsx';
 import Aboutussection from './Content/Aboutussection/Aboutussection.jsx';
 import Contact from './Content/Contact/Contact.jsx';
-import Home from './Component/Home/Home.jsx';
+import Home from './Home.jsx';
 
 function App() {
   return (

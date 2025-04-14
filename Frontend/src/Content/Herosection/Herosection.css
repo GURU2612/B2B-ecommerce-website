@@ -1,332 +1,141 @@
-.hero-container {
-    position: absolute;
-    width: 100%;
-    height: 532px;
-    left: 0px;
-    top: 164px;
-    background: #FEF8FF;
-    z-index: 1; 
-  }
-  
-  .ellipse {
-    position: absolute;
-    width: 43vw;  /* Responsive width */
-    height: 42vw; /* Maintain aspect ratio */
-    max-width: 658.56px;
-    max-height: 635.61px;
-    right: 1vh;
-    top: -30vh; /* Adjust position dynamically */
-    background: #E6D6E9;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 1200px) {
-    .ellipse {
-      width: 50vw;
-      height: 50vw;
-      max-width: 500px;
-      max-height: 500px;
-      top: -10vh;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .ellipse {
-      width: 60vw;
-      height: 60vw;
-      max-width: 400px;
-      max-height: 400px;
-      top: -8vh;
-      right: -10vw;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .ellipse {
-      width: 70vw;
-      height: 70vw;
-      max-width: 320px;
-      max-height: 320px;
-      top: -5vh;
-      right: -15vw;
-    }
-  }
-  
-
-  .hero-text {
-    position: absolute;
-    width: 315px;
-    height: 42px;
-    left: 130px;
-    top: 100px;
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 42px;
-    color: #3F2444;
-  }
-
-
-.hero-subtext {
-    position: absolute;
-    width: 274px;
-    height: 48px;
-    left: 143px;
-    top: 135px;
-    font-family: 'raleway', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: #FC9B3B;
-  }
-
-
-.hero-title {
-    position: absolute;
-    width: 375px;
-    height: 56px;
-    left: 143px;
-    top: 180px;
-    font-family: 'raleway', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    color: #FC9B3B;
-  }
-  
-
-/* Group 3 */
-.group-3 {
-    position: absolute;
-    width: 421px;
-    height: 68px;
-    left: 143px;
-    top: 305px;
-    display: flex;
-    align-items: center;
-  }
-  .hero-description {
-    position: absolute;
-    width: 397px;
-    height: 64px;
-    left: 40px;
-    top: -31px;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    color: #282828;
-    text-align: left;
-}
-  
-  /* Line 1 */
-  .line {
-    position: absolute;
-    width: 68px;
-    height: 0px;
-    left: -20px;
-    top: 24px;
-    border: 2px solid #3F2444;
-    transform: rotate(90deg);
-  }
-
-  /* Contact Us Button */
-.contact-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 14px;
-    gap: 5px;
-  
-    position: absolute;
-    width: 200px;
-    height: 52px;
-    left: 155px;
-    top: 397px;
-  
-    background: #FC9B3B;
-    border-radius: 8px;
-    border: none;
-  
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    color: #FFF7EB;
-  
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Hover Effect */
-  .contact-button:hover {
-    background: #e08934;
-    transform: scale(1.05);
-  }
-  
-  /* Active Click Effect */
-  .contact-button:active {
-    background: #c87328;
-    transform: scale(0.98);
-  }
-  
-  .hero-image {
-    position: absolute;
-    width: 30vw;  /* Responsive width */
-    max-width: 449px;
-    height: auto; /* Maintain aspect ratio */
-    right: 7vw;  /* Adjust position dynamically */
-    top: 10vh;
-  }
-  
-  /* Make sure the image scales properly */
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    max-width: 449px;
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 1200px) {
-    .hero-image {
-      width: 35vw;
-      max-width: 400px;
-      right: 3vw;
-      top: 10vh;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .hero-image {
-      width: 40vw;
-      max-width: 350px;
-      right: 2vw;
-      top: 12vh;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .hero-image {
-      width: 80%;
-      max-width: 300px;
-      right: auto; /* Center the image */
-      left: 50%;
-      transform: translateX(-50%);
-      top: 15vh;
-    }
-  }
-  
-  .frame-image {
-    position: absolute;
-    width: 41vw;
-    max-width: 1500px;
-    height: auto;
-    left: 58.5vw;
-    top: -3vh;
-    opacity: 0.7;
-  }
-  /* Make sure the image inside scales properly */
-  .frame-image img {
-    width: 100%;
-    height: auto;
-    max-width: 1500px;
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 1200px) {
-    .frame-image {
-      width: 35vw;
-      max-width: 460px;
-      left: 55vw;
-      top: 85vh;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .frame-image {
-      width: 40vw;
-      max-width: 420px;
-      left: 50vw;
-      top: 80vh;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .frame-image {
-      width: 50vw;
-      max-width: 380px;
-      left: 50%;
-      transform: translateX(-50%) rotate(-90deg);
-      top: 75vh;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .frame-image {
-      width: 80%;
-      max-width: 350px;
-      left: 50%;
-      transform: translateX(-50%) rotate(-90deg);
-      top: 70vh;
-    }
-  }
-  
-
-  /* Slider Indicator Group */
-.slider-indicator {
-    position: absolute;
-    width: 122px;
-    height: 6px;
-    left: 50%;
-    top: 510px;
-    transform: translateX(-50%);
+   .hero-section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* padding: 60px ; */
+    height: 532px;
+    padding-left: 10%;
+    background-color: #FEF8FF;
+    position: relative;
+    flex-wrap: wrap;
   }
   
-  /* Individual Dots */
-  .slider-dot {
-    width: 32px;
-    height: 6px;
-    background: #ffffff;
-    border: 1px solid #6E3F77;
-    border-radius: 12px;
+  .hero-content {
+    flex: 1;
+    max-width: 500px;
+    padding-right: 40px;
   }
   
-  /* Active Dot */
-  .slider-dot.active {
-    background: #6E3F77;
+  .hero-heading {
+    font-size: 34px;
+    color: #3b1b4a;
+    font-weight: 500;
+    font-family: 'Noto Serif', serif;
+    font-style: italic; 
+    line-height: 42px;
+    margin: 0%;
+
+  }
+  
+  .hero-subheading {
+    font-weight: 500;
+    color: #f7941d;
+    font-size: 40px;
+    font-family: raleway;
+    font-weight: bold;
+    margin: 0%;
+    line-height: 48px;
+
+
+
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #f7941d;
+    margin: 0%;
+    line-height: 56px;
+  }
+  
+  .hero-description-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .vertical-line {
+    width: 3px;
+    height: 50px;
+    background-color: #3b1b4a;
+  }
+  
+  .hero-description {
+    width: 300px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0%;
+    
+  }
+  
+  .hero-button {
+    background-color: #f7941d;
+    color: white;
     border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
   }
   
-  /* Responsive Adjustments */
-  @media screen and (max-width: 768px) {
-    .slider-indicator {
-      width: 100px;
-      top: 620px;
-    }
-    .slider-dot {
-      width: 28px;
-      height: 5px;
-    }
+  .hero-button:hover {
+    background-color: #e7821b;
   }
   
-  @media screen and (max-width: 480px) {
-    .slider-indicator {
-      width: 80px;
-      top: 600px;
-    }
-    .slider-dot {
-      width: 24px;
-      height: 4px;
-    }
+  .hero-image-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dna-frame {
+    width: 620px;
+    position: absolute;
+    left:165px;
+    top:-280px;
+    z-index: 1;
+  }
+  
+  .product-image {
+    width: 500px;
+    z-index: 2;
+    left: 220px;
+    top:-210px;
+    position: absolute;
+  }
+  
+  .ellipse-image{
+    width: 700px;
+    top: -268px;
+    left: 115px; 
+    opacity: 40%;
+    position: absolute;
+  }
+
+  .slider-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 25px;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #5c2672;
+    width: 30px;
   }
   

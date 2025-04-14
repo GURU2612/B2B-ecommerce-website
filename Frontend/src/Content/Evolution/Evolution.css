@@ -1,12 +1,12 @@
-.outer-Evolution-container {
+/* .outer-Evolution-container {
     position:absolute;
     width: 90%;
     height: 734px;
     padding-left: 5%;
     padding-right: 5%;
   
-    background-color: #F7F2F8; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
+    background-color: #F7F2F8; 
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
   }
 
   
-/* Evolution Heading */
+
 .evolution-heading {
     position: absolute;
     left: 144px;
@@ -24,12 +24,12 @@
     font-style: italic;
     font-weight: 400;
     font-size: 34px;
-    line-height: 42px; /* 124% */
+    line-height: 42px; 
     color: #6E3F77;
   }
 
   
-/* Our Professional Journey Heading */
+
 .professional-journey-heading {
     position: absolute;
     left: 144px;
@@ -38,12 +38,12 @@
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    line-height: 48px; /* 120% */
+    line-height: 48px; 
     color: #FC9B3B;
   }
 
   
-/* Image 19 */
+
 .evolution-image {
     position: absolute;
     width: 1249px;
@@ -51,4 +51,70 @@
     left: 144px;
     top: 235px;
     background-size: cover;
+  } */
+
+
+
+
+
+  .evolution-container {
+    width: 80%;
+    background-color: #F7F2F8;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .evolution-content {
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+  }
+  
+  .evolution-subheading {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    color: #6E3F77;
+    margin-bottom: 0px;
+    
+  }
+  
+  .evolution-heading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #FC9B3B;
+    margin-bottom: 40px;
+    margin-top: 0px;
+  }
+  
+  .evolution-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Optional: Responsive tweak */
+  @media (max-width: 768px) {
+    .evolution-subheading {
+      font-size: 22px;
+    }
+  
+    .evolution-heading {
+      font-size: 28px;
+    }
+  
+    .evolution-container {
+      padding: 40px 20px;
+    }
+  }
+  
