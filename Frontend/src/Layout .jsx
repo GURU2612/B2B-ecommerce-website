@@ -18,7 +18,14 @@ import Valuesection from './Content/ValueSection/Valuesection';
 import Recognition from './Content/Recognition/Recognition';
 import Management from './Content/Management/Management';
 import Evolution from './Content/Evolution/Evolution';
-import DoctorList from './Content/DoctorList/DoctorList';
+import DoctorList from './Content/DoctorGrid/DoctorGrid';
+import CareerBanner from './Content/CareerBanner/CareerBanner';
+import CareerSection from './Content/Nurturing/Nurturing';
+import CareerHighlights from './Content/CareerHighlights/CareerHighlights';
+import OpportunitySection from './Content/OpportunitySection/OpportunitySection';
+import ApplyForm from './Content/ApplyForm/ApplyForm';
+import DoctorGrid from './Content/DoctorGrid/DoctorGrid';
+
 
 
 
@@ -29,9 +36,16 @@ import DoctorList from './Content/DoctorList/DoctorList';
 const Layout = () => {
   return (
     <>
-      {/* <Toplink />
+      <Toplink />
       <Navbar/>
-      <Herosection/>
+      {/* <CareerBanner/>
+      <CareerSection/>
+      <CareerHighlights/>
+      <OpportunitySection/>
+      <ApplyForm/> */}
+      <DoctorGrid/>
+      <Blog/>
+      {/* <Herosection/>
       <Welcomesection/>
       <AdvisorSection/>
       <Card/>
@@ -47,11 +61,9 @@ const Layout = () => {
       <Management/>
       <Evolution/>
       <Blog/>
-      <DoctorList/>
-      <Footer /> */}
-      <Toplink/>
-      <Navbar/>
-      <Outlet/>
+      <DoctorList/> */}
+      <Footer /> 
+      
     </>
   );
 };

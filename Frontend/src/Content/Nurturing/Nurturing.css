@@ -1,0 +1,68 @@
+.career-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 50px;
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+  
+  .career-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .career-right {
+    flex: 1;
+    min-width: 320px;
+  }
+  
+  .career-right h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .italic-purple {
+    color: #693b94;
+    font-style: italic;
+  }
+  
+  .bold-orange {
+    color: #f7941e;
+    font-weight: bold;
+  }
+  
+  .career-right h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-top: 20px;
+  }
+  
+  .career-right p {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .apply-btn {
+    margin-top: 20px;
+    background-color: #f7941e;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .apply-btn:hover {
+    background-color: #e07d11;
+  }
+  

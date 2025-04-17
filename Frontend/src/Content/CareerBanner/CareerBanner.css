@@ -1,0 +1,48 @@
+.career-banner-container {
+    width: 80%;
+    height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #E6D6E9;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .career-title {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #6E3F77;
+    margin-bottom: 16px;
+  }
+  
+  .career-description {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282828;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .breadcrumb {
+    width: 80%;
+    background: #F4EDF7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #282828;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  

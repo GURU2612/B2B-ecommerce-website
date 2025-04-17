@@ -1,0 +1,21 @@
+.opportunity-section {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .opportunity-box {
+    background-color: #f68c29;
+    color: white;
+    padding: 20px 30px;
+    max-width: 800px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  

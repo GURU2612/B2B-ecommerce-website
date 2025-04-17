@@ -35,9 +35,9 @@ const Aboutussection = () => {
             <span className="life-heading">Life at Meghmani Life Sciences LTD</span>
           </div>
         </div>
+      </div> 
       </div>
-    </div>
-    <Valuesection/>
+    <Valuesection/>         
     <Recognition/>
     <Management/>
     <Evolution/>
