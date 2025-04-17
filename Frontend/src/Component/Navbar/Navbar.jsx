@@ -8,11 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 const navigate =useNavigate()
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
+   const closeMenu = () => {
     setMenuOpen(false);
   };
 
@@ -23,13 +19,13 @@ const navigate =useNavigate()
 
       {/* Navigation Menu */}
       <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
-        <a href="/home" className="nav-link" onClick={()=>navigate("home")}>Home</a>
-        <a href="/about" className="nav-link" onClick={()=>navigate("about")}>About</a>
-        <a href="/services" className="nav-link" onClick={closeMenu}>Area of Focus</a>
-        <a href="/doctors" className="nav-link" onClick={closeMenu}>Doctors</a>
-        <a href="/contact" className="nav-link" onClick={closeMenu}>Contact Us</a>
-        <a href="/career" className="nav-link" onClick={closeMenu}>Career</a>
-        <a href="/blog" className="nav-link" onClick={closeMenu}>Blog & News</a>
+        <a className="nav-link" onClick={()=>navigate("home")}>Home</a>
+        <a  className="nav-link" onClick={()=>navigate("about")}>About</a>
+        <a  className="nav-link" onClick={()=>navigate("AreaOfFocus")}>Area of Focus</a>
+        <a  className="nav-link" onClick={closeMenu}>Doctors</a>
+        <a  className="nav-link" onClick={closeMenu}>Contact Us</a>
+        <a  className="nav-link" onClick={closeMenu}>Career</a>
+        <a  className="nav-link" onClick={closeMenu}>Blog & News</a>
       </div>
 
       {/* Search Icon */}

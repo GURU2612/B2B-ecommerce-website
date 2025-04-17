@@ -1,6 +1,6 @@
 import React from 'react';
-import Toplink from './Content/Navbar/Toplink';
-import Navbar from './Content/Navbar/Navbar';
+import Toplink from './Component/Navbar/Toplink';
+import Navbar from './Component/Navbar/Navbar';
 import Footer from './Content/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import Herosection from './Content/Herosection/Herosection';
@@ -9,11 +9,11 @@ import Card from './Content/Card/Card';
 import AdvisorSection from './Content/AdvisorSection/AdvisorSection';
 import Vision from './Content/Vision/Vision';
 import Blog from './Content/Blog/Blog';
-import Areaoffocus from './Content/Areaoffocus/Areaoffocus';
+import Areaoffocus from './Content/Area of Focus/Areaoffocus.jsx';
 import Enhance from './Content/Enhance/Enhance';
 import Award from './Content/Award/Award';
 import AboutusBanner from './Content/AboutusBanner/Banner';
-import Aboutussection from './Content/Aboutussection/Aboutussection';
+import Aboutussection from './Component/Aboutussection/Aboutussection';
 import Valuesection from './Content/ValueSection/Valuesection';
 import Recognition from './Content/Recognition/Recognition';
 import Management from './Content/Management/Management';
@@ -43,8 +43,8 @@ const Layout = () => {
       <CareerHighlights/>
       <OpportunitySection/>
       <ApplyForm/> */}
-      <DoctorGrid/>
-      <Blog/>
+      {/*<DoctorGrid/>*/}
+      {/*<Blog/>*/}
       {/* <Herosection/>
       <Welcomesection/>
       <AdvisorSection/>
@@ -62,6 +62,8 @@ const Layout = () => {
       <Evolution/>
       <Blog/>
       <DoctorList/> */}
+
+        <Outlet />
       <Footer /> 
       
     </>

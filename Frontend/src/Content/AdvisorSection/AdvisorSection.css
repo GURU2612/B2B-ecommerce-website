@@ -1,124 +1,175 @@
+/* Base styles */
 .advisor-section-container {
   display: flex;
-  flex-wrap: wrap;
-  background-color: white;
-  padding: 40px 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 40px 20px;
   font-family: 'Raleway', sans-serif;
+  gap: 30px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .advisor-section-left {
   flex: 1;
-  min-width: 400px;
-  margin-right: 30px;
+  min-width: 280px; /* Reduced from 350px for better mobile display */
+  max-width: 400px;
+  width: 100%; /* Full width on small screens */
+  margin-bottom: 30px; /* Space when stacked */
 }
-
 
 .advisor-section-card {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: white;
+  position: relative;
 }
 
 .advisor-section-doctor-img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 .advisor-section-card-info {
-  background: #8a2be2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   color: white;
   padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(147.87deg, #6E3F77 0%, #BE36A7 100%);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
 
 .advisor-section-card-info h3 {
-  margin: 0 0 5px;
-  font-size: 1.2rem;
+  margin: 0 0 8px;
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+  font-weight: bold;
 }
 
 .advisor-section-title {
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 500;
 }
 
 .advisor-section-desc {
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
   margin-top: 10px;
+  line-height: 1.4;
 }
-
 
 .advisor-section-right {
   flex: 2;
-  min-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  width: 100%; /* Full width on smaller screens */
+}
+
+.advisor-section-top {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  flex-direction: row; /* Default row layout */
+  flex-wrap: wrap; /* Allow wrapping on very small screens */
+}
+
+.advisor-section-info {
+  flex: 1;
+  min-width: 280px; /* Minimum width before wrapping */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
 }
 
 .advisor-section-label {
+
+  font-family: 'Noto Serif';
   font-style: italic;
-  color: #6a3dad;
-  font-size: 1rem;
-  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  color: #6E3F77;
+
+
 }
 
-.advisor-section-info h2 {
-  font-size: 2rem;
-  font-weight: 600;
+.advisor-section-header {
+  font-size: clamp(1.8rem, 3vw, 2.4rem); /* Responsive header size */
+  font-weight: bold;
   margin: 0;
 }
 
-.advisor-section-info h2 span {
+.advisor-section-header span {
   color: #ff8400;
 }
 
 .advisor-section-info h3 {
   color: #6a3dad;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   margin: 10px 0;
 }
 
 .advisor-section-text {
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  color: #333333;
+  text-align: justify;
 }
 
 .advisor-section-read-more {
+  width: fit-content;
   background-color: #ff8400;
   color: white;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border: none;
   border-radius: 8px;
   font-size: 0.9rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.advisor-section-read-more:hover {
+  background-color: #e56d00;
+}
 
 .advisor-section-image-box {
-  width: 100%;
+  flex: 1;
+  min-width: 280px; /* Minimum width before wrapping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .advisor-section-side-img {
   width: 100%;
+  height: auto;
+  max-height: 300px;
   border-radius: 12px;
   object-fit: cover;
 }
 
-/* Specialties */
 .advisor-section-specialties {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 20px;
 }
 
 .advisor-section-specialty-card {
-  width: 120px;
+  flex: 1;
+  min-width: 120px; /* Minimum width */
+  max-width: calc(25% - 15px); /* Maximum width */
   text-align: center;
   position: relative;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  margin-bottom: 15px; /* Space when wrapped */
 }
 
 .advisor-section-specialty-card img {
@@ -140,409 +191,62 @@
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* .advisor-heading {
-    position: absolute;
-    width: 139px;
-    height: 42px;
-    left: 566px;
-    top: 98px;
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 42px;
-    color: #6E3F77;
-    text-align: center;
+/* Media Queries for different screen sizes */
+@media (max-width: 1024px) {
+  .advisor-section-container {
+    padding: 30px 15px;
   }
 
-  .team-heading {
-    position: absolute;
-    width: 393px;
-    height: 48px;
-    left: 566px;
-    top: 140px;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: #FC9B3B;
-    text-align: center;
+  .advisor-section-specialties {
+    justify-content: center;
   }
 
-
-.dermatologist-heading {
-  position: absolute;
-  width: 230px;
-  height: 42px;
-  left: 566px;
-  top: 190px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 42px;
-  color: #6E3F77;
-  text-align: center;
+  .advisor-section-specialty-card {
+    max-width: calc(50% - 15px); /* 2 cards per row on medium screens */
+  }
 }
 
-.advisor-quote {
-  position: absolute;
-  width: 404px;
-  height: 120px;
-  left: 566px;
-  top: 262px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #282828;
-  text-align: justify;
-}
-
-
-  .advisor-container {
-    position: absolute;
-    width: 403px;
-    height: 624px;
-    left: 143px;
-    top: 120px;
-    border-radius: 10px;
-    background-color: aqua;
+@media (max-width: 768px) {
+  .advisor-section-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  
-.advisor-gradient {
-  position: absolute;
-  width: 375.68px;
-  height: 196px;
-  left: 13px;
-  top: 413px;
-  background: linear-gradient(147.87deg, #BE36A7 0%, #6E3F77 100%);
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 
-              0px 4px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  
-}
-  
+  .advisor-section-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
 
-.advisor-name {
-  width: 209px;
-  height: 34px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 34px;
-  display: flex-end;
-  padding-left: 5px;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  text-align: center;
+  .advisor-section-top {
+    flex-direction: column;
+  }
+
+  .advisor-section-info,
+  .advisor-section-image-box {
+    min-width: 100%;
+  }
+
+  .advisor-section-text {
+    text-align: left; /* Better readability on mobile */
+  }
 }
 
-.advisor-title {
-  width: 105px;
-  height: 24px;
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  padding-left: 9px;
-  line-height: 24px;
-  left: 10px;
-  display: flex-end;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
+@media (max-width: 480px) {
+  .advisor-section-container {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .advisor-section-specialty-card {
+    max-width: 100%; /* Full width on very small screens */
+    min-width: 100%;
+  }
+
+  .advisor-section-header {
+    font-size: 1.8rem;
+  }
+
+  .advisor-section-card-info {
+    padding: 15px;
+  }
 }
-
-
-.advisor-description {
-  position: absolute;
-  left: 10px;
-  top: 99px;
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  padding-left: 2px;
-  color: #F7F2F8;
-  text-align: left;
-  width: 90%;
-}
-
-.advisor-ReadMore-button {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 14px 8px 10px;
-  gap: 5px;
-
-  position: absolute;
-  width: 126px; 
-  height: 52px;
-  left: 566px;
-  top: 420px;
-
-  background: #FC9B3B;
-  border: 0.5px solid #FFF7EB;
-  border-radius: 8px;
-
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.advisor-ReadMore-button:hover {
-  background: #e88c2a;
-}
-
-.advisor-image {
-  position: absolute;
-  width: 405px;
-  height: 362px;
-  left: 989px;
-  top: 120px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.advisor-extra-image1 {
-  position: absolute;
-  width: 192px;
-  height: 170.23px;
-  left: 566px;
-  top: 506.89px;
-
-  background-color: #36bea5;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.advisor-extra-image2 {
-  position: absolute;
-  width: 192px;
-  height: 170.23px;
-  left: 778px;
-  top: 506.89px;
-
-  background-color: #36bea5;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.advisor-extra-image3 {
-  position: absolute;
-  width: 192px;
-  height: 170.23px;
-  left: 990px;
-  top: 506.89px;
-
-  background-color: #36bea5;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.advisor-extra-image4 {
-  position: absolute;
-  width: 192px;
-  height: 170.23px;
-  left: 1202px;
-  top: 506.89px;
-
-  background-color: #36bea5;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-
-.cardiologist-heading {
-  position: absolute;
-  width: 113px;
-  height: 27.39px;
-  left: 606px;
-  top: 650.61px;
-
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-
-  color: #6E3F77;
-}
-
-
-
-.extra-image-background {
-  box-sizing: border-box;
-  position: absolute;
-  width: 48.84px;
-  height: 45.12px;
-  left: 15px;
-  top: 65px;
-
-  background: #FFFFFF;
-  border: 1px solid #6E3F77;
-  border-radius: 4px;
-}
-
-
-.extra-image-svg {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: calc(50% - 24px/2 - 0.42px);
-  top: calc(50% - 24px/2 + 0.44px);
-}
-
-
-.extra-image-svg rect {
-  position: absolute;
-  left: 37.5%;
-  right: 37.5%;
-  top: 25%;
-  bottom: 25%;
-}
-
-
-.advisor-extra-image1:hover,.advisor-extra-image2:hover,.advisor-extra-image3:hover,.advisor-extra-image4:hover {
-  background: linear-gradient(228.54deg, rgba(190, 54, 167, 0.8) 24.22%, rgba(110, 63, 119, 0.8) 66.68%), url('image.png');
-  background-size: cover;
-  background-position: center;
-}
-
-
-
-.extra-image-background2 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 48.84px;
-  height: 45.12px;
-  left: 127px;
-  top: 65px;
-
-  background: #FFFFFF;
-  border: 1px solid #6E3F77;
-  border-radius: 4px;
-}
-
-
-.extra-image-svg2 {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0px;
-  top: 0px
-}
-
-
-.extra-image-svg rect {
-  position: absolute;
-  left: 37.5%;
-  right: 37.5%;
-  top: 25%;
-  bottom: 25%;
-}
-
-.ophthalmologist-heading {
-  position: absolute;
-  width: 162px;
-  height: 27.39px;
-  left: 793px;
-  top: 650.61px;
-
- 
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; 
-  text-align: center;
-
-  
-  color: #6E3F77;
-}
-
-
-.Gastrologist-heading {
-  position: absolute;
-  width: 162px;
-  height: 27.39px;
-  left: 1010px;
-  top: 650.61px;
-
- 
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; 
-  text-align: center;
-
- 
-  color: #6E3F77;
-}
-
-
-
-.Hepatologist-heading {
-  position: absolute;
-  width: 162px;
-  height: 27.39px;
-  left: 1218px;
-  top: 650.61px;
-
-  
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px; 
-  text-align: center;
-
-  
-  color: #6E3F77;
-} 
- */

@@ -1,0 +1,212 @@
+.area-of-focus {
+  position: relative;
+  width: 100%;
+  padding: 5% 0;
+  background-color: #f7f2f8;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem; /* Adding space between header and cards */
+  justify-items:center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering cards */
+  gap: 2rem; /* Space between cards for better layout */
+}
+
+.card {
+  background: #FFFFFF; /* white */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  height: 376px;
+  width: 298px;
+
+  display: flex;               /* Enables Flexbox */
+  flex-direction: column;      /* Arrange children vertically */
+  /* Space children evenly (push last item to bottom) */
+  align-items: center;         /* Center everything horizontally */
+  padding: 1rem;               /* Add padding inside the card */
+  position: relative;          /* In case of absolute positioning in children */
+}
+
+.view-more {
+  font-size: 18px;
+  color: #fc9b3b;
+  cursor: pointer;
+  text-decoration: underline;  /* Adds underline to the text */
+  margin-top: auto;            /* Pushes View More to the bottom when space is available */
+  transition: color 0.3s ease;
+}
+
+.view-more:hover {
+  color: #e68a30; /* Changes color when hovered */
+}
+
+.card:hover {
+  background: linear-gradient(147.87deg, #be36a7 1.9%, #6e3f77 100%);
+  transform: translateY(-10px); /* Add hover lift effect */
+}
+
+.card .icon {
+  margin: 20px auto;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f2f8;
+  border-radius: 50%;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6e3f77;
+  margin: 12px 0;
+}
+
+.card-description {
+  padding: 0 20px;
+  font-size: 16px;
+  color: #282828;
+  line-height: 1.5;
+}.areas-of-focus{
+
+   width: 280px;
+   height: 48px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 48px;
+   text-align: center;
+   color: #FC9B3B;
+
+
+ }
+ .description{
+
+   width: 1220px;
+   height: 32px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 32px;
+   text-align: center;
+   color: #282828;
+
+
+ }
+.therapy{
+  color: #6E3F77;
+
+  width: 130px;
+  height: 42px;
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+
+  /* primary/800 */
+  color: #6E3F77;
+
+
+}
+
+.areas-of-focus {
+  width: 100%; /* Full width for smaller screens */
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px; /* Default size for large screens */
+  line-height: 48px;
+  text-align: center;
+  color: #FC9B3B;
+  margin: 0 auto;
+}
+
+.description {
+  width: 100%; /* Full width on all screens */
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px; /* Default size for large screens */
+  line-height: 32px;
+  text-align: center;
+  color: #282828;
+  margin: 1rem auto; /* Center with margin for spacing */
+}
+
+.therapy {
+  color: #6E3F77;
+  width: auto; /* Adjust dynamically */
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px; /* Default size */
+  line-height: 42px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Responsiveness using media queries */
+@media (max-width: 1200px) {
+  .areas-of-focus {
+    font-size: 35px; /* Slightly smaller on medium screens */
+    line-height: 44px;
+  }
+
+  .description {
+    font-size: 20px; /* Adjusted for medium screens */
+    line-height: 28px;
+  }
+
+  .therapy {
+    font-size: 30px; /* Adjust for medium screens */
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .areas-of-focus {
+    font-size: 28px; /* Smaller font size for tablets */
+    line-height: 36px;
+  }
+
+  .description {
+    font-size: 18px; /* Smaller for tablets */
+    line-height: 26px;
+    padding: 0 15px; /* Add padding for better alignment */
+  }
+
+  .therapy {
+    font-size: 26px; /* Adjust for smaller screens */
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .areas-of-focus {
+    font-size: 24px; /* Smaller for mobile screens */
+    line-height: 32px;
+  }
+
+  .description {
+    font-size: 16px; /* Mobile-friendly size */
+    line-height: 24px;
+    padding: 0 10px; /* More padding for tight spaces */
+  }
+
+  .therapy {
+    font-size: 20px; /* Mobile-friendly size */
+    line-height: 28px;
+  }
+}

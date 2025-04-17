@@ -1,13 +1,13 @@
 import React from "react";
 import "./Aboutussection.css";
 import memberimage from "../../assets/images/memberimage.png";
-import Navbar from "../Navbar/Navbar";
-import Banner from "../AboutusBanner/Banner";
-import Valuesection from "../ValueSection/Valuesection";
-import Recognition from "../Recognition/Recognition";
-import Management from "../Management/Management";
-import Evolution from "../Evolution/Evolution";
-import Blog from "../Blog/Blog";
+import Navbar from "../Navbar/Navbar.jsx";
+import Banner from "../../Content/AboutusBanner/Banner.jsx";
+import Valuesection from "../../Content/ValueSection/Valuesection.jsx";
+import Recognition from "../../Content/Recognition/Recognition.jsx";
+import Management from "../../Content/Management/Management.jsx";
+import Evolution from "../../Content/Evolution/Evolution.jsx";
+import Blog from "../../Content/Blog/Blog.jsx";
 const Aboutussection = () => {
   return (
     <>
