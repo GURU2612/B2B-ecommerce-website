@@ -6,17 +6,19 @@ import Aboutussection from './Component/Aboutussection/Aboutussection.jsx';
 import Contact from './Content/Contact/Contact.jsx';
 import Home from './Component/Home/Home.jsx';
 import AreaOfFocus from "./Content/Area of Focus/Areaoffocus.jsx";
+import Doctors from "./Component/Doctor/Doctors.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Herosection />} />
+          <Route index element={<Home />} />
           <Route path='Home' element={<Home />} />
           <Route path='about' element={<Aboutussection />} />
           <Route path='AreaOfFocus' element={<AreaOfFocus/>} />
           <Route path='contact' element={<Contact />} />
+          <Route path='Doctors' element={<Doctors/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

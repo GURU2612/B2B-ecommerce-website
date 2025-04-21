@@ -38,31 +38,6 @@ const Layout = () => {
     <>
       <Toplink />
       <Navbar/>
-      {/* <CareerBanner/>
-      <CareerSection/>
-      <CareerHighlights/>
-      <OpportunitySection/>
-      <ApplyForm/> */}
-      {/*<DoctorGrid/>*/}
-      {/*<Blog/>*/}
-      {/* <Herosection/>
-      <Welcomesection/>
-      <AdvisorSection/>
-      <Card/>
-      <Vision/>
-      <Award/>
-      <Blog/>
-      <Areaoffocus/>
-      <Enhance/>
-      <AboutusBanner/>
-      <Aboutussection/>
-      <Valuesection/>
-      <Recognition/>
-      <Management/>
-      <Evolution/>
-      <Blog/>
-      <DoctorList/> */}
-
         <Outlet />
       <Footer /> 
       

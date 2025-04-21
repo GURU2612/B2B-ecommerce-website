@@ -11,8 +11,13 @@ import Blog from "../../Content/Blog/Blog.jsx";
 const Aboutussection = () => {
   return (
     <>
-    <Banner/>
-    <div className="aboutus-container">
+      <Banner
+          title="About Us"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+          breadcrumb="Home > About Us"
+      />
+
+      <div className="aboutus-container">
       {/* <Banner/> */}
       <div className="aboutus-content">
         <div className="aboutus-image-wrapper">

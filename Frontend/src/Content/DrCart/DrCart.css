@@ -1,0 +1,56 @@
+
+.advisor-section-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+    width: 403px;
+    height: 624px;
+    border-radius: 10px;
+
+}
+
+.advisor-section-doctor-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.advisor-section-card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(147.87deg, #6E3F77 0%, #BE36A7 100%);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.advisor-section-card-info h3 {
+    margin: 0 0 8px;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    font-weight: bold;
+}
+
+.advisor-section-title {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 500;
+}
+
+.advisor-section-desc {
+    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    margin-top: 10px;
+    line-height: 1.4;
+}.doctor-list-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+     padding: 20px;
+ }
+
