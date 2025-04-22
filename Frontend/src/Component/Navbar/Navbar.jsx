@@ -24,7 +24,7 @@ const navigate =useNavigate()
         <a  className="nav-link" onClick={()=>navigate("AreaOfFocus")}>Area of Focus</a>
         <a  className="nav-link" onClick={()=>navigate("Doctors")}>Doctors</a>
         <a  className="nav-link" onClick={closeMenu}>Contact Us</a>
-        <a  className="nav-link" onClick={closeMenu}>Career</a>
+        <a  className="nav-link" onClick={()=>navigate("Career")}>Career</a>
         <a  className="nav-link" onClick={closeMenu}>Blog & News</a>
       </div>
 

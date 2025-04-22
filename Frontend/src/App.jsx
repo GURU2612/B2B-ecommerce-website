@@ -7,6 +7,8 @@ import Contact from './Content/Contact/Contact.jsx';
 import Home from './Component/Home/Home.jsx';
 import AreaOfFocus from "./Content/Area of Focus/Areaoffocus.jsx";
 import Doctors from "./Component/Doctor/Doctors.jsx";
+import DrDetails from "./Component/Dr Details/DrDetails.jsx";
+import Career from "./Component/career/Career.jsx";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path='AreaOfFocus' element={<AreaOfFocus/>} />
           <Route path='contact' element={<Contact />} />
           <Route path='Doctors' element={<Doctors/>}/>
+          <Route path="/doctor-details" element={<DrDetails/>} />
+          <Route path="/Career" element={<Career/>} />
         </Route>
       </Routes>
     </BrowserRouter>

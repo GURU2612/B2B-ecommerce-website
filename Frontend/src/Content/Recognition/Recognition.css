@@ -1,209 +1,3 @@
-/* .outer-Recognition-container {
-    position:absolute;
-    width: 90%;
-    height: 696px;
-    padding-left: 5%;
-    padding-right: 5%;
-  
-    background-color: #ffffff; 
-    margin: 0 auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 1752px;
-    left: 0px;
-  }
-
-  
-
-.recognition-heading {
-    position: absolute;
-    width: 104px;
-    height: 42px;
-    left: 144px;
-    top: 0px;
-    
-    font-family: 'Noto Serif';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 42px; 
-    text-align: center;
-
-    color: #6E3F77; 
-}
-
-
-
-.core-values-heading {
-    position: absolute;
-    width: 307px;
-    height: 48px;
-    left: 144px;
-    top: 42px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px; 
-    color: #FC9B3B; 
-}
-
-
-
-.recognition-image {
-    position: absolute;
-    width: 508px;
-    height: 446px;
-    left: 885px;
-    top: 154px;
-    
-    background-size: cover;
-    
-    border-radius: 10px;
-}
-
-
-.awards-heading-about {
-    position: absolute;
-    width: 353px;
-    height: 42px;
-    left: 144px;
-    top: 440px;
-
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 34px;
-    line-height: 42px; 
-    color: #FC9B3B; 
-}
-
-.awardimg-about1 {
-    position: absolute;
-    width: 252px;
-    height: 72px;
-    left: 144px;
-    top: 524px;
-
-    background-color: #6E3F77;
-    background-size: cover;
-    border-radius: 4px;
-}
-
-
-.awardimg-about2 {
-    position: absolute;
-    width: 252px;
-    height: 72px;
-    left: 496px;
-    top: 524px;
-
-    background-color: #6E3F77;
-    background-size: cover;
-    border-radius: 4px;
-}
-
-
-
-.meghmani-description-about {
-    position: absolute;
-    width: 718px;
-    height: 168px;
-    left: 144px;
-    top: 250px;
-
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px; 
-    color: #282828; 
-    text-align: left;
-}
-
-
-.recognition-button {
-    position: absolute;
-    width: 185px;
-    height: 66.63px;
-    left: 146px;
-    top: 135px;
-
-    background-color: transparent;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    color: #6E3F77;
-    cursor: pointer;
-    
-}
-
-.quality-button {
-    position: absolute;
-    width: 100px;
-    height: 66.63px;
-    left: 352px;
-    top: 135px;
-
-    background-color: transparent;
-    border: none;
-   
-    font-family: 'Raleway';
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    color: #6E3F77;
-    cursor: pointer;
-    
-}
-
-
-.innovation-button {
-    position: absolute;
-    width: 130px;
-    height: 66.63px;
-    left: 465px;
-    top: 135px;
-
-    background-color: transparent;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    color: #6E3F77;
-    cursor: pointer;
-    
-}
-
-.consistency-button {
-    position: absolute;
-    width: 130px;
-    height: 66.63px;
-    left: 616px;
-    top: 135px;
-
-    background-color: transparent;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    color: #6E3F77;
-    cursor: pointer;
-    
-}
-
-
-.quality-button:hover,.innovation-button:hover,.consistency-button:hover,.recognition-button:hover{
-    border-bottom: 2px solid #6E3F77; 
-} */
-
-
-
 .recognition-section {
     display: flex;
     flex-wrap: wrap;
@@ -219,21 +13,9 @@
     max-width: 600px;
   }
   
-  .image-container {
-    flex: 1 1 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .recognition-img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .recognition-heading {
+
+
+.recognition-heading {
     font-family: 'Noto Serif', serif;
     font-style: italic;
     font-weight: 400;
@@ -303,4 +85,22 @@
     background-color: #6E3F77;
     border-radius: 4px;
   }
-  
+
+.image-container {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  max-height: none;
+  /*align-items: stretch;*/
+  /*width: 100%;*/
+  /*width: 100%;*/
+  /* Stretch to full height */
+}
+
+.recognition-img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures it fills the container proportionally */
+}

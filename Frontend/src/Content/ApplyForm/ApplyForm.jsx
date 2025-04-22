@@ -4,6 +4,7 @@ import Careerimage from "../../assets/images/CareerForm-Image.png";
 
 const ApplyForm = () => {
   return (
+      <div className="applyForm-main">
     <div className="apply-container">
       {/* Left Side - Image */}
       <div className="left-section">
@@ -38,6 +39,7 @@ const ApplyForm = () => {
         </form>
       </div>
     </div>
+      </div>
   );
 };
 

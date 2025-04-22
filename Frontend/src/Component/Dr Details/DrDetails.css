@@ -1,0 +1,268 @@
+.dr-details-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-items: center;
+
+}
+
+.doctor-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: url("../../assets/images/Doc Detail.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.doctor-header img {
+    height: 450px;
+    max-width: 100%;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.doctor-info {
+    flex: 1;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1.6;
+    justify-content: start;
+    min-width: 280px;
+
+}
+
+.doctor-info h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: start;
+}
+
+.doctor-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    text-align: start;
+}
+
+.doctor-details {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Skills section */
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.skills-text {
+    width: 100%;
+    max-width: 600px;
+}
+
+.skills-text h3 {
+    font-style: italic;
+    color: #555;
+}
+
+.skills-text h2 {
+    color: #d87b00;
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: #d87b00;
+    width: 90%;
+
+
+
+}
+
+.skills-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* ✅ Responsive Styles */
+@media screen and (max-width: 992px) {
+    .doctor-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .doctor-header img {
+        height: auto;
+        width: 80%;
+    }
+
+    .doctor-info h2 {
+        font-size: 24px;
+    }
+
+    .doctor-info h4 {
+        font-size: 16px;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .skills-text, .skills-image {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .doctor-info {
+        font-size: 13px;
+    }
+
+    .doctor-header img {
+        width: 100%;
+    }
+
+    .skills-section {
+        padding: 15px;
+    }
+
+    .doctor-info h2 {
+        font-size: 20px;
+    }
+
+    .doctor-info h4 {
+        font-size: 14px;
+    }
+}
+/* Skills section */
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+.skills-text {
+    width: 60%;
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+.skills-text h3 {
+    font-style: italic;
+    color: #555;
+}
+
+.skills-text h2 {
+    color: #d87b00;
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    height: 20px;
+    background-color: #E6D6E9;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: #6E3F77;
+}
+
+.skills-image {
+    width: 35%;
+}
+
+.skills-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+/* ✅ Responsive Styles */
+@media screen and (max-width: 992px) {
+    .skills-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .skills-text, .skills-image {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .skills-text {
+        padding-bottom: 20px;
+    }
+
+    .skills-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .skills-section {
+        padding: 15px;
+    }
+
+    .skills-image img {
+        max-width: 100%;
+    }
+}
+.skill-bar-text{
+margin: 30px;
+    color: #d87b00;
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+
+
+}
