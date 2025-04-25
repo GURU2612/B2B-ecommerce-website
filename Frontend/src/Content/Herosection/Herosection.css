@@ -9,24 +9,24 @@
     position: relative;
     flex-wrap: wrap;
   }
-  
+
   .hero-content {
     flex: 1;
     max-width: 500px;
     padding-right: 40px;
   }
-  
+
   .hero-heading {
     font-size: 34px;
     color: #3b1b4a;
     font-weight: 500;
     font-family: 'Noto Serif', serif;
-    font-style: italic; 
+    font-style: italic;
     line-height: 42px;
     margin: 0%;
 
   }
-  
+
   .hero-subheading {
     font-weight: 500;
     color: #f7941d;
@@ -39,7 +39,7 @@
 
 
   }
-  
+
   .hero-title {
     font-size: 48px;
     font-weight: bold;
@@ -47,44 +47,46 @@
     margin: 0%;
     line-height: 56px;
   }
-  
+
   .hero-description-block {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin: 20px 0;
   }
-  
+
   .vertical-line {
     width: 3px;
-    height: 50px;
+    height: 68px;
     background-color: #3b1b4a;
   }
-  
+
   .hero-description {
-    width: 300px;
-    font-size: 16px;
+    width: 397px;
+    font-size: 24px;
     color: #333;
     line-height: 1.5;
     margin: 0%;
-    
+
   }
-  
+
   .hero-button {
     background-color: #f7941d;
     color: white;
     border: none;
     padding: 12px 24px;
+    width: 200px;
     border-radius: 6px;
-    font-size: 14px;
+    height: 52px;
+    font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
   }
-  
+
   .hero-button:hover {
     background-color: #e7821b;
   }
-  
+
   .hero-image-wrapper {
     position: relative;
     flex: 1;
@@ -92,7 +94,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .dna-frame {
     width: 620px;
     position: absolute;
@@ -100,7 +102,7 @@
     top:-280px;
     z-index: 1;
   }
-  
+
   .product-image {
     width: 500px;
     z-index: 2;
@@ -108,11 +110,11 @@
     top:-210px;
     position: absolute;
   }
-  
+
   .ellipse-image{
     width: 700px;
     top: -268px;
-    left: 115px; 
+    left: 115px;
     opacity: 40%;
     position: absolute;
   }
@@ -125,7 +127,7 @@
     display: flex;
     gap: 10px;
   }
-  
+
   .dot {
     width: 25px;
     height: 4px;
@@ -133,7 +135,7 @@
     border-radius: 2px;
     transition: all 0.3s ease;
   }
-  
+
   .dot.active {
     background-color: #5c2672;
     width: 30px;
