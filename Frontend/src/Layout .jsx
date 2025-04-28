@@ -39,8 +39,7 @@ const Layout = () => {
       <Toplink />
       <Navbar/>
         <Outlet />
-      <Footer /> 
-      
+      <Footer />
     </>
   );
 };

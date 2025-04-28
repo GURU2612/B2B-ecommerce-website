@@ -9,6 +9,7 @@ import AreaOfFocus from "./Content/Area of Focus/Areaoffocus.jsx";
 import Doctors from "./Component/Doctor/Doctors.jsx";
 import DrDetails from "./Component/Dr Details/DrDetails.jsx";
 import Career from "./Component/career/Career.jsx";
+import Aof from "./Component/AOF/Aof.jsx";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='Home' element={<Home />} />
           <Route path='about' element={<Aboutussection />} />
-          <Route path='AreaOfFocus' element={<AreaOfFocus/>} />
+          <Route path='AreaOfFocus' element={<Aof/>} />
           <Route path='contact' element={<Contact />} />
           <Route path='Doctors' element={<Doctors/>}/>
           <Route path="/doctor-details" element={<DrDetails/>} />
