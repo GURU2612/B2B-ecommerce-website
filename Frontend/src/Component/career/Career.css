@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center; /* Centering cards */
     gap: 2rem; /* Space between cards for better layout */
-    background-color: #BE36A7;
+    /*background-color: #BE36A7;*/
     padding: 2rem;
 }
 .career-main{

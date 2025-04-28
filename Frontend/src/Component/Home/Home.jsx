@@ -21,10 +21,10 @@ const Home = () => {
       <AreaOfFocus/>
         <AdvisorSection/>
       <Award/>
-       <Enhance/>   
+       <Enhance/>
        <Vision/>
        <BlogSection/>
-       <Footer/>
+
     </div>
   )
 }

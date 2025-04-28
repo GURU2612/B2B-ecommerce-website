@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
   background-color: #ffffff;
-  padding: 40px 20px;
+  padding: 40px 143px;
   font-family: 'Raleway', sans-serif;
   gap: 30px;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -67,7 +67,7 @@
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   width: 100%; /* Full width on smaller screens */
 }
 
@@ -85,7 +85,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  /*gap: 15px;*/
 }
 
 .advisor-section-label {
@@ -96,6 +96,8 @@
   font-size: 34px;
   line-height: 42px;
   color: #6E3F77;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
 
 }
@@ -111,9 +113,16 @@
 }
 
 .advisor-section-info h3 {
-  color: #6a3dad;
-  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-  margin: 10px 0;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 42px;
+margin: 16px 0px;
+  color: #6E3F77;
+
+
 }
 
 .advisor-section-text {
@@ -143,15 +152,14 @@
 .advisor-section-image-box {
   flex: 1;
   min-width: 280px; /* Minimum width before wrapping */
-  display: flex;
-  justify-content: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
   align-items: center;
 }
 
 .advisor-section-side-img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
+  width: 405px;
+  height: 362px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -168,13 +176,20 @@
   max-width: calc(25% - 15px); /* Maximum width */
   text-align: center;
   position: relative;
-  font-size: 0.9rem;
+  font-size: 20px;
+  color: #6E3F77;
+  margin-top: 0px;
+  font-weight: bold;
   margin-bottom: 15px; /* Space when wrapped */
 }
 
+.advisor-section-specialty-card p{
+  margin-top: 0px;
+}
+
 .advisor-section-specialty-card img {
-  width: 100%;
-  height: 80px;
+  width: 192px;
+  height: 170px;
   object-fit: cover;
   border-radius: 10px;
 }

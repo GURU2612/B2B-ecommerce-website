@@ -1,352 +1,150 @@
-/* .outer-enhance-container {
-    position:absolute;
-    width: 90%;
-    height: 800px;
-    padding-left: 5%;
-    padding-right: 5%;
-  
-    background-color: #ffffff; 
-    margin: 0 auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 4418px;
-    left: 0px;
-  }
-  
-  
-  .enhancing-quality-text {
-    position: absolute;
-    width: 294px;
-    left: 144px;
-    top: 46px;
-    font-family: 'Noto Serif';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 42px;
-    color: #6E3F77;
-  }
-  
-  
-  .better-tomorrow-text {
-    position: absolute;
-    width: 560px;
-    left: 144px;
-    top:88px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: #FC9B3B;
-  }
-  
-  
-  
-  .enhance-image {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    position: absolute;
-    width: 552px;
-    height: 540px;
-    left: 143px;
-    top: 184px;
-    border-radius: 12px;
-    background-color: #FC9B3B;
-  }
-  
-  
-  
-  .outer-enhance-heading1 {
-    position: absolute;
-    width: 251px;
-    height: 57px;
-    left: 763px;
-    top: 150px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.006em;
-    color: #282828;
-  }
-  
-  
-  
-  .outer-enhance-paragraph1 {
-    position: absolute;
-    width: 628px;
-    height: 48px;
-    left: 763px;
-    top: 230px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px; 
-    letter-spacing: -0.006em;
-    text-align: left;
-    color: #282828;
-  }
-  
-  
-  .outer-enhance-line1 {
-    position: absolute;
-    width: 100px;
-    height: 0px;
-    border: 2px solid #6E3F77;
-    transform: rotate(90deg);
-    flex: none;
-    left: 680px;
-    order: 1;
-    flex-grow: 0;
-    top: 250px;
-  }
-  
-  
-  
-  .outer-enhance-heading2 {
-    position: absolute;
-    width: 251px;
-    height: 57px;
-    left: 763px;
-    top: 280px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.006em;
-    color: #282828;
-  }
-  
-  
-  
-  .outer-enhance-paragraph2 {
-    position: absolute;
-    width: 628px;
-    height: 48px;
-    left: 763px;
-    top: 360px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px; 
-    letter-spacing: -0.006em;
-    text-align: left;
-    color: #282828;
-  }
-  
-  
-  .outer-enhance-line2 {
-    position: absolute;
-    width: 100px;
-    height: 0px;
-    border: 2px solid #6E3F77;
-    transform: rotate(90deg);
-    flex: none;
-    left: 680px;
-    order: 1;
-    flex-grow: 0;
-    top: 380px;
-  }
-  
-  
-  
-  .outer-enhance-heading3 {
-    position: absolute;
-    width: 351px;
-    height: 57px;
-    left: 763px;
-    top: 410px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.006em;
-    color: #282828;
-  }
-  
-  
-  
-  .outer-enhance-paragraph3 {
-    position: absolute;
-    width: 628px;
-    height: 48px;
-    left: 763px;
-    top: 490px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px; 
-    letter-spacing: -0.006em;
-    text-align: left;
-    color: #282828;
-  }
-  
-  
-  .outer-enhance-line3 {
-    position: absolute;
-    width: 100px;
-    height: 0px;
-    border: 2px solid #6E3F77;
-    transform: rotate(90deg);
-    flex: none;
-    left: 680px;
-    order: 1;
-    flex-grow: 0;
-    top: 510px;
-  }
-  
-  
-  
-  
-  .outer-enhance-heading4 {
-    position: absolute;
-    width: 551px;
-    height: 57px;
-    left: 763px;
-    top: 540px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.006em;
-    color: #282828;
-  }
-  
-  
- 
-  .outer-enhance-paragraph4 {
-    position: absolute;
-    width: 628px;
-    height: 48px;
-    left: 763px;
-    top: 620px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.006em;
-    text-align: left;
-    color: #282828;
-  }
-  
-  
-  .outer-enhance-line4 {
-    position: absolute;
-    width: 100px;
-    height: 0px;
-    border: 2px solid #6E3F77;
-    transform: rotate(90deg);
-    flex: none;
-    left: 680px;
-    order: 1;
-    flex-grow: 0;
-    top: 640px;
-  } */
-
 
   .outer-enhance-container {
-    width: 100%;
-    /* padding: 60px 5%; */
-    background-color: #ffffff;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    align-items: flex-start;
-    gap: 40px;
+  width: 100%;
+  padding: 60px 0%;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
   }
   
   .enhance-left {
-    flex: 1;
-    min-width: 300px;
-    max-width: 550px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  padding: 0 20px;
   }
   
   .enhancing-quality-text {
-    font-family: 'Noto Serif';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 42px;
-    color: #6E3F77;
-    margin-bottom: 0px;
-    margin-left: 150px;
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  color: #6E3F77;
+  margin-bottom: 0px;
+  margin-left: 0;
   }
   
   .better-tomorrow-text {
-    width: 700px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: #FC9B3B;
-    margin-bottom: 30px;
-    margin-top: 0px;
-    margin-left: 150px;
+  width: 800px;
+  max-width: 700px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FC9B3B;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-left: 0;
   }
   
   .enhance-image {
-    width: 100%;
-    height: 540px;
-    margin-left: 150px;
-    background-color: #FC9B3B;
-    border-radius: 12px;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-left: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  }
+  
+  .enhance-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
   }
   
   .enhance-right {
-    flex: 1;
-    min-width: 300px;
-    margin:120px;
-    max-width: 630px;
+  flex: 1;
+  min-width: 300px;
+  margin-top: 100px;
+  padding: 20px;
+  max-width: 630px;
   }
   
   .enhance-block {
-    margin-bottom: 40px;
-    position: relative;
-    padding-left: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 40px;
   }
   
   .enhance-line {
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 2px;
-    height: 100%;
-    background-color: #6E3F77;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 2px;
+  height: 100%;
+  background-color: #6E3F77;
   }
   
   .enhance-heading {
-    font-family: 'Inter';
-    font-size: 38px;
-    font-weight: 500;
-    color: #282828;
-    margin-bottom: 10px;
+  font-family: 'Inter';
+  font-size: 32px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 10px;
   }
   
   .enhance-paragraph {
-    font-family: 'Inter';
-    font-size: 18px;
-    line-height: 24px;
-    color: #282828;
+  font-family: 'Inter';
+  font-size: 18px;
+  line-height: 24px;
+    margin-top: 0px;
+  color: #282828;
+  }
+  
+  /* Media queries for better responsiveness */
+  @media (max-width: 1200px) {
+  .enhance-right {
+    margin-top: 40px;
+  }
+  }
+  
+  @media (max-width: 768px) {
+  .outer-enhance-container {
+    padding: 40px 20px;
+  }
+  
+  .enhancing-quality-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .better-tomorrow-text {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .enhance-heading {
+    font-size: 26px;
+  }
+  
+  .enhance-paragraph {
+    font-size: 16px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .outer-enhance-container {
+    padding: 30px 15px;
+  }
+  
+  .enhancing-quality-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .better-tomorrow-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .enhance-heading {
+    font-size: 22px;
+  }
   }
   

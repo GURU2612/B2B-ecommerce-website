@@ -8,7 +8,7 @@ import CareerHighlights from "../../Content/CareerHighlights/CareerHighlights.js
 import icon1 from "../../assets/images/respiratoryicon.png";
 import icon2 from "../../assets/images/Neuropathyicon.png";
 import icon3 from "../../assets/images/Anti inflammatoryicon.png";
-import FocusCard2 from "../../Content/Area of Focus/FocusCard2.jsx";
+// import FocusCard2 from "../../Content/Area of Focus/FocusCard2.jsx";
 import './Career.css'
 function Career() {
     const cardData = [

@@ -1,42 +1,30 @@
-.outer-blog-container {
-    position:absolute;
-    width: 90%;
-    height: 876px;
-    padding-left: 5%;
-    padding-right: 5%;
-  
-    background-color: #ffffff; /* Light background for visibility */
-    margin: 0 auto; /* Centers the section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 6218px;
-    left: 0px;
-  }
+.blog-section {
+    padding: 60px 5%;
+    padding-top: 0px;
+    background: #fff;
+}
 
-  
-/* Blog Heading */
-.blog-heading {
-    position: absolute;
-    width: 87px;
-    height: 42px;
-    left: 143px;
-    top: 76px;
+.blog-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.titles h4 {
+    margin-bottom: 4px;
     font-family: 'Noto Serif';
     font-style: italic;
     font-weight: 400;
     font-size: 34px;
     line-height: 42px;
     color: #6E3F77;
+    text-align: left;
 }
 
-/* News & Events Heading */
-.news-events-heading {
-    position: absolute;
-    width: 283px;
-    height: 48px;
-    left: 143px;
-    top: 110px;
+.blog-subtitle {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -45,341 +33,80 @@
     color: #FC9B3B;
 }
 
-
-/* Read All Blogs */
-.read-all-blogs {
-    position: absolute;
-    left: 1236.47px;
-    top: 138px;
+.blog-read-all {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 28px; /* 140% */
+    line-height: 28px;
     text-align: center;
+    margin-top: 180px;
     color: #FC9B3B;
+    text-decoration: underline;
 }
 
-.line-1 {
-    position: absolute;
-    width: 136px;
-    height: 0px;
-    left: 1235px;
-    top: 215px;
-    border: 2px solid #FC9B3B;
-    transform: rotate(179.99deg);
+.read-all:hover {
+    text-decoration: underline;
 }
 
-/* Blog Card */
-.blog-card1 {
-    box-sizing: border-box;
-    position: absolute;
-    width:403px;
-    height: 525.24px;
-    left: 143px;
-    right: 847px;
-    top: 260px;
-    background: #FFFFFF;
-    border: 1.03866px solid #E4E6E8;
-    border-radius: 12.4639px;
-    /* background-color: #FC9B3B; */
+.blog-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
-.blog-card2 {
-    box-sizing: border-box;
-    position: absolute;
-    width:403px;
-    height: 525.24px;
-    left: 564px;
-    right: 847px;
-    top: 260px;
-    background: #FFFFFF;
-    border: 1.03866px solid #E4E6E8;
-    border-radius: 12.4639px;
-    /* background-color: #FC9B3B; */
-}
-
-.blog-card3 {
-    box-sizing: border-box;
-    position: absolute;
-    width:403px;
-    height: 525.24px;
-    left: 988px;
-    right: 847px;
-    top: 260px;
-    background: #FFFFFF;
-    border: 1.03866px solid #E4E6E8;
-    border-radius: 12.4639px;
-    /* background-color: #FC9B3B; */
-}
-
-
-
-/* Blog Card Image */
-.blog-card-image {
-    position: absolute;
-    height: 324.06px;
-    left: 1.04px;
-    right: 0px;
-    top: 0px;
-    background-size: cover;
-    background-position: center;
-    background-color: #71773f;
-    border-radius: 10px;
-}
-
-.blog-card-background {
-    position: absolute;
-    width:100% ;
-    height: 240.97px;
-    left: 0px;
-    top: 283.23px;
-    background: #ffffff;
-    border-radius: 10px;
-}
-
-
-/* Rectangle 4218 */
-.blog-card-rectangle {
-    position: absolute;
-    width: 110px;
-    height: 39px;
-    left: 19.96px;
-    top: 17.96px;
-    background: #ffffff;
-    border-radius: 20px;
-}
-
-/* Liver (Text inside the rectangle) */
-.blog-card-liver {
-    position: absolute;
-    width: 46px;
-    height: 28px;
-    left: calc(50% - 46px/2);
-    top: 5.31px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
+.pagination-dots {
+    margin-top: 40px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #6E3F77;
+    gap: 8px;
 }
 
+/*.dot {*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    background: #d1d5db;*/
+/*    border-radius: 50%;*/
+/*}*/
 
-/* Liver (Text inside the rectangle) */
-.blog-card-skincare {
-    position: absolute;
-    width: 87px;
-    height: 28px;
-    left: 12px;
-    top: 5.31px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #6E3F77;
-}
+/*.dot.active {*/
+/*    background: #f59e0b;*/
+/*}*/
 
-
-
-/* Rectangle 4218 (Orange) */
-.blog-card-rectangle2 {
-    position: absolute;
-    width: 81px;
-    height: 44px;
-    left: 287.96px;
-    top: 17.96px;
-    background: linear-gradient(237.87deg, #BE36A7 0%, #6E3F77 100%);
-    border-radius: 20px;
-}
-
-.blog-card-events {
-
-    position: absolute;
-    width: 48px;
-    height: 28px;
-    left: calc(50% - 46px/2);
-    top: 5.31px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-}
-
-
-/* Background inside Blog Card
-.blog-card-background {
-    position: absolute;
-    height: 240.97px;
-    left: 1.04px;
-    right: 1.04px;
-    top: 283.23px;
-    background: #FFFFFF;
-    border-radius: 10px;
-} */
-
-/* Calendar Icon */
-.blog-card-calendar {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 31px;
-    top:30px;
-    background-size: cover;
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .blog-section {
+        padding: 40px 20px;
+    }
     
-}
-
-/* Date Text */
-.blog-card-date {
-    position: absolute;
-    width: 107px;
-    height: 23px;
-    left: 57px;
-    top: 30px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px; /* 150% */
-    display: flex;
-    align-items: center;
-    color: #FC9B3B;
-}
-
-/* Blog Title */
-.blog-card-title {
-    position: absolute;
-    width: 315.52px;
-    height: 66.47px;
-    left: 32px;
-    top: 65px;
-    font-family: 'Raleway';
-    font-style: 'bold';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px; /* 140% */
-    display: flex;
-    text-align: left;
-    color: #6E3F77;
-}
-
-.blog-card-ellipse {
-    position: absolute;
-    width: 33px;
-    height: 33px;
-    left: 31.96px;
-    top: calc(50% - 33px/2 + 68.74px);
-    background: url('/path-to-image.jpg'), #D9D9D9; /* Update the path */
-    border-radius: 50%;
-    background-size: cover;
-}
-
-/* Doctor's Name */
-.blog-card-doctor {
-    position: absolute;
-    width: 157px;
-    height: 23px;
-    left: 75.96px;
-    top: 176.73px;
+    .titles h4 {
+        font-size: 28px;
+        line-height: 36px;
+    }
     
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px; /* 140% */
-    display: flex;
-    align-items: center;
+    .titles h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
     
-    color: #282828; /* Black 3 */
+    .read-all {
+        font-size: 18px;
+    }
 }
 
-/* Blog Card - New Rectangle */
-.blog-card-new-rectangle {
-    position: absolute;
-    width: 134px;
-    height: 41px;
-    left: 234px;
-    top: 167px;
-    background: #F7F2F8;
-    border-radius: 10px;
+@media screen and (max-width: 480px) {
+    .blog-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .titles h4 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .titles h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
-
-
-/* Keep Reading Text */
-.blog-card-keep-reading {
-    position: absolute;
-    font-family: 'raleway';
-    font-style: normal;
-    font-weight: 400;
-    width: 600px;
-    left: 15px;
-    font-size: 16px;
-    line-height: 23px;
-    top: 9px;
-    text-align: left;
-    color: #282828;
-}
-
-
-  /* Slider Indicator Group */
-  .blog-slider-indicator {
-    position: absolute;
-    width: 122px;
-    height: 6px;
-    left: 50%;
-    top: 835px;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  /* Individual Dots */
-  .blog-slider-dot {
-    width: 32px;
-    height: 6px;
-    background: #ffffff;
-    border: 1px solid #6E3F77;
-    border-radius: 12px;
-  }
-  
-  /* Active Dot */
-  .blog-slider-dot.active {
-    background: #6E3F77;
-    border: none;
-  }
-  
-  /* Responsive Adjustments */
-  @media screen and (max-width: 768px) {
-    .blog-slider-indicator {
-      width: 100px;
-      top: 620px;
-    }
-    .blog-slider-dot {
-      width: 28px;
-      height: 5px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .blog-slider-indicator {
-      width: 80px;
-      top: 600px;
-    }
-    .blog-slider-dot {
-      width: 24px;
-      height: 4px;
-    }
-  }
-  

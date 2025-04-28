@@ -9,6 +9,7 @@
   text-align: center;
   margin-bottom: 3rem; /* Adding space between header and cards */
   justify-items:center;
+  flex-direction: column;
 }
 
 .cards-container {
@@ -212,4 +213,10 @@
     font-size: 20px; /* Mobile-friendly size */
     line-height: 28px;
   }
+}
+
+.card:hover .card-title,
+.card:hover .card-description,
+.card:hover .view-more {
+  color: #ffffff;
 }
