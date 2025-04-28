@@ -8,7 +8,31 @@ import Recognition from "../../Content/Recognition/Recognition.jsx";
 import Management from "../../Content/Management/Management.jsx";
 import Evolution from "../../Content/Evolution/Evolution.jsx";
 import Blog from "../../Content/Blog/Blog.jsx";
+import rocket from "@src/assets/images/rocketicon.png";
+import value from "@src/assets/images/valueicon.png";
+import eye from "@src/assets/images/eyeicon.png";
 const Aboutussection = () => {
+  const valuesData = [
+    {
+      icon: rocket,
+      title: "Mission",
+      description: "To ensure good health for all newly diagnosed patients with innovative medicines.",
+      altText: "Mission Icon",
+    },
+    {
+      icon: eye,
+      title: "Vision",
+      description: "To be amongst Top 150 leading healthcare company by 2027 in Indian Pharmaceutical market.",
+      altText: "Vision Icon",
+    },
+    {
+      icon: value,
+      title: "Value",
+      description: "To be amongst Top 150 leading healthcare company by 2027 in Indian Pharmaceutical market.",
+      altText: "Value Icon",
+    },
+  ];
+
   return (
     <>
       <Banner
@@ -42,7 +66,11 @@ const Aboutussection = () => {
         </div>
       </div> 
       </div>
-    <Valuesection/>         
+      <Valuesection
+          heading="Discover Our Values"
+          subheading="Quality, Safety & Security"
+          values={valuesData}
+      />
     <Recognition/>
     <Management/>
     <Evolution/>
