@@ -11,6 +11,8 @@ import DrDetails from "./Component/Dr Details/DrDetails.jsx";
 import Career from "./Component/career/Career.jsx";
 import Aof from "./Component/AOF/Aof.jsx";
 import ContectUs from "@src/Component/Contect Us/ContectUs.jsx";
+import Login from "@src/Content/Login/Login.jsx";
+import SignUp from "@src/Content/SignUp/SignUp.jsx";
 
 function App() {
   return (
@@ -26,7 +28,10 @@ function App() {
           <Route path="/doctor-details" element={<DrDetails/>} />
           <Route path="/Career" element={<Career/>} />
           <Route path="/contectUs" element={<ContectUs/>} />
+
         </Route>
+        <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );
