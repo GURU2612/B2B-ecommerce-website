@@ -10,6 +10,8 @@ import Doctors from "./Component/Doctor/Doctors.jsx";
 import DrDetails from "./Component/Dr Details/DrDetails.jsx";
 import Career from "./Component/career/Career.jsx";
 import Aof from "./Component/AOF/Aof.jsx";
+import Login from "./Content/Login/Login.jsx";
+import SignUp from "./Content/SignUp/SignUp.jsx";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path='Doctors' element={<Doctors/>}/>
           <Route path="/doctor-details" element={<DrDetails/>} />
           <Route path="/Career" element={<Career/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
         </Route>
       </Routes>
     </BrowserRouter>

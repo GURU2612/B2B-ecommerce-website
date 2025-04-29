@@ -1,20 +1,18 @@
 .recognition-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 10px!important;
     padding: 60px 5%;
     background-color: #ffffff;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
   
   .text-content {
-    flex: 1 1 50%;
+    flex: 1 1 45%;
     max-width: 600px;
   }
   
-
-
 .recognition-heading {
     font-family: 'Noto Serif', serif;
     font-style: italic;
@@ -36,11 +34,32 @@
   .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    width: 700px;
+    gap: 46px;
+    width: 100%;
+    max-width: 700px;
     margin-bottom: 20px;
   }
   
+  .value-link {
+    background: transparent;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    color: #6E3F77;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: border-bottom 0.3s ease;
+    display: inline-block;
+  }
+  
+  .value-link:hover {
+    border-bottom: 2px solid #6E3F77;
+  }
+  
+  /* Keep the old class for backward compatibility */
   .value-button {
     background: transparent;
     border: none;
@@ -50,6 +69,7 @@
     color: #6E3F77;
     cursor: pointer;
     padding-bottom: 5px;
+    margin-bottom: 10px;
   }
   
   .value-button:hover {
@@ -76,7 +96,9 @@
   
   .award-images {
     display: flex;
+    flex-wrap: nowrap;
     gap: 20px;
+    flex-direction: row;
   }
   
   .award-box {
@@ -84,23 +106,133 @@
     height: 72px;
     background-color: #6E3F77;
     border-radius: 4px;
+    flex: 1 1 200px;
+    min-width: 200px;
   }
+
+  .award-image-placeholder{
+    width: 300px;
+    height:80px;
+    padding: 5px;
+    background-color: #6E3F77;
+    border-radius: 4px;
+  }
+
 
 .image-container {
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
-  max-height: none;
-  /*align-items: stretch;*/
-  /*width: 100%;*/
-  /*width: 100%;*/
-  /* Stretch to full height */
+  align-items: center;
+  max-width: 600px;
+  height: 600px !important;
+  border-radius: 20px;
 }
 
 .recognition-img {
   width: 100%;
-  height: 100%;
-  max-height: none;
-  border-radius: 10px;
-  object-fit: cover; /* Ensures it fills the container proportionally */
+  height: auto;
+  max-height: 600px;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .recognition-section {
+    gap: 30px;
+    padding: 40px 5%;
+  }
+  
+  .recognition-heading {
+    font-size: 30px;
+  }
+  
+  .core-values-heading {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  
+  .value-button {
+    font-size: 16px;
+  }
+  
+  .awards-heading-about {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recognition-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .image-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+  }
+  
+  .recognition-img {
+    max-height: 400px;
+  }
+  
+  .button-group {
+    justify-content: center;
+  }
+  
+  .value-button {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .recognition-section {
+    padding: 30px 4%;
+    gap: 20px;
+  }
+  
+  .recognition-heading {
+    font-size: 26px;
+  }
+  
+  .core-values-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .value-button {
+    font-size: 14px;
+  }
+  
+  .meghmani-description-about {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .awards-heading-about {
+    font-size: 26px;
+  }
+  
+  .award-box {
+    width: 100%;
+    max-width: 252px;
+    margin: 0 auto;
+  }
+  
+  .award-images {
+    justify-content: center;
+  }
+  
+  .recognition-img {
+    max-height: 300px;
+  }
 }

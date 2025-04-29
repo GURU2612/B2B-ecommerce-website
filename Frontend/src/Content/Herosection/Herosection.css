@@ -104,11 +104,12 @@
   }
 
   .product-image {
-    width: 500px;
-    z-index: 2;
-    left: 220px;
-    top:-210px;
-    position: absolute;
+    width: 500px !important;
+height: 500px  !important;
+    z-index: 2 !important;
+    left: 220px !important;
+    top:-210px !important;
+    position: absolute !important;
   }
 
   .ellipse-image{

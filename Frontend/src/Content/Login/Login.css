@@ -1,0 +1,119 @@
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:50px;
+    background: linear-gradient(147.87deg, #6E3F77 0%, #BE36A7 100%);
+
+}
+
+.login-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1000px;
+    margin-left: 250px;
+    margin-right: 250px;
+    width: 100%;
+    background: #fff;
+    padding: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.login-form-section {
+    flex: 1;
+
+}
+
+.login-form-section h2 {
+    color: #2d0c48;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.login-form-section h2 span {
+    color: #f39c12;
+    font-size: 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap:5px;
+}
+
+.login-form label {
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.login-form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #EFF0F2;
+    border-radius: 6px;
+    background-color: #EFF0F2 ;
+}
+
+.login-form button {
+    padding: 12px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.login-form button:hover {
+    background-color: #e08e0b;
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+    text-align: center;
+}
+
+.signup-link span {
+    color: #f39c12;
+    cursor: pointer;
+}
+
+/* Image Section */
+.login-image-section {
+    flex: 1;
+    text-align: center;
+
+}
+
+.login-image-section img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-content {
+        flex-direction: column;
+    }
+
+    .login-image-section {
+        margin-top: 20px;
+    }
+}
+
