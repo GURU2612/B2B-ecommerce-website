@@ -10,6 +10,7 @@ import Vision from '../../Content/Vision/Vision.jsx'
 import Footer from '../../Content/Footer/Footer.jsx'
 import BlogSection from '../../Content/Blog/Blog.jsx'
 import AdvisorSection from "../../Content/AdvisorSection/AdvisorSection.jsx";
+import Product from "@src/Content/Product/Product.jsx";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <AdvisorSection/>
       <Award/>
        <Enhance/>
+        <Product/>
        <Vision/>
        <BlogSection/>
 

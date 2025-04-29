@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios"; // Import Axios
 import "./Contact.css";
 import BASE_URL from "@src/config.js"; // Keep your CSS import
+import Contactimage from "../../assets/images/contact.png";
 
 const Contact = () => {
     // Define state to hold form data
@@ -61,7 +62,10 @@ const Contact = () => {
     return (
         <div className="contact-bottom">
             <div className="message-form">
+                <h2 className= "Contact-title">Contact</h2>
+                <h4 className= "Contact-subtitle">Send a Message </h4>
                 <form onSubmit={handleSubmit}>
+
                     <input
                         type="text"
                         placeholder="Name"
@@ -94,20 +98,21 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                     />
-                    <textarea
+                    <input
                         placeholder="Comment"
                         name="comment"
                         value={formData.comment}
                         onChange={handleChange}
                         required
+
+                        type="text"
+
                     />
                     <button type="submit">Submit</button>
                 </form>
             </div>
+                <img className="map-section" src={Contactimage} alt="Office" />
 
-            <div className="map-section">
-                {/* Map will go here */}
-            </div>
         </div>
     );
 };
