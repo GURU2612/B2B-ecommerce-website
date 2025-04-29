@@ -24,6 +24,7 @@ const Home = () => {
       <Award/>
        <Enhance/>
         <Product/>
+
        <Vision/>
        <BlogSection/>
 

@@ -11,8 +11,8 @@ import DrDetails from "./Component/Dr Details/DrDetails.jsx";
 import Career from "./Component/career/Career.jsx";
 import Aof from "./Component/AOF/Aof.jsx";
 import ContectUs from "@src/Component/Contect Us/ContectUs.jsx";
-import Login from "@src/Content/Login/Login.jsx";
-import SignUp from "@src/Content/SignUp/SignUp.jsx";
+import Login from "@src/Component/Login/Login.jsx";
+import SignUp from "@src/Component/SignUp/SignUp.jsx";
 
 function App() {
   return (

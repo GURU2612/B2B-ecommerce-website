@@ -1,137 +1,153 @@
+import React, { useState } from "react";
+import "./Product.css";
+import im1 from "@src/assets/images/def_img.png";
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import "./ProductSection.css";
-import nutritionProduct from "/lovable-uploads/798f52e2-1f9c-4378-a104-651985a4f3a9.png";
+const Product = () => {
+  const [activeTab, setActiveTab] = useState("neuropathic");
 
-const ProductSection = () => {
+  const handleTabChange = (tabValue) => {
+    setActiveTab(tabValue);
+  };
+
   return (
-      <section className="product-section" id="products">
-        <div className="container">
-          <h2 className="product-category">Products</h2>
-          <h3 className="product-title">Our Wide Range in Every Filed</h3>
+      <div className="product_unique_container_xz429">
+        <div className="product_unique_header_section_ab782">
+          <h2 className="product_unique_title_p493">Products</h2>
+          <h3 className="product_unique_subtitle_m672">Our Wide Range in Every Filed</h3>
+        </div>
 
-          <Tabs defaultValue="neuropathic" className="product-tabs">
-            <TabsList className="product-tabs-list">
-              <TabsTrigger value="neuropathic">Neuropathic Pain Management</TabsTrigger>
-              <TabsTrigger value="clinical">Clinical Nutrition</TabsTrigger>
-              <TabsTrigger value="gastro">Gastro Intestinal Care</TabsTrigger>
-              <TabsTrigger value="pain">Pain Management</TabsTrigger>
-            </TabsList>
-
-            <div className="product-content">
-              <div className="product-brands">
-                <div className="brand-card">
-                  <img src="/novamegh-logo.png" alt="Novamegh" className="brand-logo" />
-                </div>
-                <div className="brand-card">
-                  <img src="/respimegh-logo.png" alt="Respimegh" className="brand-logo" />
-                </div>
-                <div className="brand-card">
-                  <img src="/epimegh-logo.png" alt="Epimegh" className="brand-logo" />
-                </div>
-              </div>
-
-              <div className="product-showcase">
-                <TabsContent value="neuropathic" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">Probedita<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="Probedita Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">SarcoBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="SarcoBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">HaloBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="HaloBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="clinical" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">Probedita<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="Probedita Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="gastro" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">HaloBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="HaloBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="pain" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">SarcoBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="SarcoBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-              </div>
-
-              <div className="product-expert">
-                <img src={nutritionProduct} alt="Healthcare Expert" className="expert-image" />
+        <div className="product_unique_content_wrapper_ij235">
+          <div className="product_unique_left_column_gh456">
+            <div className="product_unique_brand_card_qw321">
+              <div className="product_unique_brand_logo_vt789">
+                <span style={{ color: '#F97316', fontWeight: 'bold', fontSize: '24px' }}>NOVA</span>
+                <span style={{ color: '#7E69AB', fontWeight: 'bold', fontSize: '24px' }}>MEGH</span>
               </div>
             </div>
-          </Tabs>
+
+            <div className="product_unique_brand_card_qw321">
+              <div className="product_unique_brand_logo_vt789">
+                <span style={{ color: '#F97316', fontWeight: 'bold', fontSize: '24px' }}>RESPI</span>
+                <span style={{ color: '#7E69AB', fontWeight: 'bold', fontSize: '24px' }}>MEGH</span>
+              </div>
+            </div>
+
+            <div className="product_unique_brand_card_qw321">
+              <div className="product_unique_brand_logo_vt789">
+                <span style={{ color: '#7E69AB', fontWeight: 'bold', fontSize: '24px' }}>Epimegh</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="product_unique_middle_column_ty678">
+            <div className="product_unique_categories_bar_op543">
+              <div
+                  className={`product_unique_category_item_nm432 ${activeTab === "neuropathic" ? "product_unique_active_lk098" : ""}`}
+                  onClick={() => handleTabChange("neuropathic")}
+              >
+                <span>Neuropathic Pain Management</span>
+              </div>
+              <div
+                  className={`product_unique_category_item_nm432 ${activeTab === "clinical" ? "product_unique_active_lk098" : ""}`}
+                  onClick={() => handleTabChange("clinical")}
+              >
+                <span>Clinical Nutrition</span>
+              </div>
+              <div
+                  className={`product_unique_category_item_nm432 ${activeTab === "gastro" ? "product_unique_active_lk098" : ""}`}
+                  onClick={() => handleTabChange("gastro")}
+              >
+                <span>Gastro Intestinal Care</span>
+              </div>
+              <div
+                  className={`product_unique_category_item_nm432 ${activeTab === "pain" ? "product_unique_active_lk098" : ""}`}
+                  onClick={() => handleTabChange("pain")}
+              >
+                <span>Pain Management</span>
+              </div>
+            </div>
+
+            <div className="product_unique_products_grid_fg743">
+              {activeTab === "neuropathic" && (
+                  <>
+                    <div className="product_unique_product_card_rt654">
+                      <div className="product_unique_product_info_yu876">
+                        <div className="product_unique_product_logo_sd234">Probedia</div>
+                        <button className="product_unique_know_more_btn_hj765">Know More</button>
+                      </div>
+                      <div className="product_unique_product_image_container_kl321">
+                        <img src={im1} alt="Probedia Product" className="product_unique_product_image_zx098" />
+                      </div>
+                    </div>
+
+                    <div className="product_unique_product_card_rt654">
+                      <div className="product_unique_product_info_yu876">
+                        <div className="product_unique_product_logo_sd234">SarcoBoost</div>
+                        <button className="product_unique_know_more_btn_hj765">Know More</button>
+                      </div>
+                      <div className="product_unique_product_image_container_kl321">
+                        <img src={im1} alt="SarcoBoost Product" className="product_unique_product_image_zx098" />
+                      </div>
+                    </div>
+
+                    <div className="product_unique_product_card_rt654">
+                      <div className="product_unique_product_info_yu876">
+                        <div className="product_unique_product_logo_sd234">HaloBoost</div>
+                        <button className="product_unique_know_more_btn_hj765">Know More</button>
+                      </div>
+                      <div className="product_unique_product_image_container_kl321">
+                        <img src={im1} alt="HaloBoost Product" className="product_unique_product_image_zx098" />
+                      </div>
+                    </div>
+                  </>
+              )}
+
+              {activeTab === "clinical" && (
+                  <div className="product_unique_product_card_rt654">
+                    <div className="product_unique_product_info_yu876">
+                      <div className="product_unique_product_logo_sd234">Probedia</div>
+                      <button className="product_unique_know_more_btn_hj765">Know More</button>
+                    </div>
+                    <div className="product_unique_product_image_container_kl321">
+                      <img src={im1} alt="Probedia Product" className="product_unique_product_image_zx098" />
+                    </div>
+                  </div>
+              )}
+
+              {activeTab === "gastro" && (
+                  <div className="product_unique_product_card_rt654">
+                    <div className="product_unique_product_info_yu876">
+                      <div className="product_unique_product_logo_sd234">HaloBoost</div>
+                      <button className="product_unique_know_more_btn_hj765">Know More</button>
+                    </div>
+                    <div className="product_unique_product_image_container_kl321">
+                      <img src={im1} alt="HaloBoost Product" className="product_unique_product_image_zx098" />
+                    </div>
+                  </div>
+              )}
+
+              {activeTab === "pain" && (
+                  <div className="product_unique_product_card_rt654">
+                    <div className="product_unique_product_info_yu876">
+                      <div className="product_unique_product_logo_sd234">SarcoBoost</div>
+                      <button className="product_unique_know_more_btn_hj765">Know More</button>
+                    </div>
+                    <div className="product_unique_product_image_container_kl321">
+                      <img src={im1} alt="SarcoBoost Product" className="product_unique_product_image_zx098" />
+                    </div>
+                  </div>
+              )}
+            </div>
+          </div>
+
+          <div className="product_unique_right_column_ws987">
+            <div className="product_unique_doctor_image_container_qr765">
+              <img src={im1} alt="Doctor with fruits" className="product_unique_doctor_image_bn432" />
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
   );
 };
 
-export default ProductSection;
+export default Product;
