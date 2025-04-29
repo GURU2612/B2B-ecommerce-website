@@ -35,7 +35,7 @@ const Login = () => {
                     </form>
 
                     <p className="signup-link">
-                        Don't have an account? <span>Sign Up</span>
+                        Don't have an account? <span> Sign Up</span>
                     </p>
                 </motion.div>
 
