@@ -1,137 +1,99 @@
+import React, { useState } from 'react';
+import './Product.css';
+import { motion } from "framer-motion";
+import Tabs from './Tabs';
+import ServiceCard from './ProductServiceCard.jsx';
+import ProductCard from './ProductCard';
+import Novamegh from '../../assets/images/Novameghimg.png';
+import ProductMainImg from '../../assets/images/product_mian_img.png';
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import "./ProductSection.css";
-import nutritionProduct from "/lovable-uploads/798f52e2-1f9c-4378-a104-651985a4f3a9.png";
-
-const ProductSection = () => {
-  return (
-      <section className="product-section" id="products">
-        <div className="container">
-          <h2 className="product-category">Products</h2>
-          <h3 className="product-title">Our Wide Range in Every Filed</h3>
-
-          <Tabs defaultValue="neuropathic" className="product-tabs">
-            <TabsList className="product-tabs-list">
-              <TabsTrigger value="neuropathic">Neuropathic Pain Management</TabsTrigger>
-              <TabsTrigger value="clinical">Clinical Nutrition</TabsTrigger>
-              <TabsTrigger value="gastro">Gastro Intestinal Care</TabsTrigger>
-              <TabsTrigger value="pain">Pain Management</TabsTrigger>
-            </TabsList>
-
-            <div className="product-content">
-              <div className="product-brands">
-                <div className="brand-card">
-                  <img src="/novamegh-logo.png" alt="Novamegh" className="brand-logo" />
-                </div>
-                <div className="brand-card">
-                  <img src="/respimegh-logo.png" alt="Respimegh" className="brand-logo" />
-                </div>
-                <div className="brand-card">
-                  <img src="/epimegh-logo.png" alt="Epimegh" className="brand-logo" />
-                </div>
-              </div>
-
-              <div className="product-showcase">
-                <TabsContent value="neuropathic" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">Probedita<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="Probedita Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">SarcoBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="SarcoBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">HaloBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="HaloBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="clinical" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">Probedita<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="Probedita Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="gastro" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">HaloBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="HaloBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="pain" className="tab-content">
-                  <div className="product-grid">
-                    <Card className="product-card">
-                      <CardContent className="product-card-content">
-                        <div className="product-info">
-                          <h4 className="product-name">SarcoBoost<span>™</span></h4>
-                          <Button variant="link" className="know-more-btn">Know More</Button>
-                        </div>
-                        <div className="product-image">
-                          <img src={nutritionProduct} alt="SarcoBoost Product" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-              </div>
-
-              <div className="product-expert">
-                <img src={nutritionProduct} alt="Healthcare Expert" className="expert-image" />
-              </div>
-            </div>
-          </Tabs>
-        </div>
-      </section>
-  );
+// Mock data for each tab
+const tabProducts = {
+    "Neuropathic Pain Management": [
+        { img1: 'NeuroLogo1', img2: 'Neuro1', cta: 'Know More' },
+        { img1: 'NeuroLogo2', img2: 'Neuro2', cta: 'Know More' }
+    ],
+    "Clinical Nutrition": [
+        { img1: 'ProbediaLogo', img2: 'Probedia', cta: 'Know More' },
+        { img1: 'NutraLogo', img2: 'Nutra', cta: 'Know More' },
+        { img1: 'VitaLogo', img2: 'Vita', cta: 'Know More' }
+    ],
+    "Gastro Intestinal Care": [
+        { img1: 'Gastro1Logo', img2: 'Gastro1', cta: 'Know More'}
+    ],
+    "Pain Management": [
+        { img1: 'PainXLogo', img2: 'PainX', cta: 'Know More' },
+        { img1: 'ReliefLogo', img2: 'Relief', cta: 'Know More' }
+    ]
 };
 
-export default ProductSection;
+const Product = () => {
+    const [activeTab, setActiveTab] = useState("Clinical Nutrition");
+
+    return (
+        <section className="products-section">
+            <motion.div
+                className="products-header"
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+            >
+                <p className="sub-heading">Products</p>
+                <h2 className="main-heading">Our Wide Range in Every Field</h2>
+            </motion.div>
+
+            <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
+
+            <div className="products-content">
+                <motion.div
+                    className="services"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7 }}
+
+                >
+                    <ServiceCard imgSrc={Novamegh} />
+                    <ServiceCard imgSrc={Novamegh} />
+                    <ServiceCard imgSrc={Novamegh} />
+                </motion.div>
+
+                <motion.div
+                    className="product-showcase"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.3 }}
+
+                >
+                    {tabProducts[activeTab]?.map((product, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                        >
+                            <ProductCard
+                                img1={product.img1}
+                                img2={product.img2}
+                                cta={product.cta}
+                                ctaLink={product.ctaLink}
+                            />
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+                <motion.div
+                    className="product-main-image"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+
+                >
+                    <img src={ProductMainImg} alt="Main Product" />
+                </motion.div>
+            </div>
+        </section>
+
+    );
+};
+
+export default Product;
