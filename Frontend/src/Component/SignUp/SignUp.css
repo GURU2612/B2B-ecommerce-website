@@ -62,7 +62,7 @@
 .signup-form label {
     margin: 10px 0 5px;
     font-size: 0.9rem;
-    color: #666;
+    color: #090909;
 }
 
 .signup-form input {
@@ -71,7 +71,7 @@
     border: 1px solid #ddd;
     border-radius: 6px;
     background-color: #FFFFFF;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .signup-form button {
