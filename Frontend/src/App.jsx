@@ -16,6 +16,8 @@ import SignUp from "@src/Component/SignUp/SignUp.jsx";
 import BlogPage from "@src/Component/BlogPage/BlogPage.jsx";
 import BlogDetails from "@src/Content/BlogDetails/BlogDetails.jsx";
 
+import AdminLayout from "@src/AdminLayout.jsx";
+import ProductSection from "@src/Admin/ProductSec/ProductSection.jsx";
 
 function App() {
   return (
@@ -35,9 +37,15 @@ function App() {
           <Route path="/blogD" element={<BlogDetails/>} />
 
         </Route>
+
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="product" element={<ProductSection />} />
+        </Route>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
+
+
     </BrowserRouter>
   );
 }
