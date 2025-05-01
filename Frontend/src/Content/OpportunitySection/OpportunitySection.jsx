@@ -4,6 +4,8 @@ import bgImage from "../../assets/images/opportunity-bg.png";
 
 const OpportunitySection = () => {
   return (
+      <>
+        <div className="opportunity-outer">
     <div className="opportunity-section" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="opportunity-box">
         <p>
@@ -14,6 +16,8 @@ const OpportunitySection = () => {
         </p>
       </div>
     </div>
+        </div>
+      </>
   );
 };
 

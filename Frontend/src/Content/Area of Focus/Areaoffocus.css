@@ -19,6 +19,7 @@
   gap: 20px;
   padding: 40px;
   flex-wrap: wrap;
+
 }
 
 .card {
@@ -34,6 +35,20 @@
   align-items: center;         /* Center everything horizontally */
   padding: 1rem;               /* Add padding inside the card */
   position: relative;          /* In case of absolute positioning in children */
+}
+.careercard{
+  background: #FFFFFF; /* white */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  height: 376px;
+  width: 298px;
+
+  display: flex;               /* Enables Flexbox */
+  flex-direction: column;      /* Arrange children vertically */
+  /* Space children evenly (push last item to bottom) */
+  align-items: center;         /* Center everything horizontally */
+  padding: 1rem;               /* Add padding inside the card */
+  position: relative;
 }
 
 .view-more {

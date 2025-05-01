@@ -4,12 +4,11 @@ import Nurturing from "../../Content/Nurturing/Nurturing.jsx";
 import OpportunitySection from "../../Content/OpportunitySection/OpportunitySection.jsx";
 import ApplyForm from "../../Content/ApplyForm/ApplyForm.jsx";
 import Blog from "../../Content/Blog/Blog.jsx";
-import CareerHighlights from "../../Content/CareerHighlights/CareerHighlights.jsx";
 import icon1 from "../../assets/images/respiratoryicon.png";
 import icon2 from "../../assets/images/Neuropathyicon.png";
 import icon3 from "../../assets/images/Anti inflammatoryicon.png";
 import './Career.css';
-import FocusCard from "@src/Content/Area of Focus/FocusCard.jsx";
+import CareerCard from "@src/Content/Area of Focus/CareerCard.jsx";
 
 function Career() {
     const applyFormRef = useRef(null); // Create ref for ApplyForm
@@ -49,10 +48,10 @@ function Career() {
                 breadcrumb="Home > Career"
             />
             <Nurturing applyFormRef={applyFormRef} />
-            <div className="cards-container">
+            <div className="cards-container2">
                 <h2></h2>
                 {cardData.map((card, index) => (
-                    <FocusCard key={index} data={card} index={index} />
+                    <CareerCard key={index} data={card} index={index} />
                 ))}
             </div>
             <OpportunitySection />

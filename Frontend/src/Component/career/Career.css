@@ -1,6 +1,7 @@
-.cards-container {
+.cards-container2 {
     display: flex;
     flex-direction: row;
+    background:linear-gradient(147.87deg, #6E3F77 0%, #BE36A7 100%);
     flex-wrap: wrap;
     justify-content: center; /* Centering cards */
     gap: 2rem; /* Space between cards for better layout */

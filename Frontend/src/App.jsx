@@ -13,6 +13,9 @@ import Aof from "./Component/AOF/Aof.jsx";
 import ContectUs from "@src/Component/Contect Us/ContectUs.jsx";
 import Login from "@src/Component/Login/Login.jsx";
 import SignUp from "@src/Component/SignUp/SignUp.jsx";
+import BlogPage from "@src/Component/BlogPage/BlogPage.jsx";
+import BlogDetails from "@src/Content/BlogDetails/BlogDetails.jsx";
+
 
 function App() {
   return (
@@ -28,6 +31,8 @@ function App() {
           <Route path="/doctor-details" element={<DrDetails/>} />
           <Route path="/Career" element={<Career/>} />
           <Route path="/contectUs" element={<ContectUs/>} />
+          <Route path="/blogpage" element={<BlogPage/>} />
+          <Route path="/blogD" element={<BlogDetails/>} />
 
         </Route>
         <Route path='/login' element={<Login/>} />
