@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const { neon } = require("@neondatabase/serverless");
 const bcrypt = require("bcrypt");
-
+const multer =require('multer')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -131,6 +131,101 @@ app.post('/signup', async (req, res) => {
         console.error("Signup error:", error);
         res.status(500).json({ message: "Internal server error." });
     }
+});
+
+const storage = multer.memoryStorage();
+const upload = multer({
+    storage,
+    limits: { fileSize: 3 * 1024 * 1024 }, // 3 MB max
+    fileFilter: (req, file, cb) => {
+        if (file.mimetype === 'application/pdf') {
+            cb(null, true);
+        } else {
+            cb(new Error('Only PDF files are allowed'));
+        }
+    }
+}).single('resume');
+
+// POST /apply route
+app.post('/apply', (req, res) => {
+    upload(req, res, async function (err) {
+        if (err instanceof multer.MulterError || err) {
+            return res.status(400).json({ message: err.message });
+        }
+
+        const { fullName, email, contact, position, company, expectedCTC } = req.body;
+        const resumeBuffer = req.file?.buffer;
+        const resumeName = req.file?.originalname;
+
+        if (!resumeBuffer) {
+            return res.status(400).json({ message: 'Resume is required.' });
+        }
+
+        try {
+            await sql`
+        INSERT INTO applications (
+          full_name, email, contact, position, company, expected_ctc, resume_name, resume_file
+        )
+        VALUES (
+          ${fullName}, ${email}, ${contact}, ${position}, ${company}, ${expectedCTC},
+          ${resumeName}, ${resumeBuffer}
+        )
+      `;
+            console.log('Application submitted successfully.');
+            res.status(200).json({ message: 'Application submitted successfully.' });
+        } catch (error) {
+            console.error('DB Insert Error:', error);
+            res.status(500).json({ message: 'Internal server error.' });
+        }
+    });
+});
+
+
+app.post('/admin/products', (req, res) => {
+    upload(req, res, async function (err) {
+        if (err instanceof multer.MulterError || err) {
+            return res.status(400).json({ message: err.message });
+        }
+
+        const {
+            name,
+            description,
+            speciality,
+            segment,
+            presentation,
+            composition,
+            a_id // aof_id
+        } = req.body;
+
+        const segment_presentation = segment + ' - ' + presentation;
+        const imageBuffer = req.file?.buffer;
+        const imageName = req.file?.originalname;
+
+        if (!imageBuffer) {
+            return res.status(400).json({ message: 'Image is required.' });
+        }
+
+        try {
+            await sql`
+                INSERT INTO product (
+                    aof_id, name, description, speciality,
+                    segment_presentation, composition, presentation,
+                    image_name, image_file
+                )
+                VALUES (
+                    ${a_id}, ${name}, ${description}, ${speciality},
+                    ${segment_presentation}, ${composition}, ${presentation},
+                    ${imageName}, ${imageBuffer}
+                )
+            `;
+
+            console.log('Product saved successfully.');
+            res.status(201).json({ message: 'Product saved successfully.' });
+        } catch (error) {
+            console.error('DB Insert Error:', error);
+            res.status(500).json({ message: 'Internal server error.' });
+        }
+    });
 });
 
 // Start server

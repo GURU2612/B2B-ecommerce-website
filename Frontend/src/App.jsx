@@ -13,6 +13,8 @@ import Aof from "./Component/AOF/Aof.jsx";
 import ContectUs from "@src/Component/Contect Us/ContectUs.jsx";
 import Login from "@src/Component/Login/Login.jsx";
 import SignUp from "@src/Component/SignUp/SignUp.jsx";
+import AdminLayout from "@src/AdminLayout.jsx";
+import ProductSection from "@src/Admin/ProductSec/ProductSection.jsx";
 
 function App() {
   return (
@@ -30,9 +32,15 @@ function App() {
           <Route path="/contectUs" element={<ContectUs/>} />
 
         </Route>
+
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="product" element={<ProductSection />} />
+        </Route>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
+
+
     </BrowserRouter>
   );
 }

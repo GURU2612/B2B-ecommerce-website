@@ -14,6 +14,11 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent default form submission
 
+        // Check if the email and password match the admin credentials
+        if (email === "admin@123" && password === "admin123") {
+            console.log("I am admin");
+        }
+
         try {
             const response = await axios.post(
                 `${BASE_URL}/login`,
@@ -29,6 +34,7 @@ const Login = () => {
             alert("Login failed: " + (error.response?.data?.message || error.message));
         }
     };
+
 
     return (
         <div className="login-wrapper">

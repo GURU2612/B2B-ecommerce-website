@@ -1,0 +1,291 @@
+
+/* Main container */
+.admin-aof-container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Area of Focus section (left side) */
+.admin-aof-left {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.admin-aof-label {
+    color: #6b1b74;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.admin-aof-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-aof-item {
+    margin-bottom: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f5f5f7;
+    border: 1px solid #e0e0e0;
+}
+
+.admin-aof-item.active {
+    background-color: #e8e8e8;
+    border-color: #d0d0d0;
+}
+
+.admin-add-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+
+.admin-add-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* Products section (right side) */
+.admin-aof-details {
+    flex: 1;
+}
+
+.admin-product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-product-card {
+    display: flex;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.admin-product-image-section {
+    width: 180px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.admin-product-image-section img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.admin-product-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-product-main-info {
+    padding: 15px;
+    flex: 1;
+}
+
+.admin-product-main-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.admin-product-main-info p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.admin-inquiry-btn {
+    background-color: #f7931e;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.admin-inquiry-btn:hover {
+    background-color: #e78512;
+}
+
+/* Product details section */
+.admin-product-specs {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.admin-product-spec-item {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.admin-spec-label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    font-size: 14px;
+}
+
+.admin-spec-value {
+    color: #333;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .admin-aof-container {
+        flex-direction: column;
+    }
+
+    .admin-aof-left {
+        width: 100%;
+    }
+
+    .admin-product-card {
+        flex-direction: column;
+    }
+
+    .admin-product-image-section {
+        width: 100%;
+    }
+
+    .admin-product-specs {
+        flex-direction: column;
+    }
+
+    .admin-product-spec-item {
+        width: 100%;
+    }
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+    color :black;
+}
+.modal-content textarea{
+    color: whitesmoke;
+}
+.modal-content input:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-actions button:first-child {
+    background-color: #007bff;
+    color: #000000;
+}
+
+.modal-actions button:first-child:hover {
+    background-color: #0056b3;
+}
+
+.modal-actions button:last-child {
+    background-color: #6c757d;
+    color: #000000;
+}
+
+.modal-actions button:last-child:hover {
+    background-color: #5a6268;
+}
+.modal-content input::placeholder,
+.modal-content textarea::placeholder {
+    color: #555; /* You can change this to darker like #333 if needed */
+    opacity: 1;  /* Ensures it's fully visible */
+}
