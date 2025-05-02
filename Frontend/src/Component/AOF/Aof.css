@@ -26,7 +26,9 @@
     padding: 20px;
     border-radius: 10px;
 }
-
+.aof-list span{
+    color: black;
+}
 .aof-item {
     display: flex;
     justify-content: space-between;
@@ -104,9 +106,11 @@
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    align-items: flex-start;
+    align-items: stretch; /* or flex-start — depends on your design */
     gap: 1.5rem;
+    height: auto; /* Optional, but explicit */
 }
+
 
 .product-image-section {
     display: flex;

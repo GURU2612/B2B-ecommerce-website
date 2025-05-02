@@ -34,7 +34,7 @@ function App() {
         </Route>
 
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="product" element={<ProductSection />} />
+          <Route path="/admin" element={<ProductSection />} />
         </Route>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp />} />
