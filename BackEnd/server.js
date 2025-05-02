@@ -180,13 +180,24 @@ app.post('/apply', (req, res) => {
     });
 });
 
+const productUpload = multer({
+    storage,
+    limits: { fileSize: 3 * 1024 * 1024 },
+    fileFilter: (req, file, cb) => {
+        if (file.mimetype.startsWith('image/')) {
+            cb(null, true);
+        } else {
+            cb(new Error('Only image files are allowed'));
+        }
+    }
+}).single('image');
 
-app.post('/admin/products', (req, res) => {
-    upload(req, res, async function (err) {
+app.post('/products', (req, res) => {
+    productUpload(req, res, async function (err) {
         if (err instanceof multer.MulterError || err) {
             return res.status(400).json({ message: err.message });
         }
-
+        console.log("res:-",req.body);
         const {
             name,
             description,
@@ -196,10 +207,8 @@ app.post('/admin/products', (req, res) => {
             composition,
             a_id // aof_id
         } = req.body;
-
         const segment_presentation = segment + ' - ' + presentation;
         const imageBuffer = req.file?.buffer;
-        const imageName = req.file?.originalname;
 
         if (!imageBuffer) {
             return res.status(400).json({ message: 'Image is required.' });
@@ -210,14 +219,15 @@ app.post('/admin/products', (req, res) => {
                 INSERT INTO product (
                     aof_id, name, description, speciality,
                     segment_presentation, composition, presentation,
-                    image_name, image_file
+                    image
                 )
                 VALUES (
-                    ${a_id}, ${name}, ${description}, ${speciality},
-                    ${segment_presentation}, ${composition}, ${presentation},
-                    ${imageName}, ${imageBuffer}
-                )
+                           ${a_id}, ${name}, ${description}, ${speciality},
+                           ${segment_presentation}, ${composition}, ${presentation},
+                           ${imageBuffer} -- if storing the image as binary
+                       )
             `;
+
 
             console.log('Product saved successfully.');
             res.status(201).json({ message: 'Product saved successfully.' });
@@ -226,6 +236,35 @@ app.post('/admin/products', (req, res) => {
             res.status(500).json({ message: 'Internal server error.' });
         }
     });
+});
+app.post("/addAof", async (req, res) => {
+    const { a_name, description } = req.body;
+
+    // Validate input
+    if (!a_name || a_name.trim() === '') {
+        return res.status(400).json({ message: "Area of Focus name is required" });
+    }
+
+    try {
+        // Check if AOF with the same name already exists
+        const existingAof = await sql`SELECT * FROM aof WHERE a_name = ${a_name}`;
+        if (existingAof.length > 0) {
+            return res.status(409).json({ message: "Area of Focus with this name already exists" });
+        }
+
+        // Insert the new AOF
+        const result = await sql`
+            INSERT INTO aof (a_name, description)
+            VALUES (${a_name}, ${description || null})
+            RETURNING id, a_name, description
+        `;
+
+        // Return the newly created AOF data
+        res.status(201).json(result[0]);
+    } catch (error) {
+        console.error("Error adding AOF:", error);
+        res.status(500).json({ message: "Internal server error" });
+    }
 });
 
 // Start server
