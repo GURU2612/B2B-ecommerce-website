@@ -16,7 +16,8 @@ const Login = () => {
 
         // Check if the email and password match the admin credentials
         if (email === "admin@123" && password === "admin123") {
-            console.log("I am admin");
+            navigate("/admin");
+            return;
         }
 
         try {

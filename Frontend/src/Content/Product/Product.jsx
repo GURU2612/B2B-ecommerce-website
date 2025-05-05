@@ -5,23 +5,32 @@ import Tabs from './Tabs';
 import ServiceCard from './ProductServiceCard.jsx';
 import ProductCard from './ProductCard';
 import Novamegh from '../../assets/images/Novameghimg.png';
+import Respiomegh from '../../assets/images/Respiomegh.png';
+import Epimegh from '../../assets/images/Epimegh.png';
+import ProbediaLogo from '../../assets/images/Prbedialogo.png';
+import Probedia from '../../assets/images/Probedia.png';
+import HaleboostLogo from '../../assets/images/Haleboost logo.png';
+import Haleboost from '../../assets/images/Haleboost.png';
+import SarcoboostLogo from '../../assets/images/Sarcoboost logo.png';
+import Sarcoboost from '../../assets/images/Sarcoboost.png';
+
 import ProductMainImg from '../../assets/images/product_mian_img.png';
 
 // Mock data for each tab
 const tabProducts = {
-    "Neuropathic Pain Management": [
+    "Respiratory": [
         { img1: 'NeuroLogo1', img2: 'Neuro1', cta: 'Know More' },
         { img1: 'NeuroLogo2', img2: 'Neuro2', cta: 'Know More' }
     ],
-    "Clinical Nutrition": [
-        { img1: 'ProbediaLogo', img2: 'Probedia', cta: 'Know More' },
-        { img1: 'NutraLogo', img2: 'Nutra', cta: 'Know More' },
-        { img1: 'VitaLogo', img2: 'Vita', cta: 'Know More' }
+    "Neuropathy": [
+        { img1: ProbediaLogo, img2: Probedia, cta: 'Know More' },
+        { img1: HaleboostLogo, img2: Haleboost, cta: 'Know More' },
+        { img1: SarcoboostLogo, img2: Sarcoboost, cta: 'Know More' }
     ],
-    "Gastro Intestinal Care": [
+    "Anti inflammatory": [
         { img1: 'Gastro1Logo', img2: 'Gastro1', cta: 'Know More'}
     ],
-    "Pain Management": [
+    "Nutraceuticals": [
         { img1: 'PainXLogo', img2: 'PainX', cta: 'Know More' },
         { img1: 'ReliefLogo', img2: 'Relief', cta: 'Know More' }
     ]
@@ -53,8 +62,8 @@ const Product = () => {
 
                 >
                     <ServiceCard imgSrc={Novamegh} />
-                    <ServiceCard imgSrc={Novamegh} />
-                    <ServiceCard imgSrc={Novamegh} />
+                    <ServiceCard imgSrc={Respiomegh} />
+                    <ServiceCard imgSrc={Epimegh} />
                 </motion.div>
 
                 <motion.div

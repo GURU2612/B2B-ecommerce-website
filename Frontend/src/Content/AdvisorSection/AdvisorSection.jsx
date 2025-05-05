@@ -7,10 +7,10 @@ import extraAdvisor from "../../assets/images/extraadvisor.png";
 
 const AdvisorSection = () => {
   const specialties = [
-    { name: "Cardiologist", img: extraAdvisor, arrow: true },
-    { name: "Ophthalmologist", img: extraAdvisor },
-    { name: "Gastrologist", img: extraAdvisor },
-    { name: "Hepatologist", img: extraAdvisor, arrow: true },
+    { name: "Respiratory", img: extraAdvisor, arrow: true },
+    { name: "Anti inflammatory", img: extraAdvisor },
+    { name: "Neuropathy", img: extraAdvisor },
+    { name: "Nutraceuticals", img: extraAdvisor, arrow: true },
   ];
 
   return (

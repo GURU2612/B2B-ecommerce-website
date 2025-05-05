@@ -1,22 +1,18 @@
 import React from 'react';
 import './Product.css';
 
-import Probedia from '../../assets/images/probedia.png';
-import ProbediaLogo from '../../assets/images/Prbedialogo.png';
-
-const ProductCard = ({ cta }) => {
+const ProductCard = ({ img1, img2, cta }) => {
     return (
         <div className="product-card">
-            <img className="product-img1" src={ProbediaLogo} alt="Brand" />
-            <img className="product-img2" src={Probedia} alt="Product" />
+            <img className="product-img1" src={img1} alt="Brand Logo" />
+            <img className="product-img2" src={img2} alt="Product Image" />
             <div className="product-cta">
-
-                    <p>{cta}</p>
-                    <hr />
-
+                <p>{cta}</p>
+                <hr />
             </div>
         </div>
     );
 };
+
 
 export default ProductCard;

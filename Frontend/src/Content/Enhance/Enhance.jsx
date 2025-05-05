@@ -3,34 +3,34 @@ import "./Enhance.css";
 
 // Import all images you want to use
 import image1 from "../../assets/images/Enhancing Quality.png";
-import image2 from "../../assets/images/probedia.png";
-import image3 from "../../assets/images/product_mian_img.png";
-import image4 from "../../assets/images/extraadvisor.png";
+import image2 from "../../assets/images/Enhancing2.png";
+import image3 from "../../assets/images/Enhancing3.png";
+
 
 const infoList = [
   {
     title: "Responsibility",
     description:
-        "This is a sample paragraph text that describes the section.",
+        "We embrace innovation with sustainable, ethical, and socially conscious actions to enhance our connect with the valued stakeholders.",
     image: image1,
   },
   {
     title: "Careers",
     description:
-        "This is a sample paragraph text that describes the section.",
+        "We believe in nurturing talent, be a part of our team for a promising and progressive career.",
     image: image2,
   },
   {
     title: "Promise of Quality",
     description:
-        "This is a sample paragraph text that describes the section.",
+        "We are in relentless efforts to provide the unmatched , best quality medicines at the affordable price.",
     image: image3,
   },
   {
     title: "Life at Meghmani Lifesciences",
     description:
-        "This is a sample paragraph text that describes the section.",
-    image: image4,
+        "We are in relentless efforts to provide the unmatched , best quality medicines at the affordable price.",
+    image: image1,
   },
 ];
 

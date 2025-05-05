@@ -3,10 +3,10 @@ import './Product.css';
 
 const Tabs = ({ activeTab, onTabChange }) => {
     const tabs = [
-        "Neuropathic Pain Management",
-        "Clinical Nutrition",
-        "Gastro Intestinal Care",
-        "Pain Management"
+        "Respiratory",
+        "Neuropathy",
+        "Anti inflammatory",
+        "Nutraceuticals"
     ];
 
     return (
