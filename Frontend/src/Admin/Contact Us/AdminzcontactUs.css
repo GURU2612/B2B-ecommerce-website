@@ -1,0 +1,91 @@
+.career-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.career-title {
+    color: #7E69AB;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.career-subtitle {
+    color: #333;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+.career-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.career-table thead {
+    background-color: #f8f5fe;
+}
+
+.career-table th {
+    padding: 16px;
+    text-align: left;
+    color: #7E69AB;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.career-table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.career-table tbody tr:nth-child(even) {
+    background-color: #faf9ff;
+}
+
+.career-table td {
+    padding: 16px;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.resume-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.doc-icon {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.dots-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots-icon svg {
+    display: block;
+}
+.delete-icon{
+    background-color: transparent;
+}
