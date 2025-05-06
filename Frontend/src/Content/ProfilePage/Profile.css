@@ -1,0 +1,92 @@
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-container {
+    background-color: #fdf9fc;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #f48c06;
+    font-size: 50px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #33333314;
+    margin-bottom: 1rem;
+}
+
+.profile-form label {
+    color: #333;
+}
+
+.profile-form input {
+    border: none;
+    /*border-bottom: 1px solid #ccc;*/
+    background: transparent;
+    text-align: right;
+    flex: 1;
+    color: #333;
+    margin-left: 1rem;
+    /*outline: none;*/
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.save-btn, .logout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.save-btn {
+    background-color: #f48c06;
+}
+
+.logout-btn {
+    background-color: #f48c06;
+}
+
+.UserDetails{
+    color: #333;
+}

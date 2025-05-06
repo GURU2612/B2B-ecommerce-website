@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import Herosection from './Content/Herosection/Herosection.jsx';
 import Layout from './Layout .jsx';
 import Welcomesection from './Content/Welcomesection/Welcomesection.jsx';
@@ -18,10 +19,24 @@ import BlogDetails from "@src/Content/BlogDetails/BlogDetails.jsx";
 
 import AdminLayout from "@src/AdminLayout.jsx";
 import ProductSection from "@src/Admin/ProductSec/ProductSection.jsx";
+import Profile from "@src/Content/ProfilePage/Profile.jsx";
+
+function UserProfile(props) {
+  return null;
+}
 
 function App() {
+  const [showProfile, setShowProfile] = useState(false);
   return (
     <BrowserRouter>
+      {/* Global popup component */}
+      <Profile isOpen={showProfile} onClose={() => setShowProfile(false)} />
+
+      {/* Optional global trigger button (for testing) */}
+      {/* You can move this inside Navbar or anywhere globally */}
+      <button onClick={() => setShowProfile(true)} style={{ position: 'fixed', top: 10, right: 10, zIndex: 2000 }}>
+        Open Profile
+      </button>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -35,6 +50,8 @@ function App() {
           <Route path="/contectUs" element={<ContectUs/>} />
           <Route path="/blogpage" element={<BlogPage/>} />
           <Route path="/blogD" element={<BlogDetails/>} />
+
+          <Route path="/profile" element={<Profile/>} />
 
         </Route>
 
