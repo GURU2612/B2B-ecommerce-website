@@ -266,6 +266,66 @@ app.post("/addAof", async (req, res) => {
         res.status(500).json({ message: "Internal server error" });
     }
 });
+// GET /api/applications
+app.get('/api/applications', async (req, res) => {
+    const result = await sql`SELECT id, full_name, email, contact, position, company, expected_ctc, resume_name FROM applications`;
+    console.log("crr re:-",result)
+    res.json(result); // Ensure this returns { rows: [...] }
+});
+
+app.get('/api/applications/resume/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const result = await sql`
+            SELECT resume_name, resume_file FROM applications WHERE id = ${id}
+        `;
+
+        if (result.length === 0) {
+            return res.status(404).json({ message: 'Resume not found' });
+        }
+
+        const { resume_name, resume_file } = result[0]; // ✅ Corrected
+
+        res.setHeader('Content-Disposition', `attachment; filename="${resume_name}"`);
+        res.setHeader('Content-Type', 'application/pdf'); // or 'application/octet-stream' for generic
+        res.send(resume_file); // ✅ This works if resume_file is a Buffer
+    } catch (error) {
+        console.error('Resume download error:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+app.delete('/api/applications/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await sql`DELETE FROM applications WHERE id = ${id}`;
+        res.status(200).json({ message: 'Application deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting application:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+app.delete('/api/contactus/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await sql`DELETE FROM contact WHERE id = ${id}`;
+        res.status(200).json({ message: 'Contact info deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting application:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+app.get('/api/admin/contactus',async (req, res) => {
+    try{
+        const result = await sql`SELECT id,name ,email,contact,subject,comment FROM contact`;
+        res.status(200).json(result);
+    }catch (error) {
+        console.error('Resume download error:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+})
+
+
 
 // Start server
 app.listen(PORT, () => {

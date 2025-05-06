@@ -20,10 +20,8 @@ import BlogDetails from "@src/Content/BlogDetails/BlogDetails.jsx";
 import AdminLayout from "@src/AdminLayout.jsx";
 import ProductSection from "@src/Admin/ProductSec/ProductSection.jsx";
 import Profile from "@src/Content/ProfilePage/Profile.jsx";
-
-function UserProfile(props) {
-  return null;
-}
+import CTable from "@src/Admin/CareerTable/CTable.jsx";
+import AdminContactus from "@src/Admin/Contact Us/AdminContactus.jsx";
 
 function App() {
   const [showProfile, setShowProfile] = useState(false);
@@ -57,6 +55,8 @@ function App() {
 
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin" element={<ProductSection />} />
+          <Route path="career" element={<CTable/>} />
+          <Route path="contact" element={<AdminContactus/>} />
         </Route>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp />} />
