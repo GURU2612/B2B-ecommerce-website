@@ -18,6 +18,8 @@ import BlogDetails from "@src/Content/BlogDetails/BlogDetails.jsx";
 
 import AdminLayout from "@src/AdminLayout.jsx";
 import ProductSection from "@src/Admin/ProductSec/ProductSection.jsx";
+import CTable from "@src/Admin/CareerTable/CTable.jsx";
+import AdminContactus from "@src/Admin/Contact Us/AdminContactus.jsx";
 
 function App() {
   return (
@@ -35,11 +37,12 @@ function App() {
           <Route path="/contectUs" element={<ContectUs/>} />
           <Route path="/blogpage" element={<BlogPage/>} />
           <Route path="/blogD" element={<BlogDetails/>} />
-
         </Route>
 
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin" element={<ProductSection />} />
+          <Route path="career" element={<CTable/>} />
+          <Route path="contact" element={<AdminContactus/>} />
         </Route>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp />} />

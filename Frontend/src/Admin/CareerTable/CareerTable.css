@@ -86,3 +86,6 @@
 .dots-icon svg {
     display: block;
 }
+.delete-icon{
+    background-color: transparent;
+}

@@ -20,7 +20,8 @@ const navigate =useNavigate()
       {/* Navigation Menu */}
       <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
         <a  className="nav-link" onClick={()=>navigate("/admin")}>Product</a>
-        <a  className="nav-link" onClick={closeMenu}>Blog & News</a>
+        <a  className="nav-link" onClick={()=>navigate("career")}>Career</a>
+        <a  className="nav-link" onClick={()=>navigate("contact")}>Contact</a>
       </div>
 
       {/* Search Icon */}
