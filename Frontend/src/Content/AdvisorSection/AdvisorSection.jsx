@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./AdvisorSection.css";
 import doctorImage from "../../assets/images/doctor.png";
@@ -6,12 +6,62 @@ import advisorImage from "../../assets/images/advisorimage.png";
 import extraAdvisor from "../../assets/images/extraadvisor.png";
 
 const AdvisorSection = () => {
+  // Data for each specialty and corresponding doctor
   const specialties = [
-    { name: "Respiratory", img: extraAdvisor, arrow: true },
-    { name: "Anti inflammatory", img: extraAdvisor },
-    { name: "Neuropathy", img: extraAdvisor },
-    { name: "Nutraceuticals", img: extraAdvisor, arrow: true },
+    {
+      name: "Respiratory",
+      img: extraAdvisor,
+      arrow: true,
+      doctor: {
+        name: "Dr. Mehul Patel",
+        title: "Pulmonologist",
+        description:
+            "Expert in respiratory disorders, treating asthma, bronchitis, and other lung conditions.",
+        photo: doctorImage,
+      },
+    },
+    {
+      name: "Anti inflammatory",
+      img: extraAdvisor,
+      doctor: {
+        name: "Dr. Rina Desai",
+        title: "Rheumatologist",
+        description:
+            "Specialist in inflammation-related conditions like arthritis and joint pain.",
+        photo: doctorImage,
+      },
+    },
+    {
+      name: "Neuropathy",
+      img: extraAdvisor,
+      doctor: {
+        name: "Dr. Rajiv Mehta",
+        title: "Neurologist",
+        description:
+            "Focused on nerve damage and neurological treatments for chronic pain and neuropathy.",
+        photo: doctorImage,
+      },
+    },
+    {
+      name: "Nutraceuticals",
+      img: extraAdvisor,
+      arrow: true,
+      doctor: {
+        name: "Dr. Ketki Shah",
+        title: "Nutritionist",
+        description:
+            "Specialist in dietary supplements and therapeutic nutrition for improved health.",
+        photo: doctorImage,
+      },
+    },
   ];
+
+  // State to hold selected doctor info (default: first specialty)
+  const [selectedDoctor, setSelectedDoctor] = useState(specialties[0].doctor);
+
+  const handleSpecialtyClick = (doctor) => {
+    setSelectedDoctor(doctor);
+  };
 
   return (
       <div className="advisor-section-container">
@@ -19,23 +69,19 @@ const AdvisorSection = () => {
         <motion.div
             className="advisor-section-left"
             initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: false }}
         >
           <div className="advisor-section-card">
             <img
-                src={doctorImage}
-                alt="Doctor"
+                src={selectedDoctor.photo}
+                alt={selectedDoctor.name}
                 className="advisor-section-doctor-img"
             />
             <div className="advisor-section-card-info">
-              <h3>Dr. Mitesh Shah</h3>
-              <p className="advisor-section-title">Dermatologist</p>
-              <p className="advisor-section-desc">
-                As a tertiary referral ICU to provide state of the art care with
-                the help of very good professionals and infrastructure.
-              </p>
+              <h3>{selectedDoctor.name}</h3>
+              <p className="advisor-section-title">{selectedDoctor.title}</p>
+              <p className="advisor-section-desc">{selectedDoctor.description}</p>
             </div>
           </div>
         </motion.div>
@@ -44,9 +90,8 @@ const AdvisorSection = () => {
         <motion.div
             className="advisor-section-right"
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: false }}
         >
           <div className="advisor-section-top">
             <div className="advisor-section-info">
@@ -54,13 +99,8 @@ const AdvisorSection = () => {
               <h2 className="advisor-section-header">
                 <span>Team of Consultants</span>
               </h2>
-              <h3>Dermatologist</h3>
-              <p className="advisor-section-text">
-                Explain to you how all this mistaken idea of denouncing pleasure
-                and praising pain was born and I will give you a complete account
-                of the system, and the master-builder of human happiness. Expound
-                the actual teachings of the great explorer of the truth.
-              </p>
+              <h3>{selectedDoctor.title}</h3>
+              <p className="advisor-section-text">{selectedDoctor.description}</p>
               <button className="advisor-section-read-more">Read More</button>
             </div>
             <div className="advisor-section-image-box">
@@ -87,9 +127,14 @@ const AdvisorSection = () => {
                     }}
                     viewport={{ once: false }}
                 >
-                  <img src={item.img} alt={item.name} />
-
-                  <p>{item.name}</p>
+                  <div
+                      className="advisor-specialty-clickable"
+                      onClick={() => handleSpecialtyClick(item.doctor)}
+                      style={{ cursor: "pointer" }}
+                  >
+                    <img src={item.img} alt={item.name} />
+                    <p>{item.name}</p>
+                  </div>
                 </motion.div>
             ))}
           </div>
