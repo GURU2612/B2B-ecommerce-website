@@ -37,7 +37,7 @@ const tabProducts = {
 };
 
 const Product = () => {
-    const [activeTab, setActiveTab] = useState("Clinical Nutrition");
+    const [activeTab, setActiveTab] = useState("Respiratory");
 
     return (
         <section className="products-section">

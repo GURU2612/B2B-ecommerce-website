@@ -325,7 +325,349 @@ app.get('/api/admin/contactus',async (req, res) => {
     }
 })
 
+// Configure multer for image uploads
+const doctorUpload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 3 * 1024 * 1024 }, // 3MB limit
+    fileFilter: (req, file, cb) => {
+        if (file.mimetype.startsWith('image/')) {
+            cb(null, true);
+        } else {
+            cb(new Error('Only image files are allowed'));
+        }
+    }
+}).single('image');
 
+// Add Doctor - POST endpoint
+app.post('/api/addDoctor', (req, res) => {
+    doctorUpload(req, res, async (err) => {
+        if (err) {
+            return res.status(400).json({ message: err.message });
+        }
+
+        const { name, title, description } = req.body;
+        console.log(res.body)
+        // Validate required fields
+        if (!name || !title || !description) {
+            return res.status(400).json({ message: 'Name, title and description are required' });
+        }
+
+        const image = req.file?.buffer;
+        const imageType = req.file?.mimetype;
+
+        if (!image) {
+            return res.status(400).json({ message: 'Image is required' });
+        }
+
+        try {
+            await sql`
+                INSERT INTO doctor (dr_name, speciality, description, image)
+                VALUES (${name}, ${title}, ${description}, ${image});
+            `;
+            res.status(201).json({ message: 'Doctor added successfully' });
+        } catch (error) {
+            console.error("Error inserting doctor:", error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    });
+});
+
+// Get Doctor List - GET endpoint
+app.get('/api/DoctorList', async (req, res) => {
+    try {
+        const doctors = await sql`SELECT id, dr_name, speciality, description, image FROM doctor`;
+
+        // Convert image buffer to base64 string with proper mime type
+        const dataWithImageUrl = doctors.map(doc => {
+            // Create a base64 string from the buffer
+            let imageData = '';
+            if (doc.image) {
+                // Convert binary buffer to base64 string
+                const base64Image = doc.image.toString('base64');
+                // Create a data URL with the proper MIME type
+                imageData = `data:${'image/jpeg'};base64,${base64Image}`;
+            }
+
+            return {
+                id: doc.id,
+                name: doc.dr_name,
+                title: doc.speciality,
+                description: doc.description,
+                image: imageData
+            };
+        });
+
+        res.json(dataWithImageUrl);
+    } catch (err) {
+        console.error("Error fetching doctor list:", err);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
+// Delete Doctor - DELETE endpoint
+app.delete('/api/deleteDoctor/:id', async (req, res) => {
+    const { id } = req.params;
+    console.log("delte:-",id);
+    if (!id || isNaN(parseInt(id))) {
+        return res.status(400).json({ message: "Invalid doctor ID" });
+    }
+
+    try {
+        await sql`DELETE FROM doctor WHERE id = ${id}`;
+        res.json({ message: "Doctor deleted successfully" });
+    } catch (err) {
+        console.error("Error deleting doctor:", err);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
+// Update Doctor - PUT endpoint
+app.put('/api/updateDoctor/:id', (req, res) => {
+    doctorUpload(req, res, async (err) => {
+        if (err) {
+            return res.status(400).json({ message: err.message });
+        }
+console.log("body",req.body)
+        const { id } = req.params;
+        const { name, title, description } = req.body;
+        
+        // Validate required fields
+        if (!name || !title || !description) {
+            return res.status(400).json({ message: 'Name, title and description are required' });
+        }
+
+        try {
+            // Check if doctor exists
+            const doctorExists = await sql`SELECT id FROM doctor WHERE id = ${id}`;
+            if (doctorExists.length === 0) {
+                return res.status(404).json({ message: 'Doctor not found' });
+            }
+
+            // If image is provided, update with new image
+            if (req.file) {
+                // Optimize image buffer handling
+                const image = req.file.buffer;
+                
+                // Use a single SQL query with conditional logic
+                await sql`
+                    UPDATE doctor 
+                    SET dr_name = ${name}, 
+                        speciality = ${title}, 
+                        description = ${description}, 
+                        image = ${image}
+                    WHERE id = ${id}
+                `;
+            } else {
+                // Otherwise, update without changing the image
+                await sql`
+                    UPDATE doctor 
+                    SET dr_name = ${name}, 
+                        speciality = ${title}, 
+                        description = ${description}
+                    WHERE id = ${id}
+                `;
+            }
+
+            // Return success immediately without waiting for additional processing
+            res.status(200).json({ message: 'Doctor updated successfully' });
+        } catch (error) {
+            console.error("Error updating doctor:", error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    });
+});
+
+// Configure multer for blog image uploads
+const blogUpload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 3 * 1024 * 1024 }, // 3MB limit
+    fileFilter: (req, file, cb) => {
+        if (file.mimetype.startsWith('image/')) {
+            cb(null, true);
+        } else {
+            cb(new Error('Only image files are allowed'));
+        }
+    }
+}).single('image');
+
+// Create a new blog post
+app.post('/api/blogs', (req, res) => {
+    blogUpload(req, res, async (err) => {
+        if (err) {
+            return res.status(400).json({ message: err.message });
+        }
+
+        const { title, content, author, category } = req.body;
+        
+        // Validate required fields
+        if (!title || !content) {
+            return res.status(400).json({ message: 'Title and content are required' });
+        }
+
+        const image = req.file?.buffer;
+
+        if (!image) {
+            return res.status(400).json({ message: 'Featured image is required' });
+        }
+
+        try {
+            const result = await sql`
+                INSERT INTO blogs (title, content, author, category, image, created_at)
+                VALUES (${title}, ${content}, ${author || null}, ${category || null}, ${image}, NOW())
+                RETURNING id;
+            `;
+            
+            res.status(201).json({ 
+                message: 'Blog post created successfully',
+                id: result[0].id
+            });
+        } catch (error) {
+            console.error("Error creating blog post:", error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    });
+});
+
+// Get all blog posts
+app.get('/api/blogs', async (req, res) => {
+    try {
+        const blogs = await sql`
+            SELECT id, title, content, author, category, created_at, updated_at, image
+            FROM blogs
+            ORDER BY created_at DESC
+        `;
+
+        // Convert image buffer to base64 string
+        const blogsWithImageUrl = blogs.map(blog => {
+            let imageData = '';
+            if (blog.image) {
+                const base64Image = blog.image.toString('base64');
+                imageData = `data:image/jpeg;base64,${base64Image}`;
+            }
+
+            return {
+                ...blog,
+                image: imageData
+            };
+        });
+
+        res.json(blogsWithImageUrl);
+    } catch (error) {
+        console.error("Error fetching blog posts:", error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+// Get a single blog post by ID
+app.get('/api/blogs/:id', async (req, res) => {
+    const { id } = req.params;
+    
+    try {
+        const result = await sql`
+            SELECT id, title, content, author, category, created_at, updated_at, image
+            FROM blogs
+            WHERE id = ${id}
+        `;
+
+        if (result.length === 0) {
+            return res.status(404).json({ message: 'Blog post not found' });
+        }
+
+        const blog = result[0];
+        
+        // Convert image buffer to base64 string
+        let imageData = '';
+        if (blog.image) {
+            const base64Image = blog.image.toString('base64');
+            imageData = `data:image/jpeg;base64,${base64Image}`;
+        }
+
+        res.json({
+            ...blog,
+            image: imageData
+        });
+    } catch (error) {
+        console.error("Error fetching blog post:", error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+// Update a blog post
+app.put('/api/blogs/:id', (req, res) => {
+    blogUpload(req, res, async (err) => {
+        if (err) {
+            return res.status(400).json({ message: err.message });
+        }
+
+        const { id } = req.params;
+        const { title, content, author, category } = req.body;
+        
+        // Validate required fields
+        if (!title || !content) {
+            return res.status(400).json({ message: 'Title and content are required' });
+        }
+
+        try {
+            // Check if blog exists
+            const blogExists = await sql`SELECT id FROM blogs WHERE id = ${id}`;
+            if (blogExists.length === 0) {
+                return res.status(404).json({ message: 'Blog post not found' });
+            }
+
+            // If image is provided, update with new image
+            if (req.file) {
+                const image = req.file.buffer;
+                
+                await sql`
+                    UPDATE blogs 
+                    SET title = ${title}, 
+                        content = ${content}, 
+                        author = ${author || null}, 
+                        category = ${category || null}, 
+                        image = ${image},
+                        updated_at = NOW()
+                    WHERE id = ${id}
+                `;
+            } else {
+                // Otherwise, update without changing the image
+                await sql`
+                    UPDATE blogs 
+                    SET title = ${title}, 
+                        content = ${content}, 
+                        author = ${author || null}, 
+                        category = ${category || null},
+                        updated_at = NOW()
+                    WHERE id = ${id}
+                `;
+            }
+
+            res.status(200).json({ message: 'Blog post updated successfully' });
+        } catch (error) {
+            console.error("Error updating blog post:", error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    });
+});
+
+// Delete a blog post
+app.delete('/api/blogs/:id', async (req, res) => {
+    const { id } = req.params;
+    
+    try {
+        // Check if blog exists
+        const blogExists = await sql`SELECT id FROM blogs WHERE id = ${id}`;
+        if (blogExists.length === 0) {
+            return res.status(404).json({ message: 'Blog post not found' });
+        }
+
+        await sql`DELETE FROM blogs WHERE id = ${id}`;
+        
+        res.status(200).json({ message: 'Blog post deleted successfully' });
+    } catch (error) {
+        console.error("Error deleting blog post:", error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
 
 // Start server
 app.listen(PORT, () => {

@@ -5,17 +5,19 @@ import Logindrimg from '../../assets/images/loginimg.png';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import BASE_URL from "@src/config.js";
+import { useUser } from '../../Context/UserContext';
 
 const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { login } = useUser();
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault();
 
-        // Check if the email and password match the admin credentials
         if (email === "admin@123" && password === "admin123") {
+            login({ name: 'Admin', email: 'admin@123', role: 'admin' });
             navigate("/admin");
             return;
         }
@@ -27,9 +29,8 @@ const Login = () => {
                 { headers: { 'Content-Type': 'application/json' } }
             );
 
-            // Handle successful login (e.g., save token, redirect)
-            console.log('Login successful:', response.data);
-            navigate("/"); // Change to your desired route after login
+            login(response.data);
+            navigate("/");
         } catch (error) {
             console.error('Login failed:', error.response?.data || error.message);
             alert("Login failed: " + (error.response?.data?.message || error.message));

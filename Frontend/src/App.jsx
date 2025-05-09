@@ -1,12 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-import Herosection from './Content/Herosection/Herosection.jsx';
 import Layout from './Layout .jsx';
-import Welcomesection from './Content/Welcomesection/Welcomesection.jsx';
 import Aboutussection from './Component/Aboutussection/Aboutussection.jsx';
 import Contact from './Content/Contact/Contact.jsx';
 import Home from './Component/Home/Home.jsx';
-import AreaOfFocus from "./Content/Area of Focus/Areaoffocus.jsx";
 import Doctors from "./Component/Doctor/Doctors.jsx";
 import DrDetails from "./Component/Dr Details/DrDetails.jsx";
 import Career from "./Component/career/Career.jsx";
@@ -16,25 +12,19 @@ import Login from "@src/Component/Login/Login.jsx";
 import SignUp from "@src/Component/SignUp/SignUp.jsx";
 import BlogPage from "@src/Component/BlogPage/BlogPage.jsx";
 import BlogDetails from "@src/Content/BlogDetails/BlogDetails.jsx";
-
 import AdminLayout from "@src/AdminLayout.jsx";
 import ProductSection from "@src/Admin/ProductSec/ProductSection.jsx";
 import Profile from "@src/Content/ProfilePage/Profile.jsx";
 import CTable from "@src/Admin/CareerTable/CTable.jsx";
 import AdminContactus from "@src/Admin/Contact Us/AdminContactus.jsx";
+import AdminDoc from "@src/Admin/Admin Dr/AdminDoc.jsx";
+import AdminBlogEdit from "@src/Admin/AdminBlog/AdminBlogEdit.jsx";
+import AdminBlog from "@src/Admin/AdminBlog/AdminBlog.jsx";
 
 function App() {
-  const [showProfile, setShowProfile] = useState(false);
   return (
     <BrowserRouter>
       {/* Global popup component */}
-      <Profile isOpen={showProfile} onClose={() => setShowProfile(false)} />
-
-      {/* Optional global trigger button (for testing) */}
-      {/* You can move this inside Navbar or anywhere globally */}
-      <button onClick={() => setShowProfile(true)} style={{ position: 'fixed', top: 10, right: 10, zIndex: 2000 }}>
-        Open Profile
-      </button>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -47,16 +37,18 @@ function App() {
           <Route path="/Career" element={<Career/>} />
           <Route path="/contectUs" element={<ContectUs/>} />
           <Route path="/blogpage" element={<BlogPage/>} />
-          <Route path="/blogD" element={<BlogDetails/>} />
-
+          <Route path="/BlogDetails/:id" element={<BlogDetails/>} />
           <Route path="/profile" element={<Profile/>} />
-
         </Route>
 
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin" element={<ProductSection />} />
           <Route path="career" element={<CTable/>} />
           <Route path="contact" element={<AdminContactus/>} />
+          <Route path="doctor" element={<AdminDoc/>} />
+          <Route path="edit" element={<AdminBlogEdit/>} />
+          <Route path="edit/:id" element={<AdminBlogEdit/>} />
+          <Route path="blogs" element={<AdminBlog/>} />
         </Route>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp />} />

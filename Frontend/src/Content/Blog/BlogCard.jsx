@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BlogCard.css';
-import blogauthor from '../../assets/images/blogauthor.png';
-const BlogCard = ({ image, date, title, author, tags }) => {
+
+const BlogCard = ({ id, image, date, title, author, tags }) => {
+    const navigate = useNavigate();
+
+    const handleReadMore = () => {
+        navigate(`/BlogDetails/${id}`);
+    };
+
     return (
         <div className="blog-card">
             <div className="image-container">
@@ -16,11 +23,9 @@ const BlogCard = ({ image, date, title, author, tags }) => {
                 <p className="blog-date">{date}</p>
                 <h3 className="blog-title">{title}</h3>
                 <div className="author-section">
-                    <img src={blogauthor} alt="Author" className="author-icon" />
                     <p className="author-name">{author}</p>
-                    <button className="blog-read-more">Keep Reading</button>
+                    <button className="blog-read-more" onClick={handleReadMore}>Keep Reading</button>
                 </div>
-
             </div>
         </div>
     );

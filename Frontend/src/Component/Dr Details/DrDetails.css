@@ -19,11 +19,13 @@
 }
 
 .doctor-header img {
-    height: 450px;
-    max-width: 100%;
-    padding: 10px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: 450px !important;
+    max-width: 300px !important;
+    padding: 10px !important;
+    object-fit: cover !important;
+    border-radius: 20px !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
 .doctor-info {

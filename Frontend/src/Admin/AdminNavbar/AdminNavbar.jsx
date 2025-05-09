@@ -7,8 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 const AdminNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-const navigate =useNavigate()
-   const closeMenu = () => {
+  const navigate = useNavigate()
+  
+  const closeMenu = () => {
     setMenuOpen(false);
   };
 
@@ -19,23 +20,24 @@ const navigate =useNavigate()
 
       {/* Navigation Menu */}
       <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
-        <a  className="nav-link" onClick={()=>navigate("/admin")}>Product</a>
-        <a  className="nav-link" onClick={()=>navigate("career")}>Career</a>
-        <a  className="nav-link" onClick={()=>navigate("contact")}>Contact</a>
+        <a className="nav-link" onClick={()=>navigate("/admin")}>Product</a>
+        <a className="nav-link" onClick={()=>navigate("career")}>Career</a>
+        <a className="nav-link" onClick={()=>navigate("contact")}>Contact</a>
+        <a className="nav-link" onClick={()=>navigate("doctor")}>Doctor</a>
+        <a className="nav-link" onClick={()=>navigate("blogs")}>Blogs</a>
+        {/*<a className="nav-link" onClick={()=>navigate("edit")}>edit</a>*/}
       </div>
 
       {/* Search Icon */}
       <div className="nav-icons">
-       
         <div className="search-icon">
           <IoSearch />
         </div>
         <div className="profile-container">
-        <div className="profile-icon">
-        <FaUser />
-        </div>
-        <a href="/login" className="login-signup">Login/SignUp</a>
-
+          <div className="profile-icon">
+            <FaUser />
+          </div>
+          <a href="/login" className="login-signup">Login/SignUp</a>
         </div>
       </div>
     </nav>

@@ -189,3 +189,30 @@
 }
 
 
+.user-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #FC9B3B;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
+
+

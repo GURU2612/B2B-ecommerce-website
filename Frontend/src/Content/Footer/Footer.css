@@ -1,11 +1,11 @@
 .footer-container {
-  width: 80%;
-  height:628px;
+  width: 100%;
+  min-height: 628px;
   background-color: #3F2444;
   color: #fff;
-  padding-left:10% ;
-  padding-right: 10%;
+  padding: 40px 10%;
   font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
 .footer-top {
@@ -84,6 +84,18 @@
   font-size: 24px;
   margin-bottom: 24px;
   text-transform: uppercase;
+  color: #fff;
+}
+
+/* Remove duplicate styles that were causing override issues */
+.footer-contact-section a,
+.footer-links-section a,
+.footer-focus-section a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s ease;
 }
 
 .footer-links-section a{
@@ -142,13 +154,20 @@ svg.phonevolume {
 
 
 .footer-links-section a {
+  width: auto;
+  min-width: 90px;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
   color: #fff;
-  padding-bottom: 24px;
   text-decoration: none;
+  padding-bottom: 24px;
+  transition: color 0.3s ease;
 }
 
 .footer-links-section a:hover {
-  text-decoration: underline;
+  color: #f3b431;
+  text-decoration: none;
 }
 
 .footer-divider {
