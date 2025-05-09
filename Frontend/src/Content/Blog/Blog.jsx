@@ -4,7 +4,7 @@ import BlogCard from './BlogCard';
 import './Blog.css';
 import axios from 'axios';
 import BASE_URL from '@src/config.js';
-import { Link } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 const BlogSection = () => {
   const [blogs, setBlogs] = useState([]);
@@ -31,6 +31,7 @@ const BlogSection = () => {
     const options = { day: 'numeric', month: 'short', year: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
+  const navigate =useNavigate();
 
   return (
     <section className="blog-section">
@@ -46,7 +47,7 @@ const BlogSection = () => {
           <h4>Blogs</h4>
           <div className="blog-subtitle">Latest Articles</div>
         </div>
-        <Link to="/blog" className="blog-read-all">Read All Blogs</Link>
+        <a onClick={()=>navigate('/BlogPage')} className="blog-read-all">Read All Blogs</a>
       </motion.div>
 
       {/* Blog Cards Animation */}

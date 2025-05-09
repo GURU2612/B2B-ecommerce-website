@@ -1,20 +1,23 @@
 import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa";
 import "./Toplink.css";
-
-const socialIcons = [
-  { icon: <FaInstagram />, url: "#" },
-  { icon: <FaLinkedinIn />, url: "#" },
-  { icon: <FaFacebookF />, url: "#" },
-  { icon: <FaTwitter />, url: "#" },
-];
-
-const topLinks = [
-  { label: "Blogs", url: "#" },
-  { label: "Careers", url: "#" },
-  { label: "Contact Us", url: "#" },
-];
+import { useNavigate } from 'react-router-dom';
 
 const Toplink = () => {
+  const navigate = useNavigate();
+
+  const socialIcons = [
+    { icon: <FaInstagram />, url: "#" },
+    { icon: <FaLinkedinIn />, url: "#" },
+    { icon: <FaFacebookF />, url: "#" },
+    { icon: <FaTwitter />, url: "#" },
+  ];
+
+  const topLinks = [
+    { label: "Blogs", onClick: () => navigate('/blogpage') },
+    { label: "Careers", onClick: () => navigate('/Career') },
+    { label: "Contact Us", onClick: () => navigate('/contectUs') },
+  ];
+
   return (
     <header>
       <div className="top-bar">
@@ -28,7 +31,7 @@ const Toplink = () => {
 
         <div className="top-links">
           {topLinks.map((link, index) => (
-            <a key={index} href={link.url}>
+            <a key={index} onClick={link.onClick} style={{ cursor: 'pointer' }}>
               {link.label}
             </a>
           ))}

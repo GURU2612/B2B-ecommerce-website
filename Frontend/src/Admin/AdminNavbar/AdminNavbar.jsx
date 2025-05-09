@@ -27,19 +27,6 @@ const AdminNavbar = () => {
         <a className="nav-link" onClick={()=>navigate("blogs")}>Blogs</a>
         {/*<a className="nav-link" onClick={()=>navigate("edit")}>edit</a>*/}
       </div>
-
-      {/* Search Icon */}
-      <div className="nav-icons">
-        <div className="search-icon">
-          <IoSearch />
-        </div>
-        <div className="profile-container">
-          <div className="profile-icon">
-            <FaUser />
-          </div>
-          <a href="/login" className="login-signup">Login/SignUp</a>
-        </div>
-      </div>
     </nav>
   );
 };

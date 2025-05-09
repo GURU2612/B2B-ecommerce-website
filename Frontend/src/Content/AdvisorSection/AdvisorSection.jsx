@@ -4,8 +4,10 @@ import "./AdvisorSection.css";
 import doctorImage from "../../assets/images/doctor.png";
 import advisorImage from "../../assets/images/advisorimage.png";
 import extraAdvisor from "../../assets/images/extraadvisor.png";
+import { useNavigate } from 'react-router-dom';
 
 const AdvisorSection = () => {
+  const navigate = useNavigate();
   // Data for each specialty and corresponding doctor
   const specialties = [
     {
@@ -101,7 +103,7 @@ const AdvisorSection = () => {
               </h2>
               <h3>{selectedDoctor.title}</h3>
               <p className="advisor-section-text">{selectedDoctor.description}</p>
-              <button className="advisor-section-read-more">Read More</button>
+              <button className="advisor-section-read-more" onClick={()=>{navigate('/Doctors')}}>Read More</button>
             </div>
             <div className="advisor-section-image-box">
               <img

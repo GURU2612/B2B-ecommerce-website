@@ -669,6 +669,37 @@ app.delete('/api/blogs/:id', async (req, res) => {
     }
 });
 
+// Delete product endpoint
+app.delete('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    
+    try {
+        await sql`DELETE FROM product WHERE id = ${id}`;
+        res.status(200).json({ message: 'Product deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting product:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+// Delete AOF and its products endpoint
+app.delete('/aof/:id', async (req, res) => {
+    const { id } = req.params;
+    console.log("sdfsdfsdfsdaaaaaaaaaaaaaaaaaaaaaaaaaa",id)
+    try {
+        // First delete all products associated with this AOF
+        await sql`DELETE FROM product WHERE aof_id = ${id}`;
+        
+        // Then delete the AOF itself
+        await sql`DELETE FROM aof WHERE id = ${id}`;
+        
+        res.status(200).json({ message: 'Area of Focus and associated products deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting AOF:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

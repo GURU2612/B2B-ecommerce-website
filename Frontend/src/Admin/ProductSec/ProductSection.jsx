@@ -172,8 +172,48 @@ function ProductSection() {
             })
             .catch(error => console.error("Error adding product:", error));
     };
+ // Fix the syntax error in handleDeleteProduct function
+                    const handleDeleteProduct = async (productId) => {
+                        if (window.confirm('Are you sure you want to delete this product?')) {
+                            try {
+                                await axios.delete(`${BASE_URL}/products/${productId}`);
+                                // Refresh the products list after deletion
+                                const response = await axios.get(`${BASE_URL}/products/${encodeURIComponent(selectedAof.a_name)}`);
+                                const processedProducts = response.data.map(product => {
+                                    if (product.image && product.image.data) {
+                                        const base64String = bufferToBase64(product.image.data);
+                                        return {
+                                            ...product,
+                                            imageUrl: `data:image/jpeg;base64,${base64String}`
+                                        };
+                                    }
+                                    return product;
+                                });
+                                setProducts(processedProducts);
+                            } catch (error) {
+                                console.error('Error deleting product:', error);
+                                alert('Failed to delete product');
+                            }
+                        }
+                    };
 
-
+    const handleDeleteAof = async (aofId, aofName) => {
+        if (window.confirm(`Are you sure you want to delete "${aofName}" and all its products?`)) {
+            try {
+                await axios.delete(`${BASE_URL}/aof/${aofId}`);
+                // Remove the deleted AOF from the list
+                setAofList(prevList => prevList.filter(aof => aof.id !== aofId));
+                // If the deleted AOF was selected, select the first available AOF or set to null
+                if (selectedAof?.id === aofId) {
+                    const remainingAofs = aofList.filter(aof => aof.id !== aofId);
+                    setSelectedAof(remainingAofs.length > 0 ? remainingAofs[0] : null);
+                }
+            } catch (error) {
+                console.error('Error deleting AOF:', error);
+                alert('Failed to delete Area of Focus');
+            }
+        }
+    };
     return (
         <>
             {/* Modal for adding a new product */}
@@ -322,9 +362,22 @@ function ProductSection() {
                                 <li
                                     key={index}
                                     className={`admin-aof-item ${selectedAof?.a_name === aof.a_name ? "active" : ""}`}
-                                    onClick={() => setSelectedAof(aof)}
                                 >
-                                    <button className="admin-add-btn">{aof.a_name || "Respiratory"}</button>
+                                    <button 
+                                        className="admin-add-btn"
+                                        onClick={() => setSelectedAof(aof)}
+                                    >
+                                        {aof.a_name || "Respiratory"}
+                                    </button>
+                                    <button 
+                                        className="admin-delete-btn"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleDeleteAof(aof.id, aof.a_name);
+                                        }}
+                                    >
+                                        Delete
+                                    </button>
                                 </li>
                             ))}
                         </ul>
@@ -337,38 +390,14 @@ function ProductSection() {
 
                 <div className="admin-aof-details">
                     <button onClick={() => setShowModal(true)}>Add Product</button>
-
+                    
                     <div className="admin-product-container">
                         {isLoadingProducts ? (
-                            <div className="loading-spinner" style={{
-                                padding: "40px",
-                                textAlign: "center",
-                                width: "100%",
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                justifyContent: "center"
-                            }}>
-                                <div style={{
-                                    width: "40px",
-                                    height: "40px",
-                                    border: "4px solid rgba(0, 0, 0, 0.1)",
-                                    borderRadius: "50%",
-                                    borderTopColor: "#3498db",
-                                    animation: "spin 1s linear infinite"
-                                }}></div>
-                                <style jsx>{`
-                                    @keyframes spin {
-                                        to { transform: rotate(360deg); }
-                                    }
-                                `}</style>
-                                <p style={{ marginTop: "15px", fontSize: "16px" }}>Loading products...</p>
-                            </div>
+                            <div className="loading-spinner">Loading...</div>
                         ) : products.length > 0 ? (
-                            products.map((product, index) => (
-                                <div key={index} className="admin-product-card">
+                            products.map((product) => (
+                                <div key={product.id} className="admin-product-card">
                                     <div className="admin-product-image-section">
-                                        {/* Use product.imageUrl if available, fall back to default image */}
                                         <img
                                             src={product.imageUrl || did}
                                             alt={product.name}
@@ -378,15 +407,11 @@ function ProductSection() {
                                             }}
                                         />
                                     </div>
-
                                     <div className="admin-product-content">
                                         <div className="admin-product-main-info">
                                             <h3>{product.name || "BILMEGH"}</h3>
-                                            <p>
-                                                {product.description || "To tackle seasonal allergies patients need non sedating, fast & round the clock relief with safe & tolerable profile"}
-                                            </p>
+                                            <p>{product.description || "To tackle seasonal allergies patients need non sedating, fast & round the clock relief with safe & tolerable profile"}</p>
                                         </div>
-
                                         <div className="admin-product-specs">
                                             <div className="admin-product-spec-item">
                                                 <span className="admin-spec-label">Specialty</span>
@@ -405,42 +430,28 @@ function ProductSection() {
                                                 <span className="admin-spec-value">{product.composition || "Bilastine 20 mg"}</span>
                                             </div>
                                         </div>
+                                        <div className="admin-product-actions">
+                                            <button 
+                                                className="delete-btn"
+                                                onClick={() => handleDeleteProduct(product.id)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             ))
                         ) : (
-                            // "No data" message when no products are available
-                            <div style={{
-                                width: "100%",
-                                padding: "50px 20px",
-                                textAlign: "center",
-                                backgroundColor: "#f8f9fa",
-                                borderRadius: "8px",
-                                margin: "20px 0"
-                            }}>
-                                <div style={{ fontSize: "60px", color: "#ccc", marginBottom: "15px" }}>
-                                    📦
+                            <div className="admin-product-card empty-product">
+                                <div className="admin-product-content">
+                                    <div className="admin-product-main-info">
+                                        <div style={{ fontSize: "60px", color: "#ccc", marginBottom: "15px" }}>
+                            📦
+                        </div>
+                                        <h3>No Products Added</h3>
+                                        <p>There are no products added to this Area of Focus yet. Click the "Add Product" button to add your first product.</p>
+                                    </div>
                                 </div>
-                                <h3 style={{ fontSize: "22px", color: "#555", marginBottom: "10px" }}>
-                                    No Products Found
-                                </h3>
-                                <p style={{ color: "#777", maxWidth: "500px", margin: "0 auto 20px" }}>
-                                    There are no products available for {selectedAof?.a_name || "this area of focus"}.
-                                </p>
-                                <button
-                                    onClick={() => setShowModal(true)}
-                                    style={{
-                                        background: "#4a90e2",
-                                        color: "white",
-                                        border: "none",
-                                        padding: "10px 20px",
-                                        borderRadius: "4px",
-                                        cursor: "pointer",
-                                        fontWeight: "bold"
-                                    }}
-                                >
-                                    Add Your First Product
-                                </button>
                             </div>
                         )}
                     </div>
@@ -451,3 +462,4 @@ function ProductSection() {
 }
 
 export default ProductSection;
+

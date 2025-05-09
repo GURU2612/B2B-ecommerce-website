@@ -5,8 +5,10 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import logo from "../../assets/images/meghmanilogo.png";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="footer-container">
       <div className="footer-top">
@@ -38,20 +40,20 @@ const Footer = () => {
 
         <div className="footer-links-section">
           <h3>Quick Links</h3>
-          <a href="/">Home</a>
-          <a href="/">About Us</a>
-          <a href="/">Doctors</a>
-          <a href="/">Contact Us</a>
-          <a href="/">Careers</a>
-          <a href="/">Blog</a>
+          <a onClick={() => navigate('/')}>Home</a>
+          <a onClick={() => navigate('about')}>About Us</a>
+          <a onClick={() => navigate('Doctors')}>Doctors</a>
+          <a onClick={() => navigate('contectUs')}>Contact Us</a>
+          <a onClick={() => navigate('Career')}>Careers</a>
+          <a onClick={() => navigate('blogpage')}>Blog</a>
         </div>
 
         <div className="footer-focus-section">
           <h3>Area of Focus</h3>
-          <a href="/">Respiratory</a>
-          <a href="/">Neuropathy</a>
-          <a href="/">Anti-inflammatory</a>
-          <a href="/">Nutraceuticals</a>
+          <a onClick={() => navigate('AreaOfFocus')}>Respiratory</a>
+          <a onClick={() => navigate('AreaOfFocus')}>Neuropathy</a>
+          <a onClick={() => navigate('AreaOfFocus')}>Anti-inflammatory</a>
+          <a onClick={() => navigate('AreaOfFocus')}>Nutraceuticals</a>
         </div>
       </div>
 

@@ -146,6 +146,10 @@
 .product-main-info p {
     font-size: 14px;
     color: #555;
+    max-width: 300px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .product-details {
